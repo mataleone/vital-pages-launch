@@ -209,15 +209,15 @@ const ContactSection = () => {
 
             <div className="grid grid-cols-1 gap-4">
               {/* Quick Actions */}
-              <Card className="border-0 shadow-lg bg-gradient-to-br from-primary via-secondary to-accent text-white">
+              <Card className="border-0 shadow-lg bg-card">
                 <CardContent className="p-4">
-                  <h3 className="text-lg font-bold mb-4">
+                  <h3 className="text-lg font-bold mb-4 text-foreground">
                     Ações Rápidas
                   </h3>
                   <div className="space-y-3">
                     <Button 
                       size="sm" 
-                      className="w-full bg-white/20 hover:bg-white/30 backdrop-blur-sm border-white/30 text-white justify-start text-sm"
+                      className="w-full justify-start text-sm"
                       variant="outline"
                     >
                       <Calendar className="w-4 h-4 mr-2" />
@@ -226,7 +226,7 @@ const ContactSection = () => {
                     
                     <Button 
                       size="sm" 
-                      className="w-full bg-white/20 hover:bg-white/30 backdrop-blur-sm border-white/30 text-white justify-start text-sm"
+                      className="w-full justify-start text-sm"
                       variant="outline"
                     >
                       <MessageCircle className="w-4 h-4 mr-2" />
@@ -235,7 +235,7 @@ const ContactSection = () => {
                     
                     <Button 
                       size="sm" 
-                      className="w-full bg-white/20 hover:bg-white/30 backdrop-blur-sm border-white/30 text-white justify-start text-sm"
+                      className="w-full justify-start text-sm"
                       variant="outline"
                     >
                       <Phone className="w-4 h-4 mr-2" />
@@ -246,28 +246,32 @@ const ContactSection = () => {
               </Card>
 
               {/* Social Media */}
-              <Card className="border-0 shadow-lg bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 text-white">
+              <Card className="border-0 shadow-lg bg-card">
                 <CardContent className="p-4">
                   <div className="flex items-center space-x-2 mb-3">
-                    <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                      <Instagram className="w-4 h-4" />
+                    <div className="w-8 h-8 bg-gradient-to-br from-pink-500 to-purple-500 rounded-lg flex items-center justify-center">
+                      <Instagram className="w-4 h-4 text-white" />
                     </div>
-                    <h3 className="text-lg font-bold">
+                    <h3 className="text-lg font-bold text-foreground">
                       Redes Sociais
                     </h3>
                   </div>
-                  <p className="text-white/90 mb-3 text-sm">
-                    Acompanhe novidades e dicas de saúde.
+                  <p className="text-muted-foreground mb-3 text-sm">
+                    Acompanhe nossas novidades no Instagram
                   </p>
-                  <Button 
-                    size="sm" 
-                    className="w-full bg-white/20 hover:bg-white/30 backdrop-blur-sm border-white/30 text-white justify-start text-sm"
-                    variant="outline"
-                    onClick={() => window.open('https://www.instagram.com/hospital.jaquesgoncalvesp/', '_blank')}
-                  >
-                    <Instagram className="w-4 h-4 mr-2" />
-                    Seguir no Instagram
-                  </Button>
+                  {/* Instagram Feed Embed */}
+                  <div className="w-full h-64 rounded-lg overflow-hidden border">
+                    <iframe
+                      src="https://www.instagram.com/hospital.jaquesgoncalvesp/embed"
+                      width="100%"
+                      height="100%"
+                      frameBorder="0"
+                      scrolling="no"
+                      allowTransparency={true}
+                      className="instagram-media"
+                      title="Feed Instagram Hospital Jacques Gonçalves"
+                    />
+                  </div>
                 </CardContent>
               </Card>
             </div>
