@@ -77,97 +77,30 @@ const AboutSection = () => {
           ))}
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">{/* Reduced from gap-16 */}
-          {/* Left Column - Values */}
-          <div className="space-y-6">{/* Reduced from space-y-8 */}
-            <h3 className="text-3xl font-bold text-foreground mb-6">{/* Reduced from mb-8 */}
-              Nossos Valores
-            </h3>
-            
-            {values.map((value, index) => (
-              <Card key={index} className="border-0 shadow-lg bg-card hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center flex-shrink-0">
-                      <value.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-bold text-foreground mb-2">
-                        {value.title}
-                      </h4>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {value.description}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* Right Column - Achievements & CTA */}
-          <div className="space-y-6">
-            {/* Achievements Section */}
-            <div>
-              <h3 className="text-3xl font-bold text-foreground mb-6">
-                Nossos Diferenciais
-              </h3>
-              <Card className="border-0 shadow-lg bg-card overflow-hidden">
-                <div className="relative h-64">
-                  <img 
-                    src={medicalTeam} 
-                    alt="Equipe médica especializada" 
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h4 className="text-xl font-bold text-white mb-2">
-                      Nossa Excelência
-                    </h4>
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <div className="space-y-3">
-                    {achievements.map((achievement, index) => (
-                      <div key={index} className="flex items-start space-x-3">
-                        <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
-                        <span className="text-muted-foreground text-sm leading-relaxed">{achievement}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Commitment Section */}
-            <div>
-              <h3 className="text-3xl font-bold text-foreground mb-6">
-                Nosso Compromisso
-              </h3>
-              <Card className="border-0 shadow-lg bg-card overflow-hidden">
-                <div className="relative h-48">
-                  <img 
-                    src={hospitalInterior} 
-                    alt="Interior do hospital" 
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/50 to-transparent" />
-                </div>
-                <CardContent className="p-6 text-center">
-                  <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
-                    Cada paciente é uma vida que merece respeito, agilidade e excelência no cuidado. 
-                    Trabalhamos todos os dias para ser a referência em saúde da nossa região.
-                  </p>
-                  <Button 
-                    size="lg" 
-                    className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg transition-all duration-300 font-semibold px-6"
-                  >
-                    Agendar Consulta
-                  </Button>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
+        {/* Simplified About Content */}
+        <div className="text-center">
+          <Card className="border-0 shadow-lg bg-card max-w-4xl mx-auto">
+            <CardContent className="p-8">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                O <strong className="text-foreground">Hospital Jaques Gonçalves Pereira</strong> é uma 
+                instituição de referência na região, comprometida em oferecer atendimento médico de 
+                excelência com humanização e tecnologia de ponta. Fazemos parte da prestigiosa 
+                <strong className="text-foreground"> Rede Hospitais São Vicente de Paulo</strong>, 
+                unindo tradição e inovação no cuidado à saúde.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                Nossa missão é proporcionar cuidado integral e de qualidade, atendendo pacientes 
+                pelo SUS e particulares, sempre com foco na recuperação e bem-estar de cada pessoa 
+                que confia em nossos serviços.
+              </p>
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg transition-all duration-300 font-semibold px-8"
+              >
+                Conheça Nossa História
+              </Button>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
