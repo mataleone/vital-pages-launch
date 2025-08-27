@@ -256,11 +256,11 @@ const ContactSection = () => {
                       Redes Sociais
                     </h3>
                   </div>
-                  <p className="text-muted-foreground mb-6">
+                  <p className="text-muted-foreground mb-4">
                     Acompanhe nossas novidades no Instagram
                   </p>
                   {/* Instagram Feed Embed */}
-                  <div className="w-full h-80 rounded-lg overflow-hidden border">
+                  <div className="w-full h-48 rounded-lg overflow-hidden border">
                     <iframe
                       src="https://www.instagram.com/hospital.jaquesgoncalvesp/embed"
                       width="100%"
