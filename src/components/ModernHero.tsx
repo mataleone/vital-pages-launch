@@ -11,11 +11,11 @@ const ModernHero = () => {
           alt="Hospital Jaques Gonçalves Pereira - Fachada Real" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-secondary/85 to-accent/80" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/60 via-secondary/50 to-accent/40" />
       </div>
 
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10 z-10">
+      <div className="absolute inset-0 opacity-5 z-10">
         <div className="absolute inset-0" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
         }}></div>
@@ -71,36 +71,37 @@ const ModernHero = () => {
 
           {/* Right Stats Cards */}
           <div className="grid grid-cols-2 gap-6">
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center text-white hover:bg-white/15 transition-all duration-300">
-              <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            {/* Stats Cards with better transparency */}
+            <div className="bg-white/15 backdrop-blur-md rounded-2xl p-6 text-center text-white hover:bg-white/20 transition-all duration-300 border border-white/10">
+              <div className="w-16 h-16 bg-white/25 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8" />
               </div>
               <div className="text-3xl font-bold mb-2">50</div>
-              <div className="text-sm opacity-90">Leitos Disponíveis</div>
+              <div className="text-sm opacity-95">Leitos Disponíveis</div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center text-white hover:bg-white/15 transition-all duration-300 mt-8">
-              <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <div className="bg-white/15 backdrop-blur-md rounded-2xl p-6 text-center text-white hover:bg-white/20 transition-all duration-300 mt-8 border border-white/10">
+              <div className="w-16 h-16 bg-white/25 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Clock className="w-8 h-8" />
               </div>
               <div className="text-3xl font-bold mb-2">24h</div>
-              <div className="text-sm opacity-90">Pronto Atendimento</div>
+              <div className="text-sm opacity-95">Pronto Atendimento</div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center text-white hover:bg-white/15 transition-all duration-300">
-              <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <div className="bg-white/15 backdrop-blur-md rounded-2xl p-6 text-center text-white hover:bg-white/20 transition-all duration-300 border border-white/10">
+              <div className="w-16 h-16 bg-white/25 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-8 h-8" />
               </div>
               <div className="text-3xl font-bold mb-2">SUS</div>
-              <div className="text-sm opacity-90">Credenciado</div>
+              <div className="text-sm opacity-95">Credenciado</div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center text-white hover:bg-white/15 transition-all duration-300 mt-8">
-              <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <div className="bg-white/15 backdrop-blur-md rounded-2xl p-6 text-center text-white hover:bg-white/20 transition-all duration-300 mt-8 border border-white/10">
+              <div className="w-16 h-16 bg-white/25 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <div className="text-2xl font-bold">+</div>
               </div>
               <div className="text-3xl font-bold mb-2">8</div>
-              <div className="text-sm opacity-90">Leitos Emergência</div>
+              <div className="text-sm opacity-95">Leitos Emergência</div>
             </div>
           </div>
         </div>
