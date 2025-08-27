@@ -137,7 +137,7 @@ const ContactSection = () => {
                   </div>
                   
                   {/* Embedded Map */}
-                  <div className="aspect-video w-full rounded-lg overflow-hidden border mb-4">
+                  <div className="w-full h-64 rounded-lg overflow-hidden border mb-4">
                     <iframe
                       src="https://maps.google.com/maps?q=Alameda+Cruz+F+Souza,+N°500,+Alex+Müller+-+Distrito+de+Cachoeira+Escura,+Belo+Oriente+-+MG&t=&z=15&ie=UTF8&iwloc=&output=embed"
                       width="100%"
