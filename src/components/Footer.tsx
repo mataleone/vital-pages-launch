@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -19,27 +19,17 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-4 leading-relaxed">
-              Referência em atendimento médico com excelência, tecnologia e humanização. 
-              50 leitos, pronto atendimento 24h e equipe multiprofissional.
+              Sua saúde em boas mãos. Referência em atendimento médico com excelência, 
+              tecnologia e humanização. 50 leitos, pronto atendimento 24h e equipe multiprofissional.
             </p>
             <div className="flex space-x-4">
               <a 
-                href="#" 
-                className="w-8 h-8 bg-primary rounded-full flex items-center justify-center hover:bg-primary-glow transition-smooth"
+                href="https://www.instagram.com/hospital.jaquesgoncalvesp/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 bg-gradient-to-br from-pink-500 to-purple-500 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300"
               >
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a 
-                href="#" 
-                className="w-8 h-8 bg-primary rounded-full flex items-center justify-center hover:bg-primary-glow transition-smooth"
-              >
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a 
-                href="#" 
-                className="w-8 h-8 bg-primary rounded-full flex items-center justify-center hover:bg-primary-glow transition-smooth"
-              >
-                <Linkedin className="w-4 h-4" />
+                <Instagram className="w-4 h-4 text-white" />
               </a>
             </div>
           </div>
@@ -105,33 +95,28 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contato</h4>
+            <h4 className="text-lg font-semibold mb-4">Contatos</h4>
             <div className="space-y-3">
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-primary-glow mt-1 flex-shrink-0" />
-                <div className="text-gray-300 text-sm">
-                  Consulte nosso atendimento<br />
-                  para informações de localização
-                </div>
+              <div className="text-gray-300 text-sm">
+                <strong>Telefone:</strong><br />
+                Recepção: (31) 2942-0524<br />
+                (31) 0000-0000
               </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-primary-glow flex-shrink-0" />
-                <div className="text-gray-300 text-sm">
-                  Entre em contato conosco
-                </div>
+              <div className="text-gray-300 text-sm">
+                <strong>Agendamento:</strong><br />
+                (31) 9999-8888<br />
+                (31) 8888-9999<br />
+                (31) 8555-5555
               </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-primary-glow flex-shrink-0" />
-                <div className="text-gray-300 text-sm">
-                  Informações e agendamentos
-                </div>
+              <div className="text-gray-300 text-sm">
+                <strong>E-mail:</strong><br />
+                recepcao.bo@redehsvp.com.br
               </div>
-              <div className="flex items-start space-x-3">
-                <Clock className="w-5 h-5 text-primary-glow mt-1 flex-shrink-0" />
-                <div className="text-gray-300 text-sm">
-                  Emergência 24h<br />
-                  Consultas: 6h às 22h
-                </div>
+              <div className="text-gray-300 text-sm">
+                <strong>Endereço:</strong><br />
+                Alameda Cruz F Souza, N°500<br />
+                Distrito de Cachoeira Escura<br />
+                Belo Oriente - MG, 35195-000
               </div>
             </div>
           </div>
@@ -141,18 +126,23 @@ const Footer = () => {
         <div className="border-t border-gray-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2024 Rede HSVP - Hospital Jaques Gonçalves Pereira. Todos os direitos reservados.
+              © {new Date().getFullYear()} Rede HSVP - Hospital Jaques Gonçalves Pereira. Todos os direitos reservados.
             </div>
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-white transition-smooth">
-                Política de Privacidade
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-smooth">
-                Termos de Uso
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-smooth">
-                Código de Ética
-              </a>
+            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm">
+              <div className="text-gray-400">
+                Feito com ♥ por <span className="text-primary-glow font-semibold">Dataeast® Tecnologia</span>
+              </div>
+              <div className="flex space-x-6">
+                <a href="#" className="text-gray-400 hover:text-white transition-smooth">
+                  Política de Privacidade
+                </a>
+                <a href="#" className="text-gray-400 hover:text-white transition-smooth">
+                  Termos de Uso
+                </a>
+                <a href="#" className="text-gray-400 hover:text-white transition-smooth">
+                  Código de Ética
+                </a>
+              </div>
             </div>
           </div>
         </div>
