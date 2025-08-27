@@ -200,60 +200,23 @@ const ContactSection = () => {
               </CardContent>
             </Card>
 
-            <div className="grid grid-cols-1 gap-6">
-              {/* Quick Actions */}
-              <Card className="border-0 shadow-lg bg-card">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-6 text-foreground">
-                    Ações Rápidas
+            {/* Social Media */}
+            <Card className="border-0 shadow-lg bg-card">
+              <CardContent className="p-6">
+                <div className="flex items-center space-x-3 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-500 rounded-xl flex items-center justify-center">
+                    <Instagram className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground">
+                    Redes Sociais
                   </h3>
-                  <div className="space-y-4">
-                    <Button 
-                      size="lg" 
-                      className="w-full justify-start"
-                      variant="outline"
-                    >
-                      <Calendar className="w-5 h-5 mr-3" />
-                      Agendar Consulta
-                    </Button>
-                    
-                    <Button 
-                      size="lg" 
-                      className="w-full justify-start"
-                      variant="outline"
-                    >
-                      <MessageCircle className="w-5 h-5 mr-3" />
-                      Fale Conosco
-                    </Button>
-                    
-                    <Button 
-                      size="lg" 
-                      className="w-full justify-start"
-                      variant="outline"
-                    >
-                      <Phone className="w-5 h-5 mr-3" />
-                      Entrar em Contato
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Social Media */}
-              <Card className="border-0 shadow-lg bg-card">
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-3 mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-500 rounded-xl flex items-center justify-center">
-                      <Instagram className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-foreground">
-                      Redes Sociais
-                    </h3>
-                  </div>
+                </div>
+                <div className="space-y-4">
                   <p className="text-muted-foreground mb-4">
                     Acompanhe nossas novidades no Instagram
                   </p>
                   {/* Instagram Feed Embed */}
-                  <div className="w-full h-48 rounded-lg overflow-hidden border">
+                  <div className="w-full h-64 rounded-lg overflow-hidden border mb-4">
                     <iframe
                       src="https://www.instagram.com/hospital.jaquesgoncalvesp/embed"
                       width="100%"
@@ -265,9 +228,21 @@ const ContactSection = () => {
                       title="Feed Instagram Hospital Jacques Gonçalves"
                     />
                   </div>
-                </CardContent>
-              </Card>
-            </div>
+                  
+                  <div className="space-y-4">
+                    <Button 
+                      variant="outline" 
+                      size="lg"
+                      className="w-full hover:bg-primary hover:text-white transition-colors"
+                      onClick={() => window.open('https://www.instagram.com/hospital.jaquesgoncalvesp/', '_blank')}
+                    >
+                      <Instagram className="w-5 h-5 mr-3" />
+                      Seguir no Instagram
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
