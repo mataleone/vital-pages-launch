@@ -33,9 +33,9 @@ const Location = () => {
                   <div>
                     <h4 className="text-lg font-semibold text-foreground mb-1">Endereço</h4>
                     <p className="text-muted-foreground">
-                      Avenida da Saúde, 1234<br />
-                      Centro Médico - São Paulo, SP<br />
-                      CEP: 01234-567
+                      Consulte nosso atendimento<br />
+                      para informações de localização<br />
+                      e como chegar ao hospital
                     </p>
                   </div>
                 </div>
@@ -51,9 +51,9 @@ const Location = () => {
                   <div>
                     <h4 className="text-lg font-semibold text-foreground mb-1">Telefones</h4>
                     <p className="text-muted-foreground">
-                      Recepção: (11) 3456-7890<br />
-                      Emergência: (11) 3456-7891<br />
-                      WhatsApp: (11) 99999-8888
+                      Entre em contato conosco<br />
+                      para agendar consultas<br />
+                      ou emergências 24 horas
                     </p>
                   </div>
                 </div>
@@ -87,8 +87,8 @@ const Location = () => {
                   <div>
                     <h4 className="text-lg font-semibold text-foreground mb-1">E-mail</h4>
                     <p className="text-muted-foreground">
-                      contato@hospitalsantasaude.com.br<br />
-                      agendamento@hospitalsantasaude.com.br
+                      Entre em contato para<br />
+                      informações e agendamentos
                     </p>
                   </div>
                 </div>
@@ -109,7 +109,7 @@ const Location = () => {
                   <div className="text-center text-muted-foreground">
                     <MapPin className="w-12 h-12 mx-auto mb-2" />
                     <p className="text-sm">Mapa Interativo</p>
-                    <p className="text-xs">Av. da Saúde, 1234 - Centro Médico</p>
+                    <p className="text-xs">Hospital Jaques Gonçalves Pereira</p>
                   </div>
                 </div>
               </CardContent>
@@ -159,8 +159,8 @@ const Location = () => {
                 <div>
                   <h5 className="font-semibold text-red-800 mb-1">Emergência</h5>
                   <p className="text-sm text-red-700">
-                    Em caso de emergência, dirija-se ao Pronto Socorro 
-                    (entrada pela Rua das Urgências, 567) ou ligue para (11) 3456-7891
+                    Em caso de emergência, procure nosso Pronto Atendimento. 
+                    Atendimento 24 horas com 8 leitos de observação disponíveis.
                   </p>
                 </div>
               </div>
