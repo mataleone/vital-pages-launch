@@ -55,20 +55,6 @@ const AboutSection = () => {
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Sobre Nós
           </h2>
-          <div className="max-w-4xl mx-auto">
-            <p className="text-xl text-muted-foreground leading-relaxed mb-6">
-              O <strong className="text-foreground">Hospital Jaques Gonçalves Pereira</strong> é uma 
-              instituição de referência na região, comprometida em oferecer atendimento médico de 
-              excelência com humanização e tecnologia de ponta. Fazemos parte da prestigiosa 
-              <strong className="text-foreground"> Rede Hospitais São Vicente de Paulo</strong>, 
-              unindo tradição e inovação no cuidado à saúde.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Nossa missão é proporcionar cuidado integral e de qualidade, atendendo pacientes 
-              pelo SUS e particulares, sempre com foco na recuperação e bem-estar de cada pessoa 
-              que confia em nossos serviços.
-            </p>
-          </div>
         </div>
 
         {/* Stats Section */}
