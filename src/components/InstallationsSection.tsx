@@ -55,10 +55,11 @@ const InstallationsSection = () => {
         <div className="grid lg:grid-cols-3 gap-8 mb-10">
           {/* Video Section */}
           <div className="lg:col-span-1 flex">
-            <div className="relative w-full h-[520px] rounded-lg overflow-hidden shadow-lg">
+            <div className="relative w-full h-[520px] rounded-lg overflow-hidden shadow-lg bg-black">
               <iframe 
                 src="https://www.youtube.com/embed/bX5x1sPxsII?autoplay=1&mute=1&loop=1&playlist=bX5x1sPxsII&controls=0&showinfo=0&rel=0&modestbranding=1&disablekb=1&fs=0&iv_load_policy=3"
-                className="absolute inset-0 w-full h-full rounded-lg"
+                className="absolute inset-0 w-full h-full rounded-lg scale-150 origin-center"
+                style={{ transform: 'scale(1.5)' }}
                 frameBorder="0"
                 allow="autoplay; encrypted-media"
                 allowFullScreen
