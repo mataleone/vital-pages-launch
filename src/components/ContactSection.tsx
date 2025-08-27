@@ -18,22 +18,22 @@ const ContactSection = () => {
     {
       icon: Phone,
       title: "Telefone",
-      description: "Atendimento e agendamentos",
-      details: "Entre em contato conosco",
-      action: "Ligar Agora"
+      description: "Recepção: (31) 2942-0524",
+      details: "(31) 0000-0000",
+      action: "Entrar em Contato"
     },
     {
       icon: Mail,
       title: "E-mail",
-      description: "Informações e dúvidas",
+      description: "recepcao.bo@redehsvp.com.br",
       details: "Resposta em até 24 horas",
       action: "Enviar E-mail"
     },
     {
       icon: Calendar,
       title: "Agendamento Online",
-      description: "Agende sua consulta",
-      details: "Disponível 24 horas por dia",
+      description: "(31) 9999-8888, (31) 8888-9999",
+      details: "(31) 8555-5555",
       action: "Agendar"
     }
   ];
@@ -125,10 +125,30 @@ const ContactSection = () => {
                   </h3>
                 </div>
                 <div className="space-y-4">
-                  <p className="text-muted-foreground">
-                    Entre em contato conosco para informações detalhadas sobre nossa localização 
-                    e como chegar ao hospital.
-                  </p>
+                  <div className="space-y-2">
+                    <p className="text-sm font-medium text-foreground">Alameda Cruz F Souza, N°500</p>
+                    <p className="text-sm text-muted-foreground">
+                      Distrito de Cachoeira Escura (Perpétuo Socorro)
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      Belo Oriente - MG, 35195-000
+                    </p>
+                  </div>
+                  
+                  {/* Embedded Map */}
+                  <div className="aspect-video w-full rounded-lg overflow-hidden border">
+                    <iframe
+                      src="https://maps.google.com/maps?q=Alameda+Cruz+F+Souza,+N°500+-+Distrito+de+Cachoeira+Escura+(Perpétuo+Socorro),+Belo+Oriente+-+MG&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Localização do Hospital São Vicente de Paulo"
+                    />
+                  </div>
+                  
                   <div className="grid grid-cols-2 gap-4">
                     <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                       <Car className="w-4 h-4 text-primary" />
@@ -142,9 +162,10 @@ const ContactSection = () => {
                   <Button 
                     variant="outline" 
                     className="w-full hover:bg-primary hover:text-white transition-colors"
+                    onClick={() => window.open('https://maps.app.goo.gl/AVeuduYcfWFGbXsE9', '_blank')}
                   >
                     <Navigation className="w-4 h-4 mr-2" />
-                    Ver Localização
+                    Ver no Google Maps
                   </Button>
                 </div>
               </CardContent>
@@ -154,7 +175,7 @@ const ContactSection = () => {
           {/* Right Column - Emergency & Quick Actions */}
           <div className="space-y-6">{/* Reduced from space-y-8 */}
             {/* Emergency */}
-            <Card className="border-0 shadow-lg bg-gradient-to-br from-red-500 to-red-600 text-white">
+            <Card className="border-0 shadow-lg bg-gradient-to-br from-red-500 to-red-600 text-white h-fit">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
@@ -168,7 +189,7 @@ const ContactSection = () => {
                   Em caso de emergência, procure nosso Pronto Atendimento. 
                   Contamos com 8 leitos de observação e equipe especializada disponível 24 horas.
                 </p>
-                <div className="space-y-2">
+                <div className="space-y-2 mb-4">
                   <div className="text-sm">• Atendimento imediato</div>
                   <div className="text-sm">• Leitos masculino, feminino e pediátrico</div>
                   <div className="text-sm">• Equipe médica de plantão</div>
@@ -177,7 +198,7 @@ const ContactSection = () => {
             </Card>
 
             {/* Quick Actions */}
-            <Card className="border-0 shadow-lg bg-gradient-to-br from-primary via-secondary to-accent text-white">
+            <Card className="border-0 shadow-lg bg-gradient-to-br from-primary via-secondary to-accent text-white h-fit">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-6">
                   Ações Rápidas
@@ -207,7 +228,7 @@ const ContactSection = () => {
                     variant="outline"
                   >
                     <Phone className="w-5 h-5 mr-3" />
-                    Ligar Agora
+                    Entrar em Contato
                   </Button>
                 </div>
               </CardContent>

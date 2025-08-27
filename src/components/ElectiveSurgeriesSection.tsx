@@ -254,7 +254,7 @@ const ElectiveSurgeriesSection = () => {
                 </p>
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg transition-all duration-300 font-semibold px-8 w-fit"
+                  className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg transition-all duration-300 font-semibold px-12 py-4 h-14 text-lg w-fit"
                 >
                   Agendamento
                 </Button>
