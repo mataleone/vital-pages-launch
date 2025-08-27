@@ -1,12 +1,12 @@
-import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Linkedin, Heart } from "lucide-react";
+import { Instagram } from "lucide-react";
 
 const ModernFooter = () => {
   return (
     <footer className="bg-gradient-to-br from-foreground via-gray-900 to-gray-800 text-white">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Hospital Info */}
-          <div className="lg:col-span-2">
+          <div>
             <div className="flex items-center space-x-3 mb-6">
               <img 
                 src="/lovable-uploads/00897a29-1dbc-47fd-ad4c-da44171b9c7e.png" 
@@ -19,29 +19,19 @@ const ModernFooter = () => {
               </div>
             </div>
             
-            <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
-              Parte da Rede Hospitais São Vicente de Paulo, oferecemos excelência em 
-              saúde com atendimento humanizado, tecnologia de ponta e equipe especializada.
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              Sua saúde em boas mãos. Parte da Rede Hospitais São Vicente de Paulo, 
+              oferecemos excelência em saúde com atendimento humanizado, tecnologia de ponta e equipe especializada.
             </p>
             
             <div className="flex space-x-4">
               <a 
-                href="#" 
-                className="w-10 h-10 bg-primary/20 hover:bg-primary rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110"
+                href="https://www.instagram.com/hospital.jaquesgoncalvesp/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gradient-to-br from-pink-500 to-purple-500 hover:scale-110 rounded-xl flex items-center justify-center transition-all duration-300"
               >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-primary/20 hover:bg-primary rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-primary/20 hover:bg-primary rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110"
-              >
-                <Linkedin className="w-5 h-5" />
+                <Instagram className="w-5 h-5 text-white" />
               </a>
             </div>
           </div>
@@ -69,68 +59,34 @@ const ModernFooter = () => {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-bold mb-6">Serviços</h4>
-            <ul className="space-y-3">
-              {[
-                "Cirurgia Geral",
-                "Pronto Atendimento",
-                "Internação",
-                "Exames Diagnósticos",
-                "Endoscopia",
-                "Colonoscopia"
-              ].map((service, index) => (
-                <li key={index}>
-                  <span className="text-gray-300 flex items-center group cursor-pointer hover:text-white transition-colors">
-                    <div className="w-1 h-1 bg-secondary rounded-full mr-3 group-hover:scale-150 transition-transform"></div>
-                    {service}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Contact Info Bar */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12 pt-8 border-t border-gray-700">
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-primary/20 rounded-xl flex items-center justify-center">
-              <MapPin className="w-5 h-5 text-primary" />
-            </div>
-            <div>
-              <div className="text-sm font-medium">Localização</div>
-              <div className="text-xs text-gray-400">Consulte-nos para endereço</div>
-            </div>
-          </div>
-
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-secondary/20 rounded-xl flex items-center justify-center">
-              <Phone className="w-5 h-5 text-secondary" />
-            </div>
-            <div>
-              <div className="text-sm font-medium">Telefone</div>
-              <div className="text-xs text-gray-400">Entre em contato</div>
-            </div>
-          </div>
-
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-accent/20 rounded-xl flex items-center justify-center">
-              <Clock className="w-5 h-5 text-accent" />
-            </div>
-            <div>
-              <div className="text-sm font-medium">Emergência 24h</div>
-              <div className="text-xs text-gray-400">Atendimento contínuo</div>
-            </div>
-          </div>
-
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-primary/20 rounded-xl flex items-center justify-center">
-              <Mail className="w-5 h-5 text-primary" />
-            </div>
-            <div>
-              <div className="text-sm font-medium">E-mail</div>
-              <div className="text-xs text-gray-400">Informações gerais</div>
+            <h4 className="text-lg font-bold mb-6">Contatos</h4>
+            <div className="space-y-4">
+              <div>
+                <div className="text-sm font-medium text-white mb-1">Telefone</div>
+                <div className="text-xs text-gray-300">Recepção: (31) 2942-0524</div>
+                <div className="text-xs text-gray-300">(31) 0000-0000</div>
+              </div>
+              
+              <div>
+                <div className="text-sm font-medium text-white mb-1">Agendamento</div>
+                <div className="text-xs text-gray-300">(31) 9999-8888</div>
+                <div className="text-xs text-gray-300">(31) 8888-9999</div>
+                <div className="text-xs text-gray-300">(31) 8555-5555</div>
+              </div>
+              
+              <div>
+                <div className="text-sm font-medium text-white mb-1">E-mail</div>
+                <div className="text-xs text-gray-300">recepcao.bo@redehsvp.com.br</div>
+              </div>
+              
+              <div>
+                <div className="text-sm font-medium text-white mb-1">Endereço</div>
+                <div className="text-xs text-gray-300">Alameda Cruz F Souza, N°500</div>
+                <div className="text-xs text-gray-300">Distrito de Cachoeira Escura</div>
+                <div className="text-xs text-gray-300">Belo Oriente - MG, 35195-000</div>
+              </div>
             </div>
           </div>
         </div>
@@ -138,21 +94,24 @@ const ModernFooter = () => {
         {/* Bottom Section */}
         <div className="border-t border-gray-700 mt-12 pt-8">
           <div className="flex flex-col lg:flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm mb-4 lg:mb-0 flex items-center">
-              <span>© 2024 Rede HSVP - Hospital Jaques Gonçalves Pereira. Feito com</span>
-              <Heart className="w-4 h-4 text-red-500 mx-2" />
-              <span>para cuidar da sua saúde.</span>
+            <div className="text-gray-400 text-sm mb-4 lg:mb-0">
+              © {new Date().getFullYear()} Rede HSVP - Hospital Jaques Gonçalves Pereira. Todos os direitos reservados.
             </div>
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Política de Privacidade
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Termos de Uso
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Código de Ética
-              </a>
+            <div className="flex flex-col lg:flex-row items-center space-y-2 lg:space-y-0 lg:space-x-6 text-sm">
+              <div className="text-gray-400">
+                Feito com ♥ por <span className="text-primary font-semibold">Dataeast® Tecnologia</span>
+              </div>
+              <div className="flex space-x-6">
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  Política de Privacidade
+                </a>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  Termos de Uso
+                </a>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  Código de Ética
+                </a>
+              </div>
             </div>
           </div>
         </div>
