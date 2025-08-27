@@ -63,10 +63,10 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
+    <section id="services" className="py-12 bg-background">{/* Reduced from py-20 */}
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">{/* Reduced from mb-16 */}
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Nossos Serviços
           </h2>
@@ -77,13 +77,13 @@ const ServicesSection = () => {
         </div>
 
         {/* Main Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">{/* Reduced gaps and margin */}
           {mainServices.map((service, index) => (
             <Card 
               key={index} 
               className="group hover:scale-105 transition-all duration-300 border-0 shadow-lg hover:shadow-xl bg-card"
             >
-              <CardContent className="p-8 text-center">
+              <CardContent className="p-6 text-center">{/* Reduced from p-8 */}
                 <div className={`w-20 h-20 bg-gradient-to-br ${service.color} rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-10 h-10 text-white" />
                 </div>
@@ -100,10 +100,10 @@ const ServicesSection = () => {
 
         {/* Facilities Section */}
         <div>
-          <h3 className="text-3xl font-bold text-foreground text-center mb-12">
+          <h3 className="text-3xl font-bold text-foreground text-center mb-8">{/* Reduced from mb-12 */}
             Nossas Instalações
           </h3>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">{/* Reduced from gap-8 */}
             {facilities.map((facility, index) => {
               const facilityImages = [hospitalRoom, emergencyRoom, surgeryRoom];
               return (

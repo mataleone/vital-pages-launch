@@ -147,10 +147,10 @@ const ElectiveSurgeriesSection = () => {
   ];
 
   return (
-    <section itemScope itemType="https://schema.org/MedicalClinic" className="py-20 bg-background">
+    <section itemScope itemType="https://schema.org/MedicalClinic" className="py-12 bg-background">{/* Reduced from py-20 */}
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">{/* Reduced from mb-12 */}
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
             Cirurgias Eletivas
           </h2>
@@ -166,7 +166,7 @@ const ElectiveSurgeriesSection = () => {
 
         {/* Surgery Categories Tabs */}
         <Tabs defaultValue="cabeca-pescoco" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 lg:grid-cols-5 xl:grid-cols-9 mb-8">
+          <TabsList className="grid w-full grid-cols-3 lg:grid-cols-5 xl:grid-cols-9 mb-6">{/* Reduced from mb-8 */}
             {surgeryCategories.map((category) => {
               const IconComponent = category.icon;
               return (
@@ -183,9 +183,9 @@ const ElectiveSurgeriesSection = () => {
           </TabsList>
 
           {surgeryCategories.map((category) => (
-            <TabsContent key={category.id} value={category.id} className="mt-6">
+            <TabsContent key={category.id} value={category.id} className="mt-4">{/* Reduced from mt-6 */}
               <Card className="bg-card shadow-card border-0">
-                <CardContent className="p-8">
+                <CardContent className="p-6">{/* Reduced from p-8 */}
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center">
                       <category.icon className="w-6 h-6 text-white" />
@@ -232,12 +232,12 @@ const ElectiveSurgeriesSection = () => {
         </Tabs>
 
         {/* Call to Action */}
-        <div className="text-center mt-12">
-          <div className="bg-gradient-card p-8 rounded-xl shadow-card">
+        <div className="text-center mt-8">{/* Reduced from mt-12 */}
+          <div className="bg-gradient-card p-6 rounded-xl shadow-card">{/* Reduced from p-8 */}
             <h3 className="text-2xl font-bold text-foreground mb-4">
               Precisa de uma Cirurgia Eletiva?
             </h3>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+            <p className="text-muted-foreground mb-4 max-w-2xl mx-auto">{/* Reduced from mb-6 */}
               Nossa equipe está pronta para atendê-lo com segurança e qualidade. 
               Entre em contato para mais informações sobre procedimentos e agendamentos.
             </p>

@@ -3,7 +3,7 @@ import { ArrowRight, Phone, MapPin, Clock, Users } from "lucide-react";
 
 const ModernHero = () => {
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section className="relative h-screen overflow-hidden">{/* Reduced from min-h-screen */}
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img 
@@ -21,10 +21,10 @@ const ModernHero = () => {
         }}></div>
       </div>
 
-      <div className="relative z-20 container mx-auto px-4 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen">
+      <div className="relative z-20 container mx-auto px-4 py-12">{/* Reduced from py-20 */}
+        <div className="grid lg:grid-cols-2 gap-8 items-center h-screen">{/* Reduced gap from 12 to 8 */}
           {/* Left Content */}
-          <div className="text-white space-y-8">
+          <div className="text-white space-y-6">{/* Reduced from space-y-8 */}
             <div className="space-y-4">
               <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
                 <img 

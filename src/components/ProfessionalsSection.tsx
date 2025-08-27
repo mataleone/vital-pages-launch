@@ -102,10 +102,10 @@ const ProfessionalsSection = () => {
   };
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-12 bg-muted/30">{/* Reduced from py-20 */}
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">{/* Reduced from mb-12 */}
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Nossos Profissionais
           </h2>
@@ -195,7 +195,7 @@ const ProfessionalsSection = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-8">{/* Reduced from mt-12 */}
           <p className="text-muted-foreground mb-4">
             Agende uma consulta com nossos especialistas
           </p>

@@ -46,10 +46,10 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-background">
+    <section id="contact" className="py-12 bg-background">{/* Reduced from py-20 */}
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">{/* Reduced from mb-16 */}
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Entre em Contato
           </h2>
@@ -59,7 +59,7 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid lg:grid-cols-3 gap-6 mb-10">{/* Reduced gaps and margin */}
           {/* Contact Methods */}
           {contactInfo.map((contact, index) => (
             <Card key={index} className="group hover:scale-105 transition-all duration-300 border-0 shadow-lg hover:shadow-xl bg-card">
@@ -88,9 +88,9 @@ const ContactSection = () => {
           ))}
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8">{/* Reduced from gap-12 */}
           {/* Left Column - Hours & Location */}
-          <div className="space-y-8">
+          <div className="space-y-6">{/* Reduced from space-y-8 */}
             {/* Hours */}
             <Card className="border-0 shadow-lg bg-card">
               <CardContent className="p-6">
@@ -152,7 +152,7 @@ const ContactSection = () => {
           </div>
 
           {/* Right Column - Emergency & Quick Actions */}
-          <div className="space-y-8">
+          <div className="space-y-6">{/* Reduced from space-y-8 */}
             {/* Emergency */}
             <Card className="border-0 shadow-lg bg-gradient-to-br from-red-500 to-red-600 text-white">
               <CardContent className="p-6">
