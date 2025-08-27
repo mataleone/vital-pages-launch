@@ -178,7 +178,7 @@ const ContactSection = () => {
             {/* Emergency */}
             <Card className="border-0 shadow-lg bg-gradient-to-br from-red-500 to-red-600 text-white h-fit">
               <CardContent className="p-6">
-                <div className="flex items-center space-x-3 mb-4">
+                <div className="flex items-center space-x-3 mb-6">
                   <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
                     <AlertCircle className="w-6 h-6" />
                   </div>
@@ -186,26 +186,22 @@ const ContactSection = () => {
                     Emergência 24h
                   </h3>
                 </div>
-                <p className="text-white/90 mb-4">
-                  Em caso de emergência, procure nosso Pronto Atendimento. 
-                  Contamos com 8 leitos de observação e equipe especializada disponível 24 horas.
-                </p>
-                <div className="space-y-3 mb-4">
-                  <div className="flex justify-between items-center py-2 border-b border-white/20">
-                    <span className="text-sm font-medium">Atendimento</span>
-                    <span className="text-sm text-white/90">24 horas</span>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center py-2 border-b border-white/20 last:border-0">
+                    <span className="font-medium text-white">Pronto Atendimento</span>
+                    <span className="text-sm text-white/90">24 horas - Todos os dias</span>
                   </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/20">
-                    <span className="text-sm font-medium">Leitos Disponíveis</span>
-                    <span className="text-sm text-white/90">8 leitos</span>
+                  <div className="flex justify-between items-center py-2 border-b border-white/20 last:border-0">
+                    <span className="font-medium text-white">Leitos de Observação</span>
+                    <span className="text-sm text-white/90">8 leitos disponíveis</span>
                   </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/20">
-                    <span className="text-sm font-medium">Especialidades</span>
-                    <span className="text-sm text-white/90">Urgência</span>
+                  <div className="flex justify-between items-center py-2 border-b border-white/20 last:border-0">
+                    <span className="font-medium text-white">Especialidades</span>
+                    <span className="text-sm text-white/90">Urgência e Emergência</span>
                   </div>
-                  <div className="flex justify-between items-center py-2">
-                    <span className="text-sm font-medium">Observação</span>
-                    <span className="text-sm text-white/90">Masc/Fem/Ped</span>
+                  <div className="flex justify-between items-center py-2 border-b border-white/20 last:border-0">
+                    <span className="font-medium text-white">Observação</span>
+                    <span className="text-sm text-white/90">Masc/Fem/Pediátrico</span>
                   </div>
                 </div>
               </CardContent>
