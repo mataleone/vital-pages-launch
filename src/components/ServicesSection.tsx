@@ -9,6 +9,9 @@ import {
   Building2,
   UserCheck
 } from "lucide-react";
+import hospitalRoom from "@/assets/hospital-room.jpg";
+import emergencyRoom from "@/assets/emergency-room.jpg";
+import surgeryRoom from "@/assets/surgery-room.jpg";
 
 const ServicesSection = () => {
   const mainServices = [
@@ -101,36 +104,47 @@ const ServicesSection = () => {
             Nossas Instalações
           </h3>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {facilities.map((facility, index) => (
-              <Card 
-                key={index} 
-                className="group hover:scale-102 transition-all duration-300 border-0 shadow-lg hover:shadow-xl bg-card overflow-hidden"
-              >
-                <CardContent className="p-0">
-                  <div className="bg-gradient-to-br from-primary via-secondary to-accent p-8 text-white">
-                    <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-4">
-                      <facility.icon className="w-8 h-8" />
+            {facilities.map((facility, index) => {
+              const facilityImages = [hospitalRoom, emergencyRoom, surgeryRoom];
+              return (
+                <Card 
+                  key={index} 
+                  className="group hover:scale-102 transition-all duration-300 border-0 shadow-lg hover:shadow-xl bg-card overflow-hidden"
+                >
+                  <CardContent className="p-0">
+                    <div className="relative aspect-video overflow-hidden">
+                      <img 
+                        src={facilityImages[index % facilityImages.length]} 
+                        alt={facility.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent" />
+                      <div className="absolute bottom-4 left-4 right-4 text-white">
+                        <div className="flex items-center mb-2">
+                          <facility.icon className="w-6 h-6 mr-2" />
+                          <h4 className="text-lg font-bold">
+                            {facility.title}
+                          </h4>
+                        </div>
+                        <p className="text-white/90 text-sm">
+                          {facility.description}
+                        </p>
+                      </div>
                     </div>
-                    <h4 className="text-xl font-bold mb-2">
-                      {facility.title}
-                    </h4>
-                    <p className="text-white/90 text-sm">
-                      {facility.description}
-                    </p>
-                  </div>
-                  <div className="p-6">
-                    <ul className="space-y-3">
-                      {facility.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-muted-foreground">
-                          <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                    <div className="p-6">
+                      <ul className="space-y-3">
+                        {facility.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-center text-sm text-muted-foreground">
+                            <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </div>

@@ -1,6 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Award, Users, Heart, Target, Star, CheckCircle, Shield } from "lucide-react";
+import medicalTeam from "@/assets/medical-team.jpg";
+import hospitalInterior from "@/assets/hospital-interior.jpg";
 
 const AboutSection = () => {
   const stats = [
@@ -105,34 +107,52 @@ const AboutSection = () => {
 
           {/* Right Column - Achievements & CTA */}
           <div className="space-y-8">
-            <Card className="border-0 shadow-lg bg-gradient-to-br from-primary via-secondary to-accent text-white overflow-hidden">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-6">
-                  Nossos Diferenciais
-                </h3>
-                <div className="space-y-4">
+            <Card className="border-0 shadow-lg bg-card overflow-hidden">
+              <div className="relative h-64">
+                <img 
+                  src={medicalTeam} 
+                  alt="Equipe médica especializada" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    Nossos Diferenciais
+                  </h3>
+                </div>
+              </div>
+              <CardContent className="p-6">
+                <div className="space-y-3">
                   {achievements.map((achievement, index) => (
                     <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-white/90 flex-shrink-0 mt-0.5" />
-                      <span className="text-white/90 leading-relaxed">{achievement}</span>
+                      <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
+                      <span className="text-muted-foreground text-sm leading-relaxed">{achievement}</span>
                     </div>
                   ))}
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-lg bg-card">
-              <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold text-foreground mb-4">
+            <Card className="border-0 shadow-lg bg-card overflow-hidden">
+              <div className="relative h-48">
+                <img 
+                  src={hospitalInterior} 
+                  alt="Interior do hospital" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/50 to-transparent" />
+              </div>
+              <CardContent className="p-6 text-center">
+                <h3 className="text-xl font-bold text-foreground mb-3">
                   Nosso Compromisso
                 </h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
                   Cada paciente é uma vida que merece respeito, agilidade e excelência no cuidado. 
                   Trabalhamos todos os dias para ser a referência em saúde da nossa região.
                 </p>
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg transition-all duration-300 font-semibold px-8"
+                  className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg transition-all duration-300 font-semibold px-6"
                 >
                   Agendar Consulta
                 </Button>
