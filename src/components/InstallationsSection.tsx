@@ -25,6 +25,12 @@ const InstallationsSection = () => {
       description: "Atendimento de urgência e emergência 24 horas",
       image: emergencyRoom,
       icon: Heart
+    },
+    {
+      title: "Ambiente Seguro e Confortável",
+      description: "Protocolos rigorosos de segurança e qualidade para garantir proteção total",
+      image: hospitalInterior,
+      icon: Shield
     }
   ];
 
@@ -78,20 +84,20 @@ const InstallationsSection = () => {
               <Card key={index} className="border-0 shadow-lg bg-card hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-0">
                   <div className="flex items-center">
-                    <div className="relative w-32 h-24 flex-shrink-0">
+                    <div className="relative w-40 h-32 flex-shrink-0">
                       <img 
                         src={installation.image} 
                         alt={installation.title}
                         className="w-full h-full object-cover rounded-l-lg"
                       />
                       <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent rounded-l-lg" />
-                      <installation.icon className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 text-white" />
+                      <installation.icon className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 text-white" />
                     </div>
-                    <div className="p-4 flex-1">
-                      <h4 className="font-semibold text-foreground mb-2">
+                    <div className="p-6 flex-1">
+                      <h4 className="text-lg font-semibold text-foreground mb-3">
                         {installation.title}
                       </h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-muted-foreground leading-relaxed">
                         {installation.description}
                       </p>
                     </div>
@@ -104,23 +110,12 @@ const InstallationsSection = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <Card className="border-0 shadow-lg bg-gradient-to-r from-primary/5 to-secondary/5 inline-block">
-            <CardContent className="p-6">
-              <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-foreground mb-2">
-                Ambiente Seguro e Confortável
-              </h3>
-              <p className="text-muted-foreground mb-4 text-sm">
-                Todas as nossas instalações seguem rigorosos protocolos de segurança e higiene.
-              </p>
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg transition-all duration-300"
-              >
-                Agendar Visita
-              </Button>
-            </CardContent>
-          </Card>
+          <Button 
+            size="lg" 
+            className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg transition-all duration-300 font-semibold px-8"
+          >
+            Agendar Visita às Instalações
+          </Button>
         </div>
       </div>
     </section>
