@@ -84,17 +84,11 @@ const AboutSection = () => {
                   <strong className="text-foreground"> Rede Hospitais São Vicente de Paulo</strong>, 
                   unindo tradição e inovação no cuidado à saúde.
                 </p>
-                <p className="text-muted-foreground leading-relaxed mb-8">
+                <p className="text-muted-foreground leading-relaxed">
                   Nossa missão é proporcionar cuidado integral e de qualidade, atendendo pacientes 
                   pelo SUS e particulares, sempre com foco na recuperação e bem-estar de cada pessoa 
                   que confia em nossos serviços.
                 </p>
-                <Button 
-                  size="lg" 
-                  className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg transition-all duration-300 font-semibold px-8"
-                >
-                  Conheça Nossa História
-                </Button>
               </CardContent>
             </Card>
           </div>
@@ -117,13 +111,13 @@ const AboutSection = () => {
             <Card className="border-0 shadow-lg overflow-hidden">
               <div className="relative h-48">
                 <img 
-                  src={hospitalInterior} 
-                  alt="Interior do hospital" 
+                  src="/lovable-uploads/e9093921-7fd2-4005-bab8-90e2789a9fb2.png" 
+                  alt="Fachada do Hospital Jaques Gonçalves Pereira" 
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent" />
                 <div className="absolute bottom-3 left-3 right-3">
-                  <p className="text-white text-sm font-medium">Estrutura Moderna</p>
+                  <p className="text-white text-sm font-medium">Fachada do Hospital</p>
                 </div>
               </div>
             </Card>
