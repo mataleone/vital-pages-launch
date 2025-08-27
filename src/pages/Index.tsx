@@ -3,6 +3,7 @@ import ModernHero from "@/components/ModernHero";
 import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
 import ProfessionalsSection from "@/components/ProfessionalsSection";
+import ElectiveSurgeriesSection from "@/components/ElectiveSurgeriesSection";
 import ContactSection from "@/components/ContactSection";
 import ModernFooter from "@/components/ModernFooter";
 
@@ -14,6 +15,7 @@ const Index = () => {
       <ServicesSection />
       <AboutSection />
       <ProfessionalsSection />
+      <ElectiveSurgeriesSection />
       <ContactSection />
       <ModernFooter />
     </div>
