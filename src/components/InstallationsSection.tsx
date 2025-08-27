@@ -55,8 +55,8 @@ const InstallationsSection = () => {
         <div className="grid lg:grid-cols-3 gap-8 items-start mb-10">
           {/* Video Section */}
           <div className="lg:col-span-1">
-            <Card className="border-0 shadow-lg bg-card overflow-hidden h-full">
-              <div className="relative h-96">
+            <Card className="border-0 shadow-lg bg-card overflow-hidden">
+              <div className="relative h-96 rounded-lg overflow-hidden">
                 <iframe 
                   src="https://www.youtube.com/embed/bX5x1sPxsII?autoplay=1&mute=1&loop=1&playlist=bX5x1sPxsII&controls=0&showinfo=0&rel=0&modestbranding=1"
                   className="w-full h-full rounded-lg"
@@ -66,14 +66,6 @@ const InstallationsSection = () => {
                   title="Tour Virtual - Hospital Jaques Gonçalves Pereira"
                 />
               </div>
-              <CardContent className="p-6 text-center">
-                <h3 className="text-xl font-semibold text-foreground mb-2">
-                  Tour Virtual
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  Conheça nossas instalações por dentro
-                </p>
-              </CardContent>
             </Card>
           </div>
 
