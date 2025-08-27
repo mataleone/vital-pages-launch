@@ -17,17 +17,18 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 218 25% 15%;
 
-    --primary: 83 51% 52%;
+    /* Updated colors - Hospital Jaques Gonçalves Pereira palette */
+    --primary: 83 51% 52%;        /* #8bc546 - Verde */
     --primary-foreground: 0 0% 100%;
     --primary-glow: 83 65% 70%;
 
-    --secondary: 174 99% 38%;
+    --secondary: 174 99% 38%;      /* #01c2b4 - Turquesa */
     --secondary-foreground: 0 0% 100%;
 
     --muted: 220 15% 94%;
     --muted-foreground: 218 15% 55%;
 
-    --accent: 60 100% 40%;
+    --accent: 60 100% 40%;         /* #cccc00 - Amarelo */
     --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
