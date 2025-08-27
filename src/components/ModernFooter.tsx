@@ -4,7 +4,7 @@ const ModernFooter = () => {
   return (
     <footer className="bg-gradient-to-br from-foreground via-gray-900 to-gray-800 text-white">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Hospital Info */}
           <div>
             <div className="flex items-center space-x-3 mb-6">
@@ -57,13 +57,17 @@ const ModernFooter = () => {
                 <div className="text-sm font-medium text-white mb-1">E-mail</div>
                 <div className="text-xs text-gray-300">recepcao.bo@redehsvp.com.br</div>
               </div>
-              
-              <div>
-                <div className="text-sm font-medium text-white mb-1">Endereço</div>
-                <div className="text-xs text-gray-300">Alameda Cruz F Souza, N°500, Alex Müller</div>
-                <div className="text-xs text-gray-300">Distrito de Cachoeira Escura</div>
-                <div className="text-xs text-gray-300">Belo Oriente - MG, 35195-000</div>
-              </div>
+            </div>
+          </div>
+
+          {/* Address */}
+          <div>
+            <h4 className="text-lg font-bold mb-6">Localização</h4>
+            <div className="space-y-2">
+              <div className="text-sm font-medium text-white mb-1">Endereço</div>
+              <div className="text-xs text-gray-300">Alameda Cruz F Souza, N°500, Alex Müller</div>
+              <div className="text-xs text-gray-300">Distrito de Cachoeira Escura</div>
+              <div className="text-xs text-gray-300">Belo Oriente - MG, 35195-000</div>
             </div>
           </div>
         </div>

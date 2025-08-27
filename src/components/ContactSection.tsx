@@ -207,38 +207,38 @@ const ContactSection = () => {
               </CardContent>
             </Card>
 
-            <div className="grid grid-cols-1 gap-4">
+            <div className="grid grid-cols-1 gap-6">
               {/* Quick Actions */}
               <Card className="border-0 shadow-lg bg-card">
-                <CardContent className="p-4">
-                  <h3 className="text-lg font-bold mb-4 text-foreground">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-6 text-foreground">
                     Ações Rápidas
                   </h3>
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     <Button 
-                      size="sm" 
-                      className="w-full justify-start text-sm"
+                      size="lg" 
+                      className="w-full justify-start"
                       variant="outline"
                     >
-                      <Calendar className="w-4 h-4 mr-2" />
+                      <Calendar className="w-5 h-5 mr-3" />
                       Agendar Consulta
                     </Button>
                     
                     <Button 
-                      size="sm" 
-                      className="w-full justify-start text-sm"
+                      size="lg" 
+                      className="w-full justify-start"
                       variant="outline"
                     >
-                      <MessageCircle className="w-4 h-4 mr-2" />
+                      <MessageCircle className="w-5 h-5 mr-3" />
                       Fale Conosco
                     </Button>
                     
                     <Button 
-                      size="sm" 
-                      className="w-full justify-start text-sm"
+                      size="lg" 
+                      className="w-full justify-start"
                       variant="outline"
                     >
-                      <Phone className="w-4 h-4 mr-2" />
+                      <Phone className="w-5 h-5 mr-3" />
                       Entrar em Contato
                     </Button>
                   </div>
@@ -247,20 +247,20 @@ const ContactSection = () => {
 
               {/* Social Media */}
               <Card className="border-0 shadow-lg bg-card">
-                <CardContent className="p-4">
-                  <div className="flex items-center space-x-2 mb-3">
-                    <div className="w-8 h-8 bg-gradient-to-br from-pink-500 to-purple-500 rounded-lg flex items-center justify-center">
-                      <Instagram className="w-4 h-4 text-white" />
+                <CardContent className="p-6">
+                  <div className="flex items-center space-x-3 mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-500 rounded-xl flex items-center justify-center">
+                      <Instagram className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-lg font-bold text-foreground">
+                    <h3 className="text-xl font-bold text-foreground">
                       Redes Sociais
                     </h3>
                   </div>
-                  <p className="text-muted-foreground mb-3 text-sm">
+                  <p className="text-muted-foreground mb-6">
                     Acompanhe nossas novidades no Instagram
                   </p>
                   {/* Instagram Feed Embed */}
-                  <div className="w-full h-64 rounded-lg overflow-hidden border">
+                  <div className="w-full h-80 rounded-lg overflow-hidden border">
                     <iframe
                       src="https://www.instagram.com/hospital.jaquesgoncalvesp/embed"
                       width="100%"
