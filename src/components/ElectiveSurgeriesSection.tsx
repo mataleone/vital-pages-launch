@@ -170,17 +170,17 @@ const ElectiveSurgeriesSection = () => {
 
         {/* Surgery Categories Tabs */}
         <Tabs defaultValue="cabeca-pescoco" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 lg:grid-cols-5 xl:grid-cols-9 mb-6">{/* Reduced from mb-8 */}
+          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-9 mb-6 h-auto p-1">{/* Improved mobile grid */}
             {surgeryCategories.map((category) => {
               const IconComponent = category.icon;
               return (
                 <TabsTrigger 
                   key={category.id} 
                   value={category.id}
-                  className="flex flex-col items-center gap-1 p-3 text-xs"
+                  className="flex flex-col items-center gap-1 p-2 sm:p-3 text-xs min-h-[60px] sm:min-h-[70px] data-[state=active]:bg-primary data-[state=active]:text-white"
                 >
-                  <IconComponent className="w-4 h-4" />
-                  <span className="hidden sm:inline">{category.name}</span>
+                  <IconComponent className="w-4 h-4 flex-shrink-0" />
+                  <span className="text-center leading-tight text-[10px] sm:text-xs">{category.name}</span>
                 </TabsTrigger>
               );
             })}
@@ -204,7 +204,7 @@ const ElectiveSurgeriesSection = () => {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                     {category.surgeries.map((surgery, index) => (
                       <div
                         key={index}
@@ -213,10 +213,10 @@ const ElectiveSurgeriesSection = () => {
                       >
                         <Badge 
                           variant="outline" 
-                          className="w-full justify-start p-3 text-sm border-muted hover:border-primary/50 hover:bg-primary/5 transition-smooth cursor-pointer"
+                          className="w-full justify-start p-3 sm:p-4 text-xs sm:text-sm border-muted hover:border-primary/50 hover:bg-primary/5 transition-smooth cursor-pointer min-h-[48px] items-start"
                         >
-                          <Scissors className="w-4 h-4 mr-2 text-primary" />
-                          <span className="text-left">{surgery}</span>
+                          <Scissors className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-left leading-tight break-words">{surgery}</span>
                         </Badge>
                       </div>
                     ))}
@@ -236,30 +236,30 @@ const ElectiveSurgeriesSection = () => {
         </Tabs>
 
         {/* Call to Action with Image */}
-        <div className="mt-10">
+        <div className="mt-8 sm:mt-10">
           <Card className="border-0 shadow-lg bg-card overflow-hidden">
             <div className="grid lg:grid-cols-2 gap-0">
-              <div className="p-8 lg:p-12 flex flex-col justify-center">
-                <h3 className="text-3xl font-bold text-foreground mb-4">
+              <div className="p-6 sm:p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
+                <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
                   Precisa de uma Cirurgia Eletiva?
                 </h3>
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
                   Nossa equipe está pronta para atendê-lo com segurança e qualidade. 
                   Atendemos pelo SUS, com credenciamentos municipais, e também oferecemos 
                   atendimentos particulares.
                 </p>
-                <p className="text-muted-foreground mb-8 leading-relaxed">
+                <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
                   Entre em contato para mais informações sobre procedimentos e agendamentos. 
                   Todas as cirurgias são realizadas por equipe médica especializada com equipamentos modernos.
                 </p>
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg transition-all duration-300 font-semibold px-12 py-4 h-14 text-lg w-fit"
+                  className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg transition-all duration-300 font-semibold px-6 sm:px-12 py-3 sm:py-4 h-12 sm:h-14 text-base sm:text-lg w-full sm:w-fit"
                 >
                   Agendamento
                 </Button>
               </div>
-              <div className="relative h-80 lg:h-auto">
+              <div className="relative h-64 sm:h-80 lg:h-auto order-1 lg:order-2">
                 <img 
                   src={surgeryRoom} 
                   alt="Centro cirúrgico preparado para cirurgia eletiva" 
@@ -267,12 +267,12 @@ const ElectiveSurgeriesSection = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-l from-primary/80 via-primary/50 to-primary/30" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center text-white px-6">
-                    <Scissors className="w-16 h-16 mx-auto mb-4 text-white" />
-                    <h4 className="text-xl font-bold mb-2">
+                  <div className="text-center text-white px-4 sm:px-6">
+                    <Scissors className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-white" />
+                    <h4 className="text-lg sm:text-xl font-bold mb-2">
                       Cirurgias com Excelência
                     </h4>
-                    <p className="text-white/90 text-sm max-w-xs">
+                    <p className="text-white/90 text-xs sm:text-sm max-w-xs mx-auto">
                       Tecnologia de ponta e equipe especializada para os melhores resultados
                     </p>
                   </div>
