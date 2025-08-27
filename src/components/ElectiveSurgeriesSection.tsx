@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { 
   Brain, 
   Heart, 
@@ -11,8 +12,11 @@ import {
   Ear, 
   Scissors, 
   Palette, 
-  Droplets 
+  Droplets,
+  Stethoscope,
+  CheckCircle
 } from "lucide-react";
+import surgeryRoom from "@/assets/surgery-room.jpg";
 
 const ElectiveSurgeriesSection = () => {
   const surgeryCategories = [
@@ -150,18 +154,18 @@ const ElectiveSurgeriesSection = () => {
     <section itemScope itemType="https://schema.org/MedicalClinic" className="py-12 bg-background">{/* Reduced from py-20 */}
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-8">{/* Reduced from mb-12 */}
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center space-x-2 bg-primary/10 rounded-full px-4 py-2 mb-4">
+            <Scissors className="h-5 w-5 text-primary" />
+            <span className="text-sm font-medium text-primary">Procedimentos Especializados</span>
+          </div>
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Cirurgias Eletivas
           </h2>
-          <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Oferecemos uma ampla gama de <strong>cirurgias eletivas</strong>, realizadas com excelência e cuidado, 
-              atendendo pacientes pelo <strong>SUS - Sistema Único de Saúde</strong>, por meio de credenciamentos 
-              com as prefeituras, onde as despesas médicas e materiais (OPME) são custeados pelo município de origem 
-              do paciente, além de atendimentos particulares.
-            </p>
-          </div>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Oferecemos uma ampla gama de cirurgias eletivas, realizadas com excelência e cuidado, 
+            atendendo pacientes pelo SUS e particulares.
+          </p>
         </div>
 
         {/* Surgery Categories Tabs */}
@@ -231,25 +235,51 @@ const ElectiveSurgeriesSection = () => {
           ))}
         </Tabs>
 
-        {/* Call to Action */}
-        <div className="text-center mt-8">{/* Reduced from mt-12 */}
-          <div className="bg-gradient-card p-6 rounded-xl shadow-card">{/* Reduced from p-8 */}
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Precisa de uma Cirurgia Eletiva?
-            </h3>
-            <p className="text-muted-foreground mb-4 max-w-2xl mx-auto">{/* Reduced from mb-6 */}
-              Nossa equipe está pronta para atendê-lo com segurança e qualidade. 
-              Entre em contato para mais informações sobre procedimentos e agendamentos.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-primary text-white px-8 py-3 rounded-lg font-semibold hover:shadow-glow transition-smooth">
-                Agendar Consulta
-              </button>
-              <button className="border border-primary text-primary px-8 py-3 rounded-lg font-semibold hover:bg-primary/5 transition-smooth">
-                Ver Convênios
-              </button>
+        {/* Call to Action with Image */}
+        <div className="mt-10">
+          <Card className="border-0 shadow-lg bg-card overflow-hidden">
+            <div className="grid lg:grid-cols-2 gap-0">
+              <div className="p-8 lg:p-12 flex flex-col justify-center">
+                <h3 className="text-3xl font-bold text-foreground mb-4">
+                  Precisa de uma Cirurgia Eletiva?
+                </h3>
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  Nossa equipe está pronta para atendê-lo com segurança e qualidade. 
+                  Atendemos pelo SUS, com credenciamentos municipais, e também oferecemos 
+                  atendimentos particulares.
+                </p>
+                <p className="text-muted-foreground mb-8 leading-relaxed">
+                  Entre em contato para mais informações sobre procedimentos e agendamentos. 
+                  Todas as cirurgias são realizadas por equipe médica especializada com equipamentos modernos.
+                </p>
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg transition-all duration-300 font-semibold px-8 w-fit"
+                >
+                  Agendamento
+                </Button>
+              </div>
+              <div className="relative h-80 lg:h-auto">
+                <img 
+                  src={surgeryRoom} 
+                  alt="Centro cirúrgico preparado para cirurgia eletiva" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-l from-primary/80 via-primary/50 to-primary/30" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center text-white px-6">
+                    <Scissors className="w-16 h-16 mx-auto mb-4 text-white" />
+                    <h4 className="text-xl font-bold mb-2">
+                      Cirurgias com Excelência
+                    </h4>
+                    <p className="text-white/90 text-sm max-w-xs">
+                      Tecnologia de ponta e equipe especializada para os melhores resultados
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
+          </Card>
         </div>
 
         {/* Structured Data for SEO */}
