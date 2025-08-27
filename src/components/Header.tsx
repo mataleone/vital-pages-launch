@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, MapPin, Calendar, Scissors } from "lucide-react";
@@ -18,7 +19,7 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ${
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled 
         ? 'bg-card/95 backdrop-blur-md shadow-soft' 
         : 'bg-transparent'
@@ -33,7 +34,7 @@ const Header = () => {
               className="h-10 w-auto"
             />
             <div className="flex flex-col">
-              <span className={`text-lg font-bold transition-colors duration-300 ${
+              <span className={`text-lg font-bold transition-colors duration-500 ${
                 isScrolled ? 'text-foreground' : 'text-white'
               }`}>Hospital Jaques Gonçalves Pereira</span>
             </div>
@@ -41,22 +42,22 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#home" className={`transition-smooth ${
+            <a href="#home" className={`transition-all duration-500 ${
               isScrolled ? 'text-foreground hover:text-primary' : 'text-white hover:text-white/80'
             }`}>
               Início
             </a>
-            <a href="#services" className={`transition-smooth ${
+            <a href="#services" className={`transition-all duration-500 ${
               isScrolled ? 'text-foreground hover:text-primary' : 'text-white hover:text-white/80'
             }`}>
               Serviços
             </a>
-            <a href="#about" className={`transition-smooth ${
+            <a href="#about" className={`transition-all duration-500 ${
               isScrolled ? 'text-foreground hover:text-primary' : 'text-white hover:text-white/80'
             }`}>
               Sobre Nós
             </a>
-            <a href="#contact" className={`transition-smooth ${
+            <a href="#contact" className={`transition-all duration-500 ${
               isScrolled ? 'text-foreground hover:text-primary' : 'text-white hover:text-white/80'
             }`}>
               Contato
@@ -65,7 +66,7 @@ const Header = () => {
 
           {/* Contact Info & Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <div className={`flex flex-col space-y-1 text-xs mr-4 transition-colors duration-300 ${
+            <div className={`flex flex-col space-y-1 text-xs mr-4 transition-colors duration-500 ${
               isScrolled ? 'text-muted-foreground' : 'text-white/80'
             }`}>
               <div className="flex items-center space-x-1">
@@ -82,14 +83,22 @@ const Header = () => {
             <Button 
               size="sm" 
               variant="outline" 
-              className="border-primary text-primary hover:bg-primary hover:text-white"
+              className={`transition-all duration-500 ${
+                isScrolled 
+                  ? 'border-primary text-primary hover:bg-primary hover:text-white' 
+                  : 'border-white/30 text-white hover:bg-white/10 backdrop-blur-sm'
+              }`}
             >
               <Calendar className="w-4 h-4 mr-1" />
               Consulta
             </Button>
             <Button 
               size="sm" 
-              className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg"
+              className={`transition-all duration-500 ${
+                isScrolled
+                  ? 'bg-gradient-to-r from-primary to-secondary hover:shadow-lg'
+                  : 'bg-white/20 backdrop-blur-sm text-white hover:bg-white/30'
+              }`}
             >
               <Scissors className="w-4 h-4 mr-1" />
               Cirurgia
@@ -99,7 +108,7 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             onClick={toggleMenu}
-            className={`md:hidden transition-colors duration-300 ${
+            className={`md:hidden transition-colors duration-500 ${
               isScrolled ? 'text-foreground hover:text-primary' : 'text-white hover:text-white/80'
             }`}
           >
@@ -109,43 +118,57 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
+          <div className={`md:hidden py-4 border-t transition-colors duration-300 ${
+            isScrolled ? 'border-border bg-card/95' : 'border-white/20 bg-black/20 backdrop-blur-md'
+          }`}>
           <nav className="flex flex-col space-y-4">
             <a 
               href="#home" 
-              className="text-foreground hover:text-primary transition-smooth px-2"
+              className={`transition-colors duration-300 px-2 ${
+                isScrolled ? 'text-foreground hover:text-primary' : 'text-white hover:text-white/80'
+              }`}
               onClick={toggleMenu}
             >
               Início
             </a>
             <a 
               href="#services" 
-              className="text-foreground hover:text-primary transition-smooth px-2"
+              className={`transition-colors duration-300 px-2 ${
+                isScrolled ? 'text-foreground hover:text-primary' : 'text-white hover:text-white/80'
+              }`}
               onClick={toggleMenu}
             >
               Serviços
             </a>
             <a 
               href="#about" 
-              className="text-foreground hover:text-primary transition-smooth px-2"
+              className={`transition-colors duration-300 px-2 ${
+                isScrolled ? 'text-foreground hover:text-primary' : 'text-white hover:text-white/80'
+              }`}
               onClick={toggleMenu}
             >
               Sobre Nós
             </a>
             <a 
               href="#contact" 
-              className="text-foreground hover:text-primary transition-smooth px-2"
+              className={`transition-colors duration-300 px-2 ${
+                isScrolled ? 'text-foreground hover:text-primary' : 'text-white hover:text-white/80'
+              }`}
               onClick={toggleMenu}
             >
               Contato
             </a>
               <div className="px-2 pt-4 space-y-3">
-                <div className="flex flex-col space-y-2 text-sm text-muted-foreground">
+                <div className={`flex flex-col space-y-2 text-sm transition-colors duration-300 ${
+                  isScrolled ? 'text-muted-foreground' : 'text-white/80'
+                }`}>
                   <div className="flex items-center space-x-1">
                     <Phone className="w-4 h-4" />
                     <span>(31) 2942-0534</span>
                   </div>
-                  <div className="flex items-center space-x-1 text-primary">
+                  <div className={`flex items-center space-x-1 ${
+                    isScrolled ? 'text-primary' : 'text-white'
+                  }`}>
                     <Phone className="w-4 h-4" />
                     <span>(31) 9999-8888 (WhatsApp)</span>
                   </div>
@@ -153,12 +176,20 @@ const Header = () => {
                 <div className="flex flex-col space-y-2">
                   <Button 
                     variant="outline" 
-                    className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                    className={`w-full transition-all duration-300 ${
+                      isScrolled 
+                        ? 'border-primary text-primary hover:bg-primary hover:text-white'
+                        : 'border-white/30 text-white hover:bg-white/10'
+                    }`}
                   >
                     <Calendar className="w-4 h-4 mr-2" />
                     Agendar Consulta
                   </Button>
-                  <Button className="w-full bg-gradient-to-r from-primary to-secondary">
+                  <Button className={`w-full transition-all duration-300 ${
+                    isScrolled
+                      ? 'bg-gradient-to-r from-primary to-secondary'
+                      : 'bg-white/20 text-white hover:bg-white/30'
+                  }`}>
                     <Scissors className="w-4 h-4 mr-2" />
                     Agendar Cirurgia
                   </Button>
