@@ -50,121 +50,142 @@ const ValuesSection = () => {
           </p>
         </div>
 
-        {/* Nossos Valores */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-foreground mb-4">
-              Nossos Valores
-            </h3>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Os pilares fundamentais que orientam nossa missão no cuidado à saúde.
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-3 gap-8">
-            {values.map((value, index) => (
-              <Card key={index} className="border-0 shadow-lg bg-card hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-8 text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-3xl flex items-center justify-center mx-auto mb-6">
-                    <value.icon className="w-10 h-10 text-white" />
+        <div className="space-y-16">
+          {/* Nossos Valores */}
+          <div>
+            <Card className="border-0 shadow-lg bg-card overflow-hidden">
+              <div className="grid lg:grid-cols-2 gap-0">
+                <div className="relative h-80 lg:h-auto">
+                  <img 
+                    src={medicalTeam} 
+                    alt="Nossos valores em ação" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/50" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center text-white px-6">
+                      <Heart className="w-16 h-16 mx-auto mb-4 text-white" />
+                      <h3 className="text-3xl font-bold mb-3">
+                        Nossos Valores
+                      </h3>
+                      <p className="text-white/90 leading-relaxed">
+                        Os pilares fundamentais que orientam nossa missão no cuidado à saúde
+                      </p>
+                    </div>
                   </div>
-                  <h4 className="text-xl font-bold text-foreground mb-4">
-                    {value.title}
-                  </h4>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {value.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+                </div>
+                <div className="p-8 lg:p-12">
+                  <div className="space-y-6">
+                    {values.map((value, index) => (
+                      <div key={index} className="flex items-start space-x-4">
+                        <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center flex-shrink-0">
+                          <value.icon className="w-6 h-6 text-white" />
+                        </div>
+                        <div>
+                          <h4 className="text-lg font-bold text-foreground mb-2">
+                            {value.title}
+                          </h4>
+                          <p className="text-muted-foreground leading-relaxed">
+                            {value.description}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </Card>
           </div>
-        </div>
 
-        {/* Nosso Compromisso */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-foreground mb-4">
-              Nosso Compromisso
-            </h3>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              A dedicação que nos move todos os dias em busca da excelência.
-            </p>
-          </div>
-
-          <Card className="border-0 shadow-lg bg-card overflow-hidden max-w-5xl mx-auto">
-            <div className="relative h-80">
-              <img 
-                src={hospitalInterior} 
-                alt="Interior do hospital" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/60 to-secondary/30" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center text-white max-w-4xl px-6">
-                  <h4 className="text-2xl font-bold mb-4">
-                    Cada Vida Importa
-                  </h4>
-                  <p className="text-white/90 text-lg leading-relaxed mb-6">
+          {/* Nosso Compromisso */}
+          <div>
+            <Card className="border-0 shadow-lg bg-card overflow-hidden">
+              <div className="grid lg:grid-cols-2 gap-0">
+                <div className="p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
+                  <div className="flex items-center space-x-3 mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-br from-secondary to-primary rounded-xl flex items-center justify-center">
+                      <Shield className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-3xl font-bold text-foreground">
+                      Nosso Compromisso
+                    </h3>
+                  </div>
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                     Cada paciente é uma vida que merece respeito, agilidade e excelência no cuidado. 
                     Trabalhamos todos os dias para ser a referência em saúde da nossa região, 
                     unindo tradição, tecnologia e humanização no atendimento.
                   </p>
+                  <p className="text-muted-foreground leading-relaxed mb-8">
+                    Nossa dedicação vai além do tratamento médico: cuidamos de pessoas, 
+                    oferecendo suporte emocional e garantindo que cada paciente se sinta acolhido 
+                    e seguro durante todo o processo de cuidado.
+                  </p>
                   <Button 
                     size="lg" 
-                    className="bg-white text-secondary hover:bg-white/90 transition-all duration-300 font-semibold px-8"
+                    className="bg-gradient-to-r from-secondary to-primary hover:shadow-lg transition-all duration-300 font-semibold px-8 w-fit"
                   >
                     Agendar Consulta
                   </Button>
                 </div>
-              </div>
-            </div>
-          </Card>
-        </div>
-
-        {/* Nossos Diferenciais */}
-        <div>
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-foreground mb-4">
-              Nossos Diferenciais
-            </h3>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              O que nos torna únicos e referência no cuidado à saúde.
-            </p>
-          </div>
-
-          <Card className="border-0 shadow-lg bg-card overflow-hidden">
-            <div className="grid lg:grid-cols-2">
-              <div className="relative h-96 lg:h-auto">
-                <img 
-                  src={medicalTeam} 
-                  alt="Equipe médica especializada" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/50" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center text-white px-6">
-                    <h4 className="text-2xl font-bold mb-3">
-                      Nossa Excelência
-                    </h4>
-                    <p className="text-white/90 leading-relaxed max-w-sm">
-                      Comprometidos com a qualidade e inovação no cuidado à saúde, 
-                      oferecendo o que há de mais moderno e eficaz.
-                    </p>
+                <div className="relative h-80 lg:h-auto order-1 lg:order-2">
+                  <img 
+                    src={hospitalInterior} 
+                    alt="Nosso compromisso com o cuidado" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-l from-secondary/90 via-secondary/60 to-secondary/30" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center text-white px-6">
+                      <Shield className="w-16 h-16 mx-auto mb-4 text-white" />
+                      <h4 className="text-xl font-bold mb-2">
+                        Cada Vida Importa
+                      </h4>
+                      <p className="text-white/90 text-sm">
+                        Dedicação total ao cuidado humanizado
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-              <CardContent className="p-10 flex flex-col justify-center">
-                <div className="space-y-5">
-                  {achievements.map((achievement, index) => (
-                    <div key={index} className="flex items-start space-x-4">
-                      <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground leading-relaxed text-lg">{achievement}</span>
+            </Card>
+          </div>
+
+          {/* Nossos Diferenciais */}
+          <div>
+            <Card className="border-0 shadow-lg bg-card overflow-hidden">
+              <div className="grid lg:grid-cols-2 gap-0">
+                <div className="relative h-80 lg:h-auto">
+                  <img 
+                    src="/lovable-uploads/e9093921-7fd2-4005-bab8-90e2789a9fb2.png" 
+                    alt="Nossos diferenciais e estrutura" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/50" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center text-white px-6">
+                      <Target className="w-16 h-16 mx-auto mb-4 text-white" />
+                      <h3 className="text-3xl font-bold mb-3">
+                        Nossos Diferenciais
+                      </h3>
+                      <p className="text-white/90 leading-relaxed">
+                        O que nos torna únicos e referência no cuidado à saúde
+                      </p>
                     </div>
-                  ))}
+                  </div>
                 </div>
-              </CardContent>
-            </div>
-          </Card>
+                <div className="p-8 lg:p-12 flex flex-col justify-center">
+                  <div className="space-y-5">
+                    {achievements.map((achievement, index) => (
+                      <div key={index} className="flex items-start space-x-4">
+                        <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground leading-relaxed text-lg">{achievement}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
         </div>
       </div>
     </section>
