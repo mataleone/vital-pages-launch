@@ -52,43 +52,51 @@ const InstallationsSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start mb-10">
+        <div className="grid lg:grid-cols-3 gap-8 items-start mb-10">
           {/* Video Section */}
-          <div>
-            <Card className="border-0 shadow-lg bg-card overflow-hidden">
-              <div className="relative aspect-[9/16] bg-black">
+          <div className="lg:col-span-1">
+            <Card className="border-0 shadow-lg bg-card overflow-hidden h-full">
+              <div className="relative h-96">
                 <iframe 
                   src="https://www.youtube.com/embed/bX5x1sPxsII?autoplay=1&mute=1&loop=1&playlist=bX5x1sPxsII&controls=0&showinfo=0&rel=0&modestbranding=1"
-                  className="w-full h-full"
+                  className="w-full h-full rounded-lg"
                   frameBorder="0"
                   allow="autoplay; encrypted-media"
                   allowFullScreen
                   title="Tour Virtual - Hospital Jaques Gonçalves Pereira"
                 />
               </div>
+              <CardContent className="p-6 text-center">
+                <h3 className="text-xl font-semibold text-foreground mb-2">
+                  Tour Virtual
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  Conheça nossas instalações por dentro
+                </p>
+              </CardContent>
             </Card>
           </div>
 
           {/* Installations Grid */}
-          <div className="grid gap-6">
+          <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
             {installations.map((installation, index) => (
-              <Card key={index} className="border-0 shadow-lg bg-card hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-0">
-                  <div className="flex items-center">
-                    <div className="relative w-40 h-32 flex-shrink-0">
+              <Card key={index} className="border-0 shadow-lg bg-card hover:shadow-xl transition-all duration-300 h-full">
+                <CardContent className="p-0 h-full">
+                  <div className="flex flex-col h-full">
+                    <div className="relative h-32 flex-shrink-0">
                       <img 
                         src={installation.image} 
                         alt={installation.title}
-                        className="w-full h-full object-cover rounded-l-lg"
+                        className="w-full h-full object-cover rounded-t-lg"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent rounded-l-lg" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent rounded-t-lg" />
                       <installation.icon className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 text-white" />
                     </div>
-                    <div className="p-6 flex-1">
-                      <h4 className="text-lg font-semibold text-foreground mb-3">
+                    <div className="p-4 flex-1 flex flex-col justify-center">
+                      <h4 className="text-lg font-semibold text-foreground mb-2">
                         {installation.title}
                       </h4>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <p className="text-sm text-muted-foreground leading-relaxed">
                         {installation.description}
                       </p>
                     </div>
