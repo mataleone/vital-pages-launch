@@ -137,7 +137,7 @@ const ContactSection = () => {
                   </div>
                   
                   {/* Embedded Map */}
-                  <div className="aspect-video w-full rounded-lg overflow-hidden border">
+                  <div className="aspect-video w-full rounded-lg overflow-hidden border mb-4">
                     <iframe
                       src="https://maps.google.com/maps?q=Alameda+Cruz+F+Souza,+N°500,+Alex+Müller+-+Distrito+de+Cachoeira+Escura,+Belo+Oriente+-+MG&t=&z=15&ie=UTF8&iwloc=&output=embed"
                       width="100%"
@@ -150,15 +150,17 @@ const ContactSection = () => {
                     />
                   </div>
                   
-                  <Button 
-                    variant="outline" 
-                    size="lg"
-                    className="w-full hover:bg-primary hover:text-white transition-colors"
-                    onClick={() => window.open('https://maps.app.goo.gl/AVeuduYcfWFGbXsE9', '_blank')}
-                  >
-                    <Navigation className="w-5 h-5 mr-3" />
-                    Ver no Google Maps
-                  </Button>
+                  <div className="space-y-4">
+                    <Button 
+                      variant="outline" 
+                      size="lg"
+                      className="w-full hover:bg-primary hover:text-white transition-colors"
+                      onClick={() => window.open('https://maps.app.goo.gl/AVeuduYcfWFGbXsE9', '_blank')}
+                    >
+                      <Navigation className="w-5 h-5 mr-3" />
+                      Ver no Google Maps
+                    </Button>
+                  </div>
                 </div>
               </CardContent>
             </Card>
