@@ -33,34 +33,48 @@ const Header = () => {
               className="h-10 w-auto"
             />
             <div className="flex flex-col">
-              <span className="text-lg font-bold text-foreground">Hospital Jaques Gonçalves Pereira</span>
+              <span className={`text-lg font-bold transition-colors duration-300 ${
+                isScrolled ? 'text-foreground' : 'text-white'
+              }`}>Hospital Jaques Gonçalves Pereira</span>
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-foreground hover:text-primary transition-smooth">
+            <a href="#home" className={`transition-smooth ${
+              isScrolled ? 'text-foreground hover:text-primary' : 'text-white hover:text-white/80'
+            }`}>
               Início
             </a>
-            <a href="#services" className="text-foreground hover:text-primary transition-smooth">
+            <a href="#services" className={`transition-smooth ${
+              isScrolled ? 'text-foreground hover:text-primary' : 'text-white hover:text-white/80'
+            }`}>
               Serviços
             </a>
-            <a href="#about" className="text-foreground hover:text-primary transition-smooth">
+            <a href="#about" className={`transition-smooth ${
+              isScrolled ? 'text-foreground hover:text-primary' : 'text-white hover:text-white/80'
+            }`}>
               Sobre Nós
             </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-smooth">
+            <a href="#contact" className={`transition-smooth ${
+              isScrolled ? 'text-foreground hover:text-primary' : 'text-white hover:text-white/80'
+            }`}>
               Contato
             </a>
           </nav>
 
           {/* Contact Info & Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <div className="flex flex-col space-y-1 text-xs text-muted-foreground mr-4">
+            <div className={`flex flex-col space-y-1 text-xs mr-4 transition-colors duration-300 ${
+              isScrolled ? 'text-muted-foreground' : 'text-white/80'
+            }`}>
               <div className="flex items-center space-x-1">
                 <Phone className="w-3 h-3" />
                 <span>(31) 2942-0534</span>
               </div>
-              <div className="flex items-center space-x-1 text-primary">
+              <div className={`flex items-center space-x-1 ${
+                isScrolled ? 'text-primary' : 'text-white'
+              }`}>
                 <Phone className="w-3 h-3" />
                 <span>(31) 9999-8888</span>
               </div>
@@ -85,7 +99,9 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden text-foreground hover:text-primary"
+            className={`md:hidden transition-colors duration-300 ${
+              isScrolled ? 'text-foreground hover:text-primary' : 'text-white hover:text-white/80'
+            }`}
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
