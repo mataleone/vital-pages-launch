@@ -57,7 +57,7 @@ const InstallationsSection = () => {
           <div className="lg:col-span-1 flex">
             <div className="relative w-full h-[520px] rounded-lg overflow-hidden shadow-lg">
               <iframe 
-                src="https://www.youtube.com/embed/bX5x1sPxsII?autoplay=1&mute=1&loop=1&playlist=bX5x1sPxsII&controls=0&showinfo=0&rel=0&modestbranding=1"
+                src="https://www.youtube.com/embed/bX5x1sPxsII?autoplay=1&mute=1&loop=1&playlist=bX5x1sPxsII&controls=0&showinfo=0&rel=0&modestbranding=1&disablekb=1&fs=0&iv_load_policy=3"
                 className="absolute inset-0 w-full h-full rounded-lg"
                 frameBorder="0"
                 allow="autoplay; encrypted-media"
