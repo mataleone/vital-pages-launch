@@ -115,8 +115,8 @@ const ContactSection = () => {
             </Card>
 
             {/* Location */}
-            <Card className="border-0 shadow-lg bg-card h-[500px]">
-              <CardContent className="p-6 h-full flex flex-col">
+            <Card className="border-0 shadow-lg bg-card">
+              <CardContent className="p-6">
                 <div className="flex items-center space-x-3 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-secondary to-accent rounded-xl flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-white" />
@@ -125,8 +125,8 @@ const ContactSection = () => {
                     Localização
                   </h3>
                 </div>
-                <div className="flex-1 flex flex-col">
-                  <div className="space-y-2 mb-4">
+                <div className="space-y-4">
+                  <div className="space-y-2">
                     <p className="text-sm font-medium text-foreground">Alameda Cruz F Souza, N°500, Alex Müller</p>
                     <p className="text-sm text-muted-foreground">
                       Distrito de Cachoeira Escura
@@ -137,7 +137,7 @@ const ContactSection = () => {
                   </div>
                   
                   {/* Embedded Map */}
-                  <div className="w-full h-48 rounded-lg overflow-hidden border mb-4 flex-1">
+                  <div className="w-full h-64 rounded-lg overflow-hidden border mb-4">
                     <iframe
                       src="https://maps.google.com/maps?q=Alameda+Cruz+F+Souza,+N°500,+Alex+Müller+-+Distrito+de+Cachoeira+Escura,+Belo+Oriente+-+MG&t=&z=15&ie=UTF8&iwloc=&output=embed"
                       width="100%"
@@ -150,7 +150,7 @@ const ContactSection = () => {
                     />
                   </div>
                   
-                  <div className="mt-auto">
+                  <div className="space-y-4">
                     <Button 
                       variant="outline" 
                       size="lg"
@@ -201,8 +201,8 @@ const ContactSection = () => {
             </Card>
 
             {/* Social Media */}
-            <Card className="border-0 shadow-lg bg-card h-[500px]">
-              <CardContent className="p-6 h-full flex flex-col">
+            <Card className="border-0 shadow-lg bg-card">
+              <CardContent className="p-6">
                 <div className="flex items-center space-x-3 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-500 rounded-xl flex items-center justify-center">
                     <Instagram className="w-6 h-6 text-white" />
@@ -211,12 +211,12 @@ const ContactSection = () => {
                     Redes Sociais
                   </h3>
                 </div>
-                <div className="flex-1 flex flex-col">
+                <div className="space-y-4">
                   <p className="text-muted-foreground mb-4">
                     Acompanhe nossas novidades no Instagram
                   </p>
                   {/* Instagram Feed Embed */}
-                  <div className="w-full rounded-lg overflow-hidden border mb-4 flex-1">
+                  <div className="w-full h-64 rounded-lg overflow-hidden border mb-4">
                     <iframe
                       src="https://www.instagram.com/hospital.jaquesgoncalvesp/embed"
                       width="100%"
@@ -229,7 +229,7 @@ const ContactSection = () => {
                     />
                   </div>
                   
-                  <div className="mt-auto">
+                  <div className="space-y-4">
                     <Button 
                       variant="outline" 
                       size="lg"
