@@ -150,22 +150,27 @@ const ContactSection = () => {
                     />
                   </div>
                   
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-3">
                     <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                       <Car className="w-4 h-4 text-primary" />
-                      <span>Estacionamento gratuito</span>
+                      <span>Estacionamento gratuito disponível</span>
                     </div>
                     <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                       <Bus className="w-4 h-4 text-primary" />
                       <span>Acesso por transporte público</span>
                     </div>
+                    <div className="text-sm text-muted-foreground border-t pt-3">
+                      <strong>Referências:</strong> Próximo ao centro da cidade, de fácil acesso por rodovias principais.
+                    </div>
                   </div>
+                  
                   <Button 
                     variant="outline" 
+                    size="lg"
                     className="w-full hover:bg-primary hover:text-white transition-colors"
                     onClick={() => window.open('https://maps.app.goo.gl/AVeuduYcfWFGbXsE9', '_blank')}
                   >
-                    <Navigation className="w-4 h-4 mr-2" />
+                    <Navigation className="w-5 h-5 mr-3" />
                     Ver no Google Maps
                   </Button>
                 </div>
