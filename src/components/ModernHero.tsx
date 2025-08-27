@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, MapPin, Clock, Users } from "lucide-react";
-import hospitalExterior from "@/assets/hospital-exterior.jpg";
 
 const ModernHero = () => {
   return (
@@ -8,8 +7,8 @@ const ModernHero = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img 
-          src={hospitalExterior} 
-          alt="Hospital Jaques Gonçalves Pereira - Exterior" 
+          src="/lovable-uploads/a9e4cc63-eef5-4308-9bce-542fdb14620d.png" 
+          alt="Hospital Jaques Gonçalves Pereira - Fachada Real" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-secondary/85 to-accent/80" />
@@ -55,7 +54,7 @@ const ModernHero = () => {
                 size="lg" 
                 className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4"
               >
-                Agendar Consulta
+                Agendar Cirurgia
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               
@@ -65,7 +64,7 @@ const ModernHero = () => {
                 className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm font-semibold px-8 py-4"
               >
                 <Phone className="mr-2 w-5 h-5" />
-                Emergência 24h
+                Agendar Consulta
               </Button>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, MapPin } from "lucide-react";
+import { Menu, X, Phone, MapPin, Calendar, Scissors } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +19,6 @@ const Header = () => {
               className="h-10 w-auto"
             />
             <div className="flex flex-col">
-              <span className="text-sm font-semibold text-muted-foreground">Rede HSVP</span>
               <span className="text-lg font-bold text-foreground">Hospital Jaques Gonçalves Pereira</span>
             </div>
           </div>
@@ -40,14 +39,32 @@ const Header = () => {
             </a>
           </nav>
 
-          {/* Contact Info */}
+          {/* Contact Info & Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <div className="flex items-center space-x-1 text-sm text-muted-foreground">
-              <Phone className="w-4 h-4" />
-              <span>(11) 3456-7890</span>
+            <div className="flex flex-col space-y-1 text-xs text-muted-foreground mr-4">
+              <div className="flex items-center space-x-1">
+                <Phone className="w-3 h-3" />
+                <span>(31) 2942-0534</span>
+              </div>
+              <div className="flex items-center space-x-1 text-primary">
+                <Phone className="w-3 h-3" />
+                <span>(31) 9999-8888</span>
+              </div>
             </div>
-            <Button className="bg-gradient-primary hover:shadow-glow transition-smooth">
-              Agendar Consulta
+            <Button 
+              size="sm" 
+              variant="outline" 
+              className="border-primary text-primary hover:bg-primary hover:text-white"
+            >
+              <Calendar className="w-4 h-4 mr-1" />
+              Consulta
+            </Button>
+            <Button 
+              size="sm" 
+              className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg"
+            >
+              <Scissors className="w-4 h-4 mr-1" />
+              Cirurgia
             </Button>
           </div>
 
@@ -92,14 +109,30 @@ const Header = () => {
             >
               Contato
             </a>
-              <div className="px-2 pt-4 space-y-2">
-                <div className="flex items-center space-x-1 text-sm text-muted-foreground">
-                  <Phone className="w-4 h-4" />
-                  <span>(11) 3456-7890</span>
+              <div className="px-2 pt-4 space-y-3">
+                <div className="flex flex-col space-y-2 text-sm text-muted-foreground">
+                  <div className="flex items-center space-x-1">
+                    <Phone className="w-4 h-4" />
+                    <span>(31) 2942-0534</span>
+                  </div>
+                  <div className="flex items-center space-x-1 text-primary">
+                    <Phone className="w-4 h-4" />
+                    <span>(31) 9999-8888 (WhatsApp)</span>
+                  </div>
                 </div>
-                <Button className="w-full bg-gradient-primary">
-                  Agendar Consulta
-                </Button>
+                <div className="flex flex-col space-y-2">
+                  <Button 
+                    variant="outline" 
+                    className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                  >
+                    <Calendar className="w-4 h-4 mr-2" />
+                    Agendar Consulta
+                  </Button>
+                  <Button className="w-full bg-gradient-to-r from-primary to-secondary">
+                    <Scissors className="w-4 h-4 mr-2" />
+                    Agendar Cirurgia
+                  </Button>
+                </div>
               </div>
             </nav>
           </div>
