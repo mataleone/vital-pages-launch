@@ -190,76 +190,91 @@ const ContactSection = () => {
                   Em caso de emergência, procure nosso Pronto Atendimento. 
                   Contamos com 8 leitos de observação e equipe especializada disponível 24 horas.
                 </p>
-                <div className="space-y-2 mb-4">
-                  <div className="text-sm">• Atendimento imediato</div>
-                  <div className="text-sm">• Leitos masculino, feminino e pediátrico</div>
-                  <div className="text-sm">• Equipe médica de plantão</div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Quick Actions */}
-            <Card className="border-0 shadow-lg bg-gradient-to-br from-primary via-secondary to-accent text-white h-fit">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-6">
-                  Ações Rápidas
-                </h3>
-                <div className="space-y-4">
-                  <Button 
-                    size="lg" 
-                    className="w-full bg-white/20 hover:bg-white/30 backdrop-blur-sm border-white/30 text-white justify-start"
-                    variant="outline"
-                  >
-                    <Calendar className="w-5 h-5 mr-3" />
-                    Agendar Consulta
-                  </Button>
-                  
-                  <Button 
-                    size="lg" 
-                    className="w-full bg-white/20 hover:bg-white/30 backdrop-blur-sm border-white/30 text-white justify-start"
-                    variant="outline"
-                  >
-                    <MessageCircle className="w-5 h-5 mr-3" />
-                    Fale Conosco
-                  </Button>
-                  
-                  <Button 
-                    size="lg" 
-                    className="w-full bg-white/20 hover:bg-white/30 backdrop-blur-sm border-white/30 text-white justify-start"
-                    variant="outline"
-                  >
-                    <Phone className="w-5 h-5 mr-3" />
-                    Entrar em Contato
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Social Media */}
-            <Card className="border-0 shadow-lg bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 text-white h-fit">
-              <CardContent className="p-6">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                    <Instagram className="w-6 h-6" />
+                <div className="space-y-3 mb-4">
+                  <div className="flex justify-between items-center py-2 border-b border-white/20">
+                    <span className="text-sm font-medium">Atendimento</span>
+                    <span className="text-sm text-white/90">24 horas</span>
                   </div>
-                  <h3 className="text-xl font-bold">
-                    Redes Sociais
-                  </h3>
+                  <div className="flex justify-between items-center py-2 border-b border-white/20">
+                    <span className="text-sm font-medium">Leitos Disponíveis</span>
+                    <span className="text-sm text-white/90">8 leitos</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-white/20">
+                    <span className="text-sm font-medium">Especialidades</span>
+                    <span className="text-sm text-white/90">Urgência</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2">
+                    <span className="text-sm font-medium">Observação</span>
+                    <span className="text-sm text-white/90">Masc/Fem/Ped</span>
+                  </div>
                 </div>
-                <p className="text-white/90 mb-4">
-                  Acompanhe nossas novidades, dicas de saúde e eventos especiais através das nossas redes sociais.
-                </p>
-                <Button 
-                  size="lg" 
-                  className="w-full bg-white/20 hover:bg-white/30 backdrop-blur-sm border-white/30 text-white justify-start"
-                  variant="outline"
-                  onClick={() => window.open('https://www.instagram.com/hospital.jaquesgoncalvesp/', '_blank')}
-                >
-                  <Instagram className="w-5 h-5 mr-3" />
-                  Seguir no Instagram
-                </Button>
               </CardContent>
             </Card>
+
+            <div className="grid grid-cols-1 gap-4">
+              {/* Quick Actions */}
+              <Card className="border-0 shadow-lg bg-gradient-to-br from-primary via-secondary to-accent text-white">
+                <CardContent className="p-4">
+                  <h3 className="text-lg font-bold mb-4">
+                    Ações Rápidas
+                  </h3>
+                  <div className="space-y-3">
+                    <Button 
+                      size="sm" 
+                      className="w-full bg-white/20 hover:bg-white/30 backdrop-blur-sm border-white/30 text-white justify-start text-sm"
+                      variant="outline"
+                    >
+                      <Calendar className="w-4 h-4 mr-2" />
+                      Agendar Consulta
+                    </Button>
+                    
+                    <Button 
+                      size="sm" 
+                      className="w-full bg-white/20 hover:bg-white/30 backdrop-blur-sm border-white/30 text-white justify-start text-sm"
+                      variant="outline"
+                    >
+                      <MessageCircle className="w-4 h-4 mr-2" />
+                      Fale Conosco
+                    </Button>
+                    
+                    <Button 
+                      size="sm" 
+                      className="w-full bg-white/20 hover:bg-white/30 backdrop-blur-sm border-white/30 text-white justify-start text-sm"
+                      variant="outline"
+                    >
+                      <Phone className="w-4 h-4 mr-2" />
+                      Entrar em Contato
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Social Media */}
+              <Card className="border-0 shadow-lg bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 text-white">
+                <CardContent className="p-4">
+                  <div className="flex items-center space-x-2 mb-3">
+                    <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                      <Instagram className="w-4 h-4" />
+                    </div>
+                    <h3 className="text-lg font-bold">
+                      Redes Sociais
+                    </h3>
+                  </div>
+                  <p className="text-white/90 mb-3 text-sm">
+                    Acompanhe novidades e dicas de saúde.
+                  </p>
+                  <Button 
+                    size="sm" 
+                    className="w-full bg-white/20 hover:bg-white/30 backdrop-blur-sm border-white/30 text-white justify-start text-sm"
+                    variant="outline"
+                    onClick={() => window.open('https://www.instagram.com/hospital.jaquesgoncalvesp/', '_blank')}
+                  >
+                    <Instagram className="w-4 h-4 mr-2" />
+                    Seguir no Instagram
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </div>
