@@ -8,7 +8,8 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 18% 97%;
+    /* Updated Hospital Jaques Gonçalves Pereira palette */
+    --background: 60 4% 89%;         /* #e4e4e2 - Fundo */
     --foreground: 218 25% 15%;
 
     --card: 0 0% 100%;
@@ -17,41 +18,44 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 218 25% 15%;
 
-    /* Updated colors - Hospital Jaques Gonçalves Pereira palette */
-    --primary: 83 51% 52%;        /* #8bc546 - Verde */
+    --primary: 83 50% 54%;           /* #8fc64f - Verde primário */
     --primary-foreground: 0 0% 100%;
     --primary-glow: 83 65% 70%;
 
-    --secondary: 174 99% 38%;      /* #01c2b4 - Turquesa */
+    --secondary: 174 100% 38%;       /* #00c3b5 - Turquesa */
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 15% 94%;
+    --muted: 60 8% 92%;
     --muted-foreground: 218 15% 55%;
 
-    --accent: 60 100% 40%;         /* #cccc00 - Amarelo */
-    --accent-foreground: 0 0% 0%;
+    --accent: 80 38% 49%;            /* #8fab4c - Verde de destaque */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 210 100% 48%;
+    --border: 60 8% 85%;
+    --input: 60 8% 85%;
+    --ring: 83 50% 54%;
 
-    /* Medical gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(83 51% 52%), hsl(83 65% 70%));
-    --gradient-secondary: linear-gradient(135deg, hsl(174 99% 38%), hsl(174 85% 55%));
-    --gradient-hero: linear-gradient(135deg, hsl(83 51% 52% / 0.9), hsl(174 99% 38% / 0.9));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 18% 97%));
+    /* Enhanced medical gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(83 50% 54%), hsl(83 65% 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(174 100% 38%), hsl(174 85% 55%));
+    --gradient-accent: linear-gradient(135deg, hsl(80 38% 49%), hsl(80 50% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(83 50% 54% / 0.9), hsl(174 100% 38% / 0.9));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(60 4% 89%));
+    --gradient-subtle: linear-gradient(180deg, hsl(60 4% 89%), hsl(60 8% 92%));
     
-    /* Medical shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(83 51% 52% / 0.15);
-    --shadow-card: 0 8px 30px -8px hsl(218 25% 15% / 0.1);
+    /* Enhanced medical shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(83 50% 54% / 0.15);
+    --shadow-card: 0 8px 30px -8px hsl(218 25% 15% / 0.08);
     --shadow-glow: 0 0 40px hsl(83 65% 70% / 0.3);
+    --shadow-accent: 0 4px 15px -2px hsl(80 38% 49% / 0.2);
     
-    /* Transitions */
+    /* Enhanced transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-spring: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 
