@@ -7,15 +7,20 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Hospital Info */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">+</span>
+            <div className="flex items-center space-x-3 mb-4">
+              <img 
+                src="/lovable-uploads/00897a29-1dbc-47fd-ad4c-da44171b9c7e.png" 
+                alt="Hospital Jaques Gonçalves Pereira" 
+                className="h-8 w-auto"
+              />
+              <div className="flex flex-col">
+                <span className="text-sm text-gray-400">Rede HSVP</span>
+                <span className="text-lg font-bold">Hospital Jaques Gonçalves Pereira</span>
               </div>
-              <span className="text-xl font-bold">Hospital Jaques Gonçalves Pereira</span>
             </div>
             <p className="text-gray-300 mb-4 leading-relaxed">
-              Hospital com assistência médica 24 horas, equipe especializada 
-              e 50 leitos de internação para cuidar da sua saúde.
+              Referência em atendimento médico com excelência, tecnologia e humanização. 
+              50 leitos, pronto atendimento 24h e equipe multiprofissional.
             </p>
             <div className="flex space-x-4">
               <a 
@@ -56,11 +61,6 @@ const Footer = () => {
               <li>
                 <a href="#about" className="text-gray-300 hover:text-white transition-smooth">
                   Sobre Nós
-                </a>
-              </li>
-              <li>
-                <a href="#team" className="text-gray-300 hover:text-white transition-smooth">
-                  Equipe Médica
                 </a>
               </li>
               <li>
@@ -141,7 +141,7 @@ const Footer = () => {
         <div className="border-t border-gray-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2024 Hospital Jaques Gonçalves Pereira. Todos os direitos reservados.
+              © 2024 Rede HSVP - Hospital Jaques Gonçalves Pereira. Todos os direitos reservados.
             </div>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-gray-400 hover:text-white transition-smooth">

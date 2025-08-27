@@ -1,124 +1,94 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Clock, Heart, Award, Users, MapPin } from "lucide-react";
-import heroImage from "@/assets/hospital-hero.jpg";
+import { ArrowRight, Star, Shield, Clock, Award } from "lucide-react";
 
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background with Gradient */}
       <div className="absolute inset-0">
-        <img 
-          src={heroImage} 
-          alt="Hospital Jaques Gonçalves Pereira - Fachada moderna" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-hero"></div>
-      </div>
-
-      {/* Floating images for visual appeal */}
-      <div className="absolute top-20 right-10 w-24 h-24 rounded-full overflow-hidden shadow-lg animate-float hidden lg:block">
-        <img 
-          src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=200&h=200&fit=crop&crop=face" 
-          alt="Doctor placeholder" 
-          className="w-full h-full object-cover"
-          loading="lazy"
-        />
-      </div>
-      
-      <div className="absolute bottom-32 left-10 w-20 h-20 rounded-lg overflow-hidden shadow-lg animate-float delay-300 hidden lg:block">
-        <img 
-          src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=200&h=200&fit=crop" 
-          alt="Medical equipment placeholder" 
-          className="w-full h-full object-cover"
-          loading="lazy"
-        />
-      </div>
-
-      <div className="absolute top-1/2 left-8 w-16 h-16 rounded-full overflow-hidden shadow-lg animate-float delay-500 hidden xl:block">
-        <img 
-          src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=200&h=200&fit=crop" 
-          alt="Hospital room placeholder" 
-          className="w-full h-full object-cover"
-          loading="lazy"
-        />
+        <div className="w-full h-full bg-gradient-hero"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4">
-        <div className="max-w-3xl text-center mx-auto text-white">
-          {/* Main Heading */}
+        <div className="text-center text-white max-w-4xl mx-auto">
+          <div className="mb-4 animate-fade-in">
+            <span className="text-lg text-white/80">Rede HSVP - Hospitais São Vicente de Paulo</span>
+          </div>
+          
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
-            Cuidado Médico de
-            <span className="block bg-gradient-to-r from-white to-primary-glow bg-clip-text text-transparent">
-              Excelência
-            </span>
+            Hospital Jaques Gonçalves Pereira
           </h1>
-
-          {/* Subtitle */}
-          <p className="text-lg md:text-xl mb-8 text-white/90 animate-fade-in delay-200">
-            Hospital Jaques Gonçalves Pereira - Assistência médica 24 horas com equipe multiprofissional,
-            50 leitos de internação e tecnologia de ponta para seu cuidado completo.
+          
+          <p className="text-xl md:text-2xl mb-4 text-white/90 animate-fade-in" style={{animationDelay: '0.2s'}}>
+            Excelência em saúde com atendimento humanizado
+          </p>
+          
+          <p className="text-lg mb-8 text-white/80 max-w-2xl mx-auto animate-fade-in" style={{animationDelay: '0.4s'}}>
+            50 leitos, pronto atendimento 24h, bloco cirúrgico e exames especializados. 
+            Referência regional em cuidados médicos.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in delay-400">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-in" style={{animationDelay: '0.6s'}}>
             <Button 
               size="lg" 
-              className="bg-white text-primary hover:bg-white/90 shadow-glow transition-bounce"
+              className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4 text-lg shadow-glow"
             >
               Agendar Consulta
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
+            
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-primary transition-smooth"
+              className="border-white text-white hover:bg-white/10 font-semibold px-8 py-4 text-lg backdrop-blur-sm"
             >
-              Conhecer Serviços
+              Emergência 24h
             </Button>
           </div>
 
-          {/* Trust Indicators with enhanced visuals */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 animate-fade-in delay-600">
-            <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mb-3 group-hover:bg-white/20 transition-all duration-300">
-                <Shield className="w-8 h-8 text-white" />
+          {/* Trust Indicators */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center animate-fade-in" style={{animationDelay: '0.8s'}}>
+            <div className="flex flex-col items-center space-y-2">
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                <Star className="w-6 h-6 text-white" />
               </div>
-              <h3 className="font-semibold mb-1">Segurança</h3>
-              <p className="text-sm text-white/80 text-center">Protocolos rigorosos de segurança</p>
-            </div>
-            
-            <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mb-3 group-hover:bg-white/20 transition-all duration-300">
-                <Clock className="w-8 h-8 text-white" />
+              <div className="text-white">
+                <div className="text-lg font-bold">50 Leitos</div>
+                <div className="text-xs text-white/80">Internação completa</div>
               </div>
-              <h3 className="font-semibold mb-1">24/7</h3>
-              <p className="text-sm text-white/80 text-center">Atendimento de emergência</p>
-            </div>
-            
-            <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mb-3 group-hover:bg-white/20 transition-all duration-300">
-                <Heart className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="font-semibold mb-1">Cuidado</h3>
-              <p className="text-sm text-white/80 text-center">Atendimento humanizado</p>
             </div>
 
-            <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mb-3 group-hover:bg-white/20 transition-all duration-300">
-                <Award className="w-8 h-8 text-white" />
+            <div className="flex flex-col items-center space-y-2">
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                <Clock className="w-6 h-6 text-white" />
               </div>
-              <h3 className="font-semibold mb-1">Excelência</h3>
-              <p className="text-sm text-white/80 text-center">Reconhecimento nacional</p>
+              <div className="text-white">
+                <div className="text-lg font-bold">24 Horas</div>
+                <div className="text-xs text-white/80">Emergência</div>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center space-y-2">
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                <Shield className="w-6 h-6 text-white" />
+              </div>
+              <div className="text-white">
+                <div className="text-lg font-bold">SUS</div>
+                <div className="text-xs text-white/80">Credenciado</div>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center space-y-2">
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                <Award className="w-6 h-6 text-white" />
+              </div>
+              <div className="text-white">
+                <div className="text-lg font-bold">Referência</div>
+                <div className="text-xs text-white/80">Regional</div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-bounce"></div>
         </div>
       </div>
     </section>
