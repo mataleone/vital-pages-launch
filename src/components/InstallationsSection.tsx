@@ -55,18 +55,16 @@ const InstallationsSection = () => {
         <div className="grid lg:grid-cols-3 gap-8 items-start mb-10">
           {/* Video Section */}
           <div className="lg:col-span-1">
-            <Card className="border-0 shadow-lg bg-card overflow-hidden h-full">
-              <div className="relative h-full min-h-[500px] rounded-lg overflow-hidden">
-                <iframe 
-                  src="https://www.youtube.com/embed/bX5x1sPxsII?autoplay=1&mute=1&loop=1&playlist=bX5x1sPxsII&controls=0&showinfo=0&rel=0&modestbranding=1"
-                  className="w-full h-full rounded-lg"
-                  frameBorder="0"
-                  allow="autoplay; encrypted-media"
-                  allowFullScreen
-                  title="Tour Virtual - Hospital Jaques Gonçalves Pereira"
-                />
-              </div>
-            </Card>
+            <div className="relative h-full min-h-[500px] rounded-lg overflow-hidden shadow-lg">
+              <iframe 
+                src="https://www.youtube.com/embed/bX5x1sPxsII?autoplay=1&mute=1&loop=1&playlist=bX5x1sPxsII&controls=0&showinfo=0&rel=0&modestbranding=1"
+                className="w-full h-full rounded-lg"
+                frameBorder="0"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                title="Tour Virtual - Hospital Jaques Gonçalves Pereira"
+              />
+            </div>
           </div>
 
           {/* Installations Grid */}
