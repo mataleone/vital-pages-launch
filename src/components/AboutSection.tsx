@@ -93,31 +93,18 @@ const AboutSection = () => {
             </Card>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
-            <Card className="border-0 shadow-lg overflow-hidden">
-              <div className="relative h-48">
-                <img 
-                  src={medicalTeam} 
-                  alt="Equipe médica especializada" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent" />
-                <div className="absolute bottom-3 left-3 right-3">
-                  <p className="text-white text-sm font-medium">Equipe Especializada</p>
-                </div>
-              </div>
-            </Card>
-            
-            <Card className="border-0 shadow-lg overflow-hidden">
-              <div className="relative h-48">
+          <div className="relative">
+            <Card className="border-0 shadow-lg overflow-hidden h-full">
+              <div className="relative h-96">
                 <img 
                   src="/lovable-uploads/e9093921-7fd2-4005-bab8-90e2789a9fb2.png" 
                   alt="Fachada do Hospital Jaques Gonçalves Pereira" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent" />
-                <div className="absolute bottom-3 left-3 right-3">
-                  <p className="text-white text-sm font-medium">Fachada do Hospital</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <h3 className="text-white text-xl font-bold mb-2">Hospital Jaques Gonçalves Pereira</h3>
+                  <p className="text-white/90 text-sm">Estrutura moderna e acolhedora para o melhor cuidado</p>
                 </div>
               </div>
             </Card>
