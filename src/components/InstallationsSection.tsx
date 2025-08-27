@@ -52,14 +52,13 @@ const InstallationsSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-10">
-          {/* Video Section */}
-          <div className="lg:col-span-1 flex">
-            <div className="relative w-full h-[520px] rounded-lg overflow-hidden shadow-lg bg-black">
+        <div className="grid lg:grid-cols-5 gap-8 mb-10">
+          {/* Video Section - Maior prioridade */}
+          <div className="lg:col-span-3">
+            <div className="relative w-full h-[600px] rounded-lg overflow-hidden shadow-lg bg-black">
               <iframe 
                 src="https://www.youtube.com/embed/bX5x1sPxsII?autoplay=1&mute=1&loop=1&playlist=bX5x1sPxsII&controls=0&showinfo=0&rel=0&modestbranding=1&disablekb=1&fs=0&iv_load_policy=3"
-                className="absolute inset-0 w-full h-full rounded-lg scale-150 origin-center"
-                style={{ transform: 'scale(1.5)' }}
+                className="absolute inset-0 w-full h-full rounded-lg"
                 frameBorder="0"
                 allow="autoplay; encrypted-media"
                 allowFullScreen
@@ -68,26 +67,26 @@ const InstallationsSection = () => {
             </div>
           </div>
 
-          {/* Installations Grid */}
-          <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 h-[520px]">
+          {/* Installations Grid - Compacto */}
+          <div className="lg:col-span-2 grid grid-cols-1 gap-4 h-[600px]">
             {installations.map((installation, index) => (
               <Card key={index} className="border-0 shadow-lg bg-card hover:shadow-xl transition-all duration-300 h-full">
                 <CardContent className="p-0 h-full">
                   <div className="flex flex-col h-full">
-                    <div className="relative h-32 flex-shrink-0">
+                    <div className="relative h-20 flex-shrink-0">
                       <img 
                         src={installation.image} 
                         alt={installation.title}
                         className="w-full h-full object-cover rounded-t-lg"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent rounded-t-lg" />
-                      <installation.icon className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 text-white" />
+                      <installation.icon className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-5 h-5 text-white" />
                     </div>
-                    <div className="p-4 flex-1 flex flex-col justify-center">
-                      <h4 className="text-lg font-semibold text-foreground mb-2">
+                    <div className="p-3 flex-1 flex flex-col justify-center">
+                      <h4 className="text-sm font-semibold text-foreground mb-1">
                         {installation.title}
                       </h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-xs text-muted-foreground leading-relaxed">
                         {installation.description}
                       </p>
                     </div>
