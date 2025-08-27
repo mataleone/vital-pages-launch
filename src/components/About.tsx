@@ -1,32 +1,34 @@
 import { Button } from "@/components/ui/button";
-import { Check, Award, Users, Clock } from "lucide-react";
+import { Check, Award, Users, Clock, Building } from "lucide-react";
 import hospitalInterior from "@/assets/hospital-interior.jpg";
 
 const About = () => {
   const features = [
-    "Tecnologia de ponta em equipamentos médicos",
-    "Equipe médica altamente qualificada",
-    "Atendimento humanizado e personalizado",
-    "Infraestrutura moderna e confortável",
-    "Certificações nacionais e internacionais",
-    "Protocolos rigorosos de segurança"
+    "Assistência médica 24 horas",
+    "Equipe multiprofissional e interdisciplinar",
+    "50 leitos de internação completos",
+    "Salas cirúrgicas equipadas para cirurgias de médio porte",
+    "Pronto atendimento com 8 leitos de observação",
+    "Exames de endoscopia, colonoscopia e raio-x",
+    "Exames laboratoriais rápidos",
+    "Certificações e protocolos de segurança"
   ];
 
   const stats = [
     {
-      icon: Users,
-      number: "50+",
-      label: "Médicos Especialistas"
-    },
-    {
-      icon: Award,
-      number: "25+",
-      label: "Anos de Experiência"
+      icon: Building,
+      number: "50",
+      label: "Leitos de Internação"
     },
     {
       icon: Clock,
       number: "24/7",
       label: "Atendimento de Emergência"
+    },
+    {
+      icon: Users,
+      number: "8",
+      label: "Leitos de Observação"
     }
   ];
 
@@ -37,25 +39,26 @@ const About = () => {
           {/* Content */}
           <div className="animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Sobre o Hospital Santa Saúde
+              Sobre o Hospital Jaques Gonçalves Pereira
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Há mais de 25 anos, o Hospital Santa Saúde tem sido referência em 
-              excelência médica, oferecendo cuidados de saúde de alta qualidade 
-              com tecnologia de ponta e atendimento humanizado.
+              O Hospital Jaques Gonçalves Pereira conta com assistência médica 24 horas, 
+              equipe multiprofissional e interdisciplinar, 50 leitos de internação, 
+              salas cirúrgicas devidamente equipadas para atendimento a cirurgias de médio porte.
             </p>
             
             <p className="text-muted-foreground mb-8">
-              Nossa missão é proporcionar o melhor atendimento médico, combinando 
-              expertise profissional, infraestrutura moderna e um ambiente acolhedor 
-              para pacientes e familiares.
+              Nossa estrutura inclui pronto atendimento com 8 leitos de observação 
+              (masculino, feminino e pediátrico), consultórios para atendimentos, 
+              sala de triagem, sala de emergência, sala de curativo, sala de gesso, 
+              sala de nebulização, entre outros serviços essenciais para seu cuidado.
             </p>
 
             {/* Features List */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <div className="w-5 h-5 bg-secondary rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
                     <Check className="w-3 h-3 text-white" />
                   </div>
                   <span className="text-sm text-foreground">{feature}</span>
@@ -73,7 +76,7 @@ const About = () => {
             <div className="relative">
               <img 
                 src={hospitalInterior} 
-                alt="Interior moderno do Hospital Santa Saúde" 
+                alt="Interior moderno do Hospital Jaques Gonçalves Pereira" 
                 className="rounded-lg shadow-card w-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>

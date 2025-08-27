@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="absolute inset-0">
         <img 
           src={heroImage} 
-          alt="Hospital Santa Saúde - Fachada moderna" 
+          alt="Hospital Jaques Gonçalves Pereira - Fachada moderna" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-hero"></div>
@@ -28,8 +28,8 @@ const Hero = () => {
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl mb-8 text-white/90 animate-fade-in delay-200">
-            Oferecemos atendimento médico de qualidade com tecnologia de ponta e uma equipe 
-            altamente qualificada, comprometida com o seu bem-estar e saúde.
+            Hospital Jaques Gonçalves Pereira - Assistência médica 24 horas com equipe multiprofissional,
+            50 leitos de internação e tecnologia de ponta para seu cuidado completo.
           </p>
 
           {/* CTA Buttons */}
