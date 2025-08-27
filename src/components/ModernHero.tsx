@@ -26,16 +26,16 @@ const ModernHero = () => {
           {/* Left Content */}
           <div className="text-white space-y-6">{/* Reduced from space-y-8 */}
             <div className="space-y-4">
-              <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+              <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 md:px-4 py-2">
                 <img 
                   src="/lovable-uploads/00897a29-1dbc-47fd-ad4c-da44171b9c7e.png" 
                   alt="HSVP Logo" 
-                  className="h-6 w-auto"
+                  className="h-5 md:h-6 w-auto"
                 />
-                <span className="text-sm font-medium">Rede HSVP</span>
+                <span className="text-xs md:text-sm font-medium">Rede HSVP</span>
               </div>
               
-              <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
                 Hospital
                 <span className="block text-white/90">Jaques Gonçalves</span>
                 <span className="block bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent">
@@ -44,7 +44,7 @@ const ModernHero = () => {
               </h1>
             </div>
 
-            <p className="text-xl text-white/90 leading-relaxed max-w-lg">
+            <p className="text-base md:text-xl text-white/90 leading-relaxed max-w-lg">
               Excelência médica com atendimento humanizado. Referência regional 
               em cuidados de saúde com tecnologia de ponta.
             </p>

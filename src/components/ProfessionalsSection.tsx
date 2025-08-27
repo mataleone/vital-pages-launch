@@ -101,15 +101,15 @@ const ProfessionalsSection = () => {
     <section className="py-12 bg-muted/30">{/* Reduced from py-20 */}
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-8 md:mb-10">
           <div className="inline-flex items-center space-x-2 bg-primary/10 rounded-full px-4 py-2 mb-4">
             <Users className="h-5 w-5 text-primary" />
             <span className="text-sm font-medium text-primary">Equipe Especializada</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 md:mb-6 px-4">
             Nossos Profissionais
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
             Conheça nossa equipe de especialistas altamente qualificados e experientes, 
             comprometidos em oferecer o melhor cuidado à sua saúde.
           </p>
@@ -120,27 +120,27 @@ const ProfessionalsSection = () => {
           {/* Navigation Buttons */}
           <button 
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-primary rounded-full p-2 shadow-lg hover:shadow-glow transition-smooth"
+            className="absolute left-2 md:left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-primary rounded-full p-2 shadow-lg hover:shadow-glow transition-smooth"
           >
-            <ChevronLeft className="w-5 h-5" />
+            <ChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
           </button>
           
           <button 
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-primary rounded-full p-2 shadow-lg hover:shadow-glow transition-smooth"
+            className="absolute right-2 md:right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-primary rounded-full p-2 shadow-lg hover:shadow-glow transition-smooth"
           >
-            <ChevronRight className="w-5 h-5" />
+            <ChevronRight className="w-4 h-4 md:w-5 md:h-5" />
           </button>
 
           {/* Slideshow Container */}
-          <div className="overflow-hidden mx-12">
+          <div className="overflow-hidden mx-4 md:mx-12">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {Array.from({ length: Math.ceil(professionals.length / 3) }).map((_, slideIndex) => (
                 <div key={slideIndex} className="w-full flex-shrink-0">
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                     {professionals.slice(slideIndex * 3, slideIndex * 3 + 3).map((professional) => (
                       <Card 
                         key={professional.id} 
