@@ -193,16 +193,6 @@ const ProfessionalsSection = () => {
             ))}
           </div>
         </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-8">{/* Reduced from mt-12 */}
-          <p className="text-muted-foreground mb-4">
-            Agende uma consulta com nossos especialistas
-          </p>
-          <button className="bg-gradient-primary text-white px-8 py-3 rounded-lg font-semibold hover:shadow-glow transition-smooth">
-            Ver Todos os Profissionais
-          </button>
-        </div>
       </div>
     </section>
   );

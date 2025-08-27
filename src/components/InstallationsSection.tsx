@@ -56,24 +56,15 @@ const InstallationsSection = () => {
           {/* Video Section */}
           <div>
             <Card className="border-0 shadow-lg bg-card overflow-hidden">
-              <div className="relative aspect-[9/16] bg-muted/50 flex items-center justify-center">
-                {/* Placeholder for YouTube video */}
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Play className="w-10 h-10 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">
-                    Tour Virtual
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    Vídeo em formato vertical (9:16) do YouTube será inserido aqui
-                    <br />
-                    Autoplayer ativo, sem som inicial
-                  </p>
-                  <div className="mt-4 p-3 bg-muted/50 rounded-lg text-xs text-muted-foreground">
-                    <code>iframe src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1"</code>
-                  </div>
-                </div>
+              <div className="relative aspect-[9/16] bg-black">
+                <iframe 
+                  src="https://www.youtube.com/embed/bX5x1sPxsII?autoplay=1&mute=1&loop=1&playlist=bX5x1sPxsII&controls=0&showinfo=0&rel=0&modestbranding=1"
+                  className="w-full h-full"
+                  frameBorder="0"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                  title="Tour Virtual - Hospital Jaques Gonçalves Pereira"
+                />
               </div>
             </Card>
           </div>
@@ -108,15 +99,6 @@ const InstallationsSection = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center">
-          <Button 
-            size="lg" 
-            className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg transition-all duration-300 font-semibold px-8"
-          >
-            Agendar Visita às Instalações
-          </Button>
-        </div>
       </div>
     </section>
   );
