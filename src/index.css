@@ -17,11 +17,11 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 218 25% 15%;
 
-    --primary: 174 100% 38%;
+    --primary: 83 51% 52%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 174 85% 55%;
+    --primary-glow: 83 65% 70%;
 
-    --secondary: 75 56% 50%;
+    --secondary: 174 99% 38%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 220 15% 94%;
@@ -38,15 +38,15 @@ All colors MUST be HSL.
     --ring: 210 100% 48%;
 
     /* Medical gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(174 100% 38%), hsl(174 85% 55%));
-    --gradient-secondary: linear-gradient(135deg, hsl(75 56% 50%), hsl(75 46% 65%));
-    --gradient-hero: linear-gradient(135deg, hsl(174 100% 38% / 0.9), hsl(75 56% 50% / 0.9));
+    --gradient-primary: linear-gradient(135deg, hsl(83 51% 52%), hsl(83 65% 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(174 99% 38%), hsl(174 85% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(83 51% 52% / 0.9), hsl(174 99% 38% / 0.9));
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 18% 97%));
     
     /* Medical shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(174 100% 38% / 0.15);
+    --shadow-soft: 0 4px 20px -4px hsl(83 51% 52% / 0.15);
     --shadow-card: 0 8px 30px -8px hsl(218 25% 15% / 0.1);
-    --shadow-glow: 0 0 40px hsl(174 85% 55% / 0.3);
+    --shadow-glow: 0 0 40px hsl(83 65% 70% / 0.3);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
