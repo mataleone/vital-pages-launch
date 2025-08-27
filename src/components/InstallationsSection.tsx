@@ -52,13 +52,13 @@ const InstallationsSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 items-start mb-10">
+        <div className="grid lg:grid-cols-3 gap-8 mb-10">
           {/* Video Section */}
-          <div className="lg:col-span-1">
-            <div className="relative h-full min-h-[500px] rounded-lg overflow-hidden shadow-lg">
+          <div className="lg:col-span-1 flex">
+            <div className="relative w-full h-[520px] rounded-lg overflow-hidden shadow-lg">
               <iframe 
                 src="https://www.youtube.com/embed/bX5x1sPxsII?autoplay=1&mute=1&loop=1&playlist=bX5x1sPxsII&controls=0&showinfo=0&rel=0&modestbranding=1"
-                className="w-full h-full rounded-lg"
+                className="absolute inset-0 w-full h-full rounded-lg"
                 frameBorder="0"
                 allow="autoplay; encrypted-media"
                 allowFullScreen
@@ -68,7 +68,7 @@ const InstallationsSection = () => {
           </div>
 
           {/* Installations Grid */}
-          <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 h-[520px]">
             {installations.map((installation, index) => (
               <Card key={index} className="border-0 shadow-lg bg-card hover:shadow-xl transition-all duration-300 h-full">
                 <CardContent className="p-0 h-full">
