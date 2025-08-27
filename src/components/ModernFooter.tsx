@@ -4,7 +4,7 @@ const ModernFooter = () => {
   return (
     <footer className="bg-gradient-to-br from-foreground via-gray-900 to-gray-800 text-white">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Hospital Info */}
           <div>
             <div className="flex items-center space-x-3 mb-6">
@@ -36,29 +36,6 @@ const ModernFooter = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-bold mb-6">Navegação</h4>
-            <ul className="space-y-3">
-              {[
-                { label: "Início", href: "#home" },
-                { label: "Serviços", href: "#services" },
-                { label: "Sobre Nós", href: "#about" },
-                { label: "Contato", href: "#contact" }
-              ].map((link, index) => (
-                <li key={index}>
-                  <a 
-                    href={link.href} 
-                    className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group"
-                  >
-                    <div className="w-1 h-1 bg-primary rounded-full mr-3 group-hover:scale-150 transition-transform"></div>
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Contact Info */}
           <div>
             <h4 className="text-lg font-bold mb-6">Contatos</h4>
@@ -83,7 +60,7 @@ const ModernFooter = () => {
               
               <div>
                 <div className="text-sm font-medium text-white mb-1">Endereço</div>
-                <div className="text-xs text-gray-300">Alameda Cruz F Souza, N°500</div>
+                <div className="text-xs text-gray-300">Alameda Cruz F Souza, N°500, Alex Müller</div>
                 <div className="text-xs text-gray-300">Distrito de Cachoeira Escura</div>
                 <div className="text-xs text-gray-300">Belo Oriente - MG, 35195-000</div>
               </div>
@@ -99,7 +76,7 @@ const ModernFooter = () => {
             </div>
             <div className="flex flex-col lg:flex-row items-center space-y-2 lg:space-y-0 lg:space-x-6 text-sm">
               <div className="text-gray-400">
-                Feito com ♥ por <span className="text-primary font-semibold">Dataeast® Tecnologia</span>
+                Feito com ♥ por <a href="https://www.dataeast.com.br" target="_blank" rel="noopener noreferrer" className="text-white font-semibold hover:text-primary transition-colors">Dataeast® Tecnologia</a>
               </div>
               <div className="flex space-x-6">
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">

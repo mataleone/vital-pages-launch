@@ -127,9 +127,9 @@ const ContactSection = () => {
                 </div>
                 <div className="space-y-4">
                   <div className="space-y-2">
-                    <p className="text-sm font-medium text-foreground">Alameda Cruz F Souza, N°500</p>
+                    <p className="text-sm font-medium text-foreground">Alameda Cruz F Souza, N°500, Alex Müller</p>
                     <p className="text-sm text-muted-foreground">
-                      Distrito de Cachoeira Escura (Perpétuo Socorro)
+                      Distrito de Cachoeira Escura
                     </p>
                     <p className="text-sm text-muted-foreground">
                       Belo Oriente - MG, 35195-000
@@ -139,7 +139,7 @@ const ContactSection = () => {
                   {/* Embedded Map */}
                   <div className="aspect-video w-full rounded-lg overflow-hidden border">
                     <iframe
-                      src="https://maps.google.com/maps?q=Alameda+Cruz+F+Souza,+N°500+-+Distrito+de+Cachoeira+Escura+(Perpétuo+Socorro),+Belo+Oriente+-+MG&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                      src="https://maps.google.com/maps?q=Alameda+Cruz+F+Souza,+N°500,+Alex+Müller+-+Distrito+de+Cachoeira+Escura,+Belo+Oriente+-+MG&t=&z=15&ie=UTF8&iwloc=&output=embed"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
