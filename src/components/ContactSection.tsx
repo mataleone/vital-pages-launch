@@ -10,7 +10,8 @@ import {
   AlertCircle,
   MessageCircle,
   Calendar,
-  Navigation
+  Navigation,
+  Instagram
 } from "lucide-react";
 
 const ContactSection = () => {
@@ -92,7 +93,7 @@ const ContactSection = () => {
           {/* Left Column - Hours & Location */}
           <div className="space-y-6">{/* Reduced from space-y-8 */}
             {/* Hours */}
-            <Card className="border-0 shadow-lg bg-card">
+            <Card className="border-0 shadow-lg bg-card h-fit">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-3 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center">
@@ -231,6 +232,32 @@ const ContactSection = () => {
                     Entrar em Contato
                   </Button>
                 </div>
+              </CardContent>
+            </Card>
+
+            {/* Social Media */}
+            <Card className="border-0 shadow-lg bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 text-white h-fit">
+              <CardContent className="p-6">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                    <Instagram className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-xl font-bold">
+                    Redes Sociais
+                  </h3>
+                </div>
+                <p className="text-white/90 mb-4">
+                  Acompanhe nossas novidades, dicas de saúde e eventos especiais através das nossas redes sociais.
+                </p>
+                <Button 
+                  size="lg" 
+                  className="w-full bg-white/20 hover:bg-white/30 backdrop-blur-sm border-white/30 text-white justify-start"
+                  variant="outline"
+                  onClick={() => window.open('https://www.instagram.com/hospital.jaquesgoncalvesp/', '_blank')}
+                >
+                  <Instagram className="w-5 h-5 mr-3" />
+                  Seguir no Instagram
+                </Button>
               </CardContent>
             </Card>
           </div>
