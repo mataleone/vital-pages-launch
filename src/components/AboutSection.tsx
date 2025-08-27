@@ -95,11 +95,11 @@ const AboutSection = () => {
 
           <div className="relative">
             <Card className="border-0 shadow-lg overflow-hidden h-full">
-              <div className="relative h-96">
+              <div className="relative h-80">
                 <img 
                   src="/lovable-uploads/e9093921-7fd2-4005-bab8-90e2789a9fb2.png" 
                   alt="Fachada do Hospital Jaques Gonçalves Pereira" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6">
