@@ -7,29 +7,20 @@ import emergencyRoom from "@/assets/emergency-room.jpg";
 import surgeryRoom from "@/assets/surgery-room.jpg";
 
 const InstallationsSection = () => {
-  const installations = [
+  const qualityItems = [
     {
-      title: "Quartos de Internação",
-      description: "Ambientes confortáveis e seguros para a recuperação dos pacientes",
-      image: hospitalRoom,
-      icon: Building
-    },
-    {
-      title: "Centro Cirúrgico",
-      description: "Salas cirúrgicas equipadas com tecnologia de ponta",
-      image: surgeryRoom,
-      icon: Stethoscope
-    },
-    {
-      title: "Pronto Atendimento",
-      description: "Atendimento de urgência e emergência 24 horas",
-      image: emergencyRoom,
+      title: "Missão",
+      description: "Proporcionar aos clientes e usuários atendimentos de qualidade, prestando serviços assistenciais com eficiência e humanização",
       icon: Heart
     },
     {
-      title: "Ambiente Seguro e Confortável",
-      description: "Protocolos rigorosos de segurança e qualidade para garantir proteção total",
-      image: hospitalInterior,
+      title: "Visão",
+      description: "Ser referência local em atendimentos hospitalares com excelência na prestação de serviços em saúde",
+      icon: Building
+    },
+    {
+      title: "Valores",
+      description: "Honestidade, Humanização, Competência, Profissionalismo e Compromisso Social",
       icon: Shield
     }
   ];
@@ -40,15 +31,14 @@ const InstallationsSection = () => {
         {/* Header */}
         <div className="text-center mb-10">
           <div className="inline-flex items-center space-x-2 bg-primary/10 rounded-full px-4 py-2 mb-4">
-            <Building className="h-5 w-5 text-primary" />
-            <span className="text-sm font-medium text-primary">Estrutura Moderna</span>
+            <Stethoscope className="h-5 w-5 text-primary" />
+            <span className="text-sm font-medium text-primary">Qualidade e Excelência</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Nossas Instalações
+            Política da Qualidade
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Conheça nossa estrutura moderna e equipada, projetada para oferecer o melhor 
-            cuidado e conforto aos nossos pacientes.
+            A Política de Qualidade do Hospital Jaques Gonçalves Pereira tem como objetivo promover a melhoria contínua nos processos Médico Hospitalar, buscando sempre a satisfação de seus clientes e usuários.
           </p>
         </div>
 
@@ -67,28 +57,35 @@ const InstallationsSection = () => {
             </div>
           </div>
 
-          {/* Installations Grid */}
-          <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4 h-[520px]">
-            {installations.map((installation, index) => (
+          {/* Quality Policy Grid */}
+          <div className="lg:col-span-2 grid grid-cols-1 gap-6 h-[520px]">
+            {qualityItems.map((item, index) => (
               <Card key={index} className="border-0 shadow-lg bg-card hover:shadow-xl transition-all duration-300 h-full">
-                <CardContent className="p-0 h-full">
+                <CardContent className="p-6 h-full">
                   <div className="flex flex-col h-full">
-                    <div className="relative h-28 flex-shrink-0">
-                      <img 
-                        src={installation.image} 
-                        alt={installation.title}
-                        className="w-full h-full object-cover rounded-t-lg"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent rounded-t-lg" />
-                      <installation.icon className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 text-white" />
-                    </div>
-                    <div className="p-4 flex-1 flex flex-col justify-center">
-                      <h4 className="text-base font-semibold text-foreground mb-2">
-                        {installation.title}
+                    <div className="flex items-center space-x-4 mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center">
+                        <item.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <h4 className="text-xl font-bold text-foreground">
+                        {item.title}
                       </h4>
-                      <p className="text-xs text-muted-foreground leading-relaxed">
-                        {installation.description}
-                      </p>
+                    </div>
+                    <div className="flex-1 flex flex-col justify-center">
+                      {item.title === "Valores" ? (
+                        <div className="space-y-2">
+                          {["Honestidade", "Humanização", "Competência", "Profissionalismo", "Compromisso Social"].map((value, idx) => (
+                            <div key={idx} className="flex items-center space-x-2">
+                              <div className="w-2 h-2 bg-primary rounded-full"></div>
+                              <span className="text-base text-muted-foreground">{value}</span>
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <p className="text-base text-muted-foreground leading-relaxed">
+                          {item.description}
+                        </p>
+                      )}
                     </div>
                   </div>
                 </CardContent>
