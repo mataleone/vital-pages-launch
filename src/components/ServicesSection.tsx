@@ -98,53 +98,15 @@ const ServicesSection = () => {
           ))}
         </div>
 
-        {/* Facilities Section */}
+        {/* Quality Policy Section */}
         <div>
-          <h3 className="text-3xl font-bold text-foreground text-center mb-8">{/* Reduced from mb-12 */}
-            Nossas Instalações
+          <h3 className="text-3xl font-bold text-foreground text-center mb-8">
+            Política da Qualidade
           </h3>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">{/* Reduced from gap-8 */}
-            {facilities.map((facility, index) => {
-              const facilityImages = [hospitalRoom, emergencyRoom, surgeryRoom];
-              return (
-                <Card 
-                  key={index} 
-                  className="group hover:scale-102 transition-all duration-300 border-0 shadow-lg hover:shadow-xl bg-card overflow-hidden"
-                >
-                  <CardContent className="p-0">
-                    <div className="relative aspect-video overflow-hidden">
-                      <img 
-                        src={facilityImages[index % facilityImages.length]} 
-                        alt={facility.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent" />
-                      <div className="absolute bottom-4 left-4 right-4 text-white">
-                        <div className="flex items-center mb-2">
-                          <facility.icon className="w-6 h-6 mr-2" />
-                          <h4 className="text-lg font-bold">
-                            {facility.title}
-                          </h4>
-                        </div>
-                        <p className="text-white/90 text-sm">
-                          {facility.description}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="p-6">
-                      <ul className="space-y-3">
-                        {facility.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-muted-foreground">
-                            <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              A Política de Qualidade do Hospital Jaques Gonçalves Pereira tem como objetivo promover a melhoria contínua nos processos Médico Hospitalar, buscando sempre a satisfação de seus clientes e usuários.
+            </p>
           </div>
         </div>
       </div>
