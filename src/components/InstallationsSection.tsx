@@ -40,15 +40,14 @@ const InstallationsSection = () => {
         {/* Header */}
         <div className="text-center mb-10">
           <div className="inline-flex items-center space-x-2 bg-primary/10 rounded-full px-4 py-2 mb-4">
-            <Building className="h-5 w-5 text-primary" />
-            <span className="text-sm font-medium text-primary">Estrutura Moderna</span>
+            <Shield className="h-5 w-5 text-primary" />
+            <span className="text-sm font-medium text-primary">Qualidade</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Nossas Instalações
+            Política da Qualidade
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Conheça nossa estrutura moderna e equipada, projetada para oferecer o melhor 
-            cuidado e conforto aos nossos pacientes.
+            A Política de Qualidade do Hospital Jaques Gonçalves Pereira tem como objetivo promover a melhoria contínua nos processos Médico Hospitalar, buscando sempre a satisfação de seus clientes e usuários.
           </p>
         </div>
 
