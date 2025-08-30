@@ -98,66 +98,103 @@ const ServicesSection = () => {
           ))}
         </div>
 
-        {/* Quality Policy Section - Compact Design */}
-        <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-6">
-          <h3 className="text-2xl font-bold text-foreground text-center mb-6">
+        {/* Quality Policy Section - Infographic Style */}
+        <div className="relative py-8">
+          <h3 className="text-2xl font-bold text-foreground text-center mb-8">
             Política da Qualidade
           </h3>
           
-          {/* Main Policy Statement - Compact */}
-          <div className="text-center mb-6">
-            <p className="text-sm text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              A Política de Qualidade do Hospital Jaques Gonçalves Pereira tem como objetivo promover a melhoria contínua nos processos Médico Hospitalar, buscando sempre a satisfação de seus clientes e usuários.
-            </p>
-          </div>
-
-          {/* Inline Cards - Horizontal Layout */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {/* Mission */}
-            <div className="group bg-card rounded-xl p-4 border hover:shadow-lg transition-all duration-300 hover:scale-105">
-              <div className="flex items-center mb-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary-glow rounded-lg flex items-center justify-center mr-3 group-hover:rotate-12 transition-transform duration-300">
-                  <Heart className="w-4 h-4 text-white" />
+          {/* Central Hub Design */}
+          <div className="relative max-w-5xl mx-auto">
+            {/* Main Policy - Central Circle */}
+            <div className="relative z-10 mx-auto w-80 h-80 bg-gradient-to-br from-primary/20 via-primary/10 to-transparent rounded-full flex items-center justify-center border-2 border-primary/30 hover:scale-105 transition-all duration-500 group">
+              <div className="w-72 h-72 bg-card rounded-full shadow-xl flex items-center justify-center border border-primary/20 group-hover:shadow-2xl transition-all duration-500">
+                <div className="text-center p-6">
+                  <Shield className="w-12 h-12 text-primary mx-auto mb-4 group-hover:rotate-12 transition-transform duration-500" />
+                  <h4 className="text-lg font-bold text-foreground mb-3">Política da Qualidade</h4>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    Promover a melhoria contínua nos processos médico hospitalares, buscando sempre a satisfação de clientes e usuários.
+                  </p>
                 </div>
-                <h4 className="text-sm font-bold text-foreground">Missão</h4>
               </div>
-              <p className="text-xs text-muted-foreground leading-tight">
-                Atendimentos de qualidade com eficiência e humanização.
-              </p>
             </div>
 
-            {/* Vision */}
-            <div className="group bg-card rounded-xl p-4 border hover:shadow-lg transition-all duration-300 hover:scale-105">
-              <div className="flex items-center mb-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-secondary to-accent rounded-lg flex items-center justify-center mr-3 group-hover:rotate-12 transition-transform duration-300">
-                  <Activity className="w-4 h-4 text-white" />
+            {/* Connected Elements - Orbital Layout */}
+            {/* Mission - Top Left */}
+            <div className="absolute top-0 left-0 transform -translate-x-4 -translate-y-4 group animate-fade-in" style={{animationDelay: '0.2s'}}>
+              <div className="relative">
+                {/* Connection Line */}
+                <div className="absolute top-16 left-16 w-32 h-px bg-gradient-to-r from-primary/60 to-transparent"></div>
+                <div className="absolute top-16 left-16 w-px h-32 bg-gradient-to-b from-primary/60 to-transparent"></div>
+                
+                <div className="w-32 h-32 bg-gradient-to-br from-primary to-primary-glow rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+                  <div className="text-center text-white">
+                    <Heart className="w-6 h-6 mx-auto mb-1" />
+                    <div className="text-xs font-bold">MISSÃO</div>
+                  </div>
                 </div>
-                <h4 className="text-sm font-bold text-foreground">Visão</h4>
+                <div className="mt-2 w-32 text-center">
+                  <p className="text-xs text-muted-foreground leading-tight">
+                    Atendimentos de qualidade com eficiência e humanização
+                  </p>
+                </div>
               </div>
-              <p className="text-xs text-muted-foreground leading-tight">
-                Ser referência local em excelência nos serviços de saúde.
-              </p>
             </div>
 
-            {/* Values */}
-            <div className="group bg-card rounded-xl p-4 border hover:shadow-lg transition-all duration-300 hover:scale-105 sm:col-span-2">
-              <div className="flex items-center mb-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-accent to-secondary rounded-lg flex items-center justify-center mr-3 group-hover:rotate-12 transition-transform duration-300">
-                  <UserCheck className="w-4 h-4 text-white" />
+            {/* Vision - Top Right */}
+            <div className="absolute top-0 right-0 transform translate-x-4 -translate-y-4 group animate-fade-in" style={{animationDelay: '0.4s'}}>
+              <div className="relative">
+                {/* Connection Line */}
+                <div className="absolute top-16 right-16 w-32 h-px bg-gradient-to-l from-secondary/60 to-transparent"></div>
+                <div className="absolute top-16 right-0 w-px h-32 bg-gradient-to-b from-secondary/60 to-transparent"></div>
+                
+                <div className="w-32 h-32 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+                  <div className="text-center text-white">
+                    <Activity className="w-6 h-6 mx-auto mb-1" />
+                    <div className="text-xs font-bold">VISÃO</div>
+                  </div>
                 </div>
-                <h4 className="text-sm font-bold text-foreground">Valores</h4>
-              </div>
-              <div className="flex flex-wrap gap-1">
-                {['Honestidade', 'Humanização', 'Competência', 'Profissionalismo', 'Compromisso Social'].map((value, index) => (
-                  <span
-                    key={index}
-                    className="inline-block px-2 py-1 bg-primary/10 text-foreground rounded-md text-xs font-medium hover:bg-primary/20 transition-colors duration-300"
-                  >
-                    {value}
-                  </span>
-                ))}
+                <div className="mt-2 w-32 text-center">
+                  <p className="text-xs text-muted-foreground leading-tight">
+                    Ser referência local em excelência nos serviços de saúde
+                  </p>
+                </div>
               </div>
             </div>
+
+            {/* Values - Bottom Center */}
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 group animate-fade-in" style={{animationDelay: '0.6s'}}>
+              <div className="relative">
+                {/* Connection Line */}
+                <div className="absolute -top-8 left-1/2 w-px h-16 bg-gradient-to-t from-accent/60 to-transparent"></div>
+                
+                <div className="w-40 h-20 bg-gradient-to-br from-accent to-secondary rounded-2xl flex items-center justify-center shadow-lg hover:scale-110 hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+                  <div className="text-center text-white">
+                    <UserCheck className="w-6 h-6 mx-auto mb-1" />
+                    <div className="text-xs font-bold">VALORES</div>
+                  </div>
+                </div>
+                <div className="mt-3 w-40">
+                  <div className="flex flex-wrap justify-center gap-1">
+                    {['Honestidade', 'Humanização', 'Competência', 'Profissionalismo', 'Compromisso Social'].map((value, index) => (
+                      <span
+                        key={index}
+                        className="inline-block px-2 py-1 bg-accent/20 text-accent rounded-md text-xs font-medium hover:bg-accent/30 transition-colors duration-300 cursor-pointer hover:scale-105"
+                        style={{animationDelay: `${0.8 + index * 0.1}s`}}
+                      >
+                        {value}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Floating Decorative Elements */}
+            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary/30 rounded-full animate-pulse"></div>
+            <div className="absolute top-3/4 right-1/4 w-3 h-3 bg-secondary/30 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+            <div className="absolute top-1/2 left-0 w-1 h-1 bg-accent/30 rounded-full animate-pulse" style={{animationDelay: '1.5s'}}></div>
+            <div className="absolute top-1/3 right-0 w-2 h-2 bg-primary/30 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
           </div>
         </div>
       </div>
