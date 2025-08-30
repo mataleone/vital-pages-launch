@@ -100,85 +100,77 @@ const ServicesSection = () => {
 
         {/* Quality Policy Section */}
         <div>
-          <h3 className="text-3xl font-bold text-foreground text-center mb-12">
+          <h3 className="text-3xl font-bold text-foreground text-center mb-8">
             Política da Qualidade
           </h3>
           
-          {/* Policy Statement */}
-          <div className="max-w-4xl mx-auto mb-12">
-            <Card className="border-2 border-primary/20 bg-primary/5">
-              <CardContent className="p-8 text-center">
-                <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
-                <p className="text-lg text-foreground leading-relaxed">
+          {/* Compact Grid Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {/* Policy Statement - Takes 2 columns on larger screens */}
+            <Card className="md:col-span-2 group hover:scale-[1.02] transition-all duration-300 border-2 border-primary/20 bg-gradient-to-r from-primary/5 to-primary/10">
+              <CardContent className="p-6 text-center">
+                <div className="flex items-center justify-center mb-4">
+                  <Shield className="w-8 h-8 text-primary mr-3" />
+                  <h4 className="text-lg font-bold text-foreground">Política da Qualidade</h4>
+                </div>
+                <p className="text-sm text-foreground leading-relaxed">
                   A Política de Qualidade do Hospital Jaques Gonçalves Pereira tem como objetivo promover a melhoria contínua nos processos Médico Hospitalar, buscando sempre a satisfação de seus clientes e usuários.
                 </p>
               </CardContent>
             </Card>
-          </div>
 
-          {/* Mission, Vision, Values Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Mission */}
-            <Card className="group hover:scale-105 transition-all duration-300 border-0 shadow-lg hover:shadow-xl bg-card">
-              <CardContent className="p-6 text-center h-full">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-glow rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <Heart className="w-8 h-8 text-white" />
+            <Card className="group hover:scale-105 hover:-translate-y-2 transition-all duration-300 border-0 shadow-lg hover:shadow-xl bg-card">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-glow rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:rotate-6 transition-transform duration-300">
+                  <Heart className="w-6 h-6 text-white" />
                 </div>
-                <h4 className="text-xl font-bold text-foreground mb-4">
+                <h4 className="text-lg font-bold text-foreground mb-3">
                   Missão
                 </h4>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Proporcionar aos clientes e usuários atendimentos de qualidade, prestando serviços assistenciais com eficiência e humanização.
                 </p>
               </CardContent>
             </Card>
 
             {/* Vision */}
-            <Card className="group hover:scale-105 transition-all duration-300 border-0 shadow-lg hover:shadow-xl bg-card">
-              <CardContent className="p-6 text-center h-full">
-                <div className="w-16 h-16 bg-gradient-to-br from-secondary to-accent rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <Activity className="w-8 h-8 text-white" />
+            <Card className="group hover:scale-105 hover:-translate-y-2 transition-all duration-300 border-0 shadow-lg hover:shadow-xl bg-card">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-secondary to-accent rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:rotate-6 transition-transform duration-300">
+                  <Activity className="w-6 h-6 text-white" />
                 </div>
-                <h4 className="text-xl font-bold text-foreground mb-4">
+                <h4 className="text-lg font-bold text-foreground mb-3">
                   Visão
                 </h4>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Ser referência local em atendimentos hospitalares com excelência na prestação de serviços em saúde.
                 </p>
               </CardContent>
             </Card>
 
-            {/* Values */}
-            <Card className="group hover:scale-105 transition-all duration-300 border-0 shadow-lg hover:shadow-xl bg-card">
-              <CardContent className="p-6 text-center h-full">
-                <div className="w-16 h-16 bg-gradient-to-br from-accent to-secondary rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <UserCheck className="w-8 h-8 text-white" />
+            {/* Values - Spans 2 columns */}
+            <Card className="md:col-span-2 group hover:scale-[1.02] transition-all duration-300 border-0 shadow-lg hover:shadow-xl bg-card">
+              <CardContent className="p-6">
+                <div className="flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-accent to-secondary rounded-xl flex items-center justify-center mr-4 group-hover:rotate-6 transition-transform duration-300">
+                    <UserCheck className="w-6 h-6 text-white" />
+                  </div>
+                  <h4 className="text-lg font-bold text-foreground">
+                    Nossos Valores
+                  </h4>
                 </div>
-                <h4 className="text-xl font-bold text-foreground mb-4">
-                  Valores
-                </h4>
-                <ul className="text-muted-foreground leading-relaxed space-y-2 text-left">
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                    Honestidade
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                    Humanização
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                    Competência
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                    Profissionalismo
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                    Compromisso Social
-                  </li>
-                </ul>
+                <div className="flex flex-wrap justify-center gap-4">
+                  {['Honestidade', 'Humanização', 'Competência', 'Profissionalismo', 'Compromisso Social'].map((value, index) => (
+                    <span
+                      key={index}
+                      className="inline-flex items-center px-3 py-2 bg-primary/10 text-foreground rounded-full text-sm font-medium hover:bg-primary/20 transition-colors duration-300"
+                    >
+                      <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
+                      {value}
+                    </span>
+                  ))}
+                </div>
               </CardContent>
             </Card>
           </div>
