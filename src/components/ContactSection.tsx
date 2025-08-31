@@ -19,22 +19,22 @@ const ContactSection = () => {
     {
       icon: Phone,
       title: "Telefone",
-      description: "Recepção: (31) 2942-0524",
+      description: "(31) 2942-0524",
       details: "(31) 0000-0000",
-      action: "Entrar em Contato"
+      action: ""
     },
     {
       icon: Mail,
       title: "E-mail",
       description: "recepcao.bo@redehsvp.com.br",
-      details: "Resposta em até 24 horas",
-      action: "Enviar E-mail"
+      details: "",
+      action: ""
     },
     {
       icon: Calendar,
       title: "Agendamento Online",
       description: "WhatsApp - Escolha sua atendente",
-      details: "Resposta rápida via WhatsApp",
+      details: "",
       action: "Escolher Atendente"
     }
   ];
@@ -47,10 +47,10 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-12 bg-background">{/* Reduced from py-20 */}
+    <section id="contact" className="py-16 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-10">{/* Reduced from mb-16 */}
+        <div className="text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Entre em Contato
           </h2>
@@ -60,7 +60,7 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-6 mb-10">{/* Reduced gaps and margin */}
+        <div className="grid lg:grid-cols-3 gap-6 mb-12">
           {/* Contact Methods */}
           {contactInfo.map((contact, index) => (
             <Card key={index} className="group hover:scale-105 transition-all duration-300 border-0 shadow-lg hover:shadow-xl bg-card">
@@ -71,12 +71,14 @@ const ContactSection = () => {
                 <h3 className="text-lg font-bold text-foreground mb-2">
                   {contact.title}
                 </h3>
-                <p className="text-muted-foreground text-sm mb-2">
+                <p className="text-muted-foreground text-sm mb-4">
                   {contact.description}
                 </p>
-                <p className="text-xs text-muted-foreground mb-4">
-                  {contact.details}
-                </p>
+                {contact.details && (
+                  <p className="text-xs text-muted-foreground mb-4">
+                    {contact.details}
+                  </p>
+                )}
                 {contact.title === "Agendamento Online" ? (
                   <div className="space-y-2 w-full">
                     <Button 
@@ -98,7 +100,7 @@ const ContactSection = () => {
                       Julia
                     </Button>
                   </div>
-                ) : (
+                ) : contact.action && (
                   <Button 
                     variant="outline" 
                     size="sm" 
@@ -112,9 +114,9 @@ const ContactSection = () => {
           ))}
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">{/* Reduced from gap-12 */}
+        <div className="grid lg:grid-cols-2 gap-8">
           {/* Left Column - Hours & Location */}
-          <div className="space-y-6">{/* Reduced from space-y-8 */}
+          <div className="space-y-6">
             {/* Hours */}
             <Card className="border-0 shadow-lg bg-card h-fit">
               <CardContent className="p-6">
@@ -190,7 +192,7 @@ const ContactSection = () => {
           </div>
 
           {/* Right Column - Emergency & Quick Actions */}
-          <div className="space-y-6">{/* Reduced from space-y-8 */}
+          <div className="space-y-6">
             {/* Emergency */}
             <Card className="border-0 shadow-lg bg-gradient-to-br from-red-500 to-red-600 text-white h-fit">
               <CardContent className="p-6">

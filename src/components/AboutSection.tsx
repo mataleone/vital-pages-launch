@@ -34,10 +34,10 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-12 bg-muted/30">{/* Reduced from py-20 */}
+    <section id="about" className="py-16 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-10">{/* Reduced from mb-16 */}
+        <div className="text-center mb-12">
           <div className="inline-flex items-center space-x-2 bg-primary/10 rounded-full px-4 py-2 mb-4">
             <img 
               src="/lovable-uploads/00897a29-1dbc-47fd-ad4c-da44171b9c7e.png" 
