@@ -33,9 +33,9 @@ const ContactSection = () => {
     {
       icon: Calendar,
       title: "Agendamento Online",
-      description: "(31) 9999-8888, (31) 8888-9999",
-      details: "(31) 8555-5555",
-      action: "Agendar"
+      description: "WhatsApp - Escolha sua atendente",
+      details: "Resposta rápida via WhatsApp",
+      action: "Escolher Atendente"
     }
   ];
 
@@ -77,13 +77,36 @@ const ContactSection = () => {
                 <p className="text-xs text-muted-foreground mb-4">
                   {contact.details}
                 </p>
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  className="w-full hover:bg-primary hover:text-white transition-colors"
-                >
-                  {contact.action}
-                </Button>
+                {contact.title === "Agendamento Online" ? (
+                  <div className="space-y-2 w-full">
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="w-full hover:bg-primary hover:text-white transition-colors"
+                      onClick={() => window.open('https://api.whatsapp.com/send/?phone=5531972052830', '_blank')}
+                    >
+                      <MessageCircle className="w-4 h-4 mr-2" />
+                      Francielly
+                    </Button>
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="w-full hover:bg-primary hover:text-white transition-colors"
+                      onClick={() => window.open('https://api.whatsapp.com/send/?phone=55319974042370', '_blank')}
+                    >
+                      <MessageCircle className="w-4 h-4 mr-2" />
+                      Julia
+                    </Button>
+                  </div>
+                ) : (
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="w-full hover:bg-primary hover:text-white transition-colors"
+                  >
+                    {contact.action}
+                  </Button>
+                )}
               </CardContent>
             </Card>
           ))}

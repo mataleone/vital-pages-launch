@@ -100,9 +100,6 @@ const ServicesSection = () => {
 
         {/* Quality Policy Section - Organized Layout */}
         <div className="py-8">
-          <h3 className="text-2xl font-bold text-foreground text-center mb-8">
-            Nossos Pilares
-          </h3>
           
           {/* Modern Grid Layout */}
           <div className="max-w-6xl mx-auto">

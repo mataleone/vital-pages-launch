@@ -1,11 +1,12 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, MapPin, Calendar, Scissors } from "lucide-react";
+import { Menu, X, Phone, MapPin, Calendar, Scissors, ChevronDown } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isSurgeryDropdownOpen, setIsSurgeryDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -92,17 +93,48 @@ const Header = () => {
               <Calendar className="w-4 h-4 mr-1" />
               Consulta
             </Button>
-            <Button 
-              size="sm" 
-              className={`transition-all duration-500 ${
-                isScrolled
-                  ? 'bg-gradient-to-r from-primary to-secondary hover:shadow-lg'
-                  : 'bg-white/20 backdrop-blur-sm text-white hover:bg-white/30'
-              }`}
-            >
-              <Scissors className="w-4 h-4 mr-1" />
-              Cirurgia
-            </Button>
+            <div className="relative">
+              <Button 
+                size="sm" 
+                className={`transition-all duration-500 ${
+                  isScrolled
+                    ? 'bg-gradient-to-r from-primary to-secondary hover:shadow-lg'
+                    : 'bg-white/20 backdrop-blur-sm text-white hover:bg-white/30'
+                }`}
+                onClick={() => setIsSurgeryDropdownOpen(!isSurgeryDropdownOpen)}
+              >
+                <Scissors className="w-4 h-4 mr-1" />
+                Cirurgia
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </Button>
+              
+              {isSurgeryDropdownOpen && (
+                <div className="absolute top-full right-0 mt-2 w-64 bg-card border border-border rounded-lg shadow-xl z-50">
+                  <div className="p-2">
+                    <a
+                      href="https://api.whatsapp.com/send/?phone=5531972052830"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center w-full px-4 py-3 text-sm text-foreground hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                      onClick={() => setIsSurgeryDropdownOpen(false)}
+                    >
+                      <Phone className="w-4 h-4 mr-3" />
+                      Agendamento - Francielly
+                    </a>
+                    <a
+                      href="https://api.whatsapp.com/send/?phone=55319974042370"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center w-full px-4 py-3 text-sm text-foreground hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                      onClick={() => setIsSurgeryDropdownOpen(false)}
+                    >
+                      <Phone className="w-4 h-4 mr-3" />
+                      Agendamento - Julia
+                    </a>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Mobile menu button */}
