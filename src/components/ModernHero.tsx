@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone, MapPin, Clock, Users } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 
 const ModernHero = () => {
   return (
@@ -22,9 +22,9 @@ const ModernHero = () => {
       </div>
 
       <div className="relative z-20 container mx-auto px-4 py-12">{/* Reduced from py-20 */}
-        <div className="grid lg:grid-cols-2 gap-8 items-center h-screen">{/* Reduced gap from 12 to 8 */}
+        <div className="flex items-center h-screen">{/* Changed from grid lg:grid-cols-2 to flex */}
           {/* Left Content */}
-          <div className="text-white space-y-6">{/* Reduced from space-y-8 */}
+          <div className="text-white space-y-6 max-w-3xl">{/* Reduced from space-y-8 and added max-width */}
             <div className="space-y-4">
               <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 md:px-4 py-2">
                 <img 
@@ -66,42 +66,6 @@ const ModernHero = () => {
                 <Phone className="mr-2 w-5 h-5" />
                 Agendar Consulta
               </Button>
-            </div>
-          </div>
-
-          {/* Right Stats Cards */}
-          <div className="grid grid-cols-2 gap-6">
-            {/* Stats Cards with better transparency */}
-            <div className="bg-white/15 backdrop-blur-md rounded-2xl p-6 text-center text-white hover:bg-white/20 transition-all duration-300 border border-white/10">
-              <div className="w-16 h-16 bg-white/25 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8" />
-              </div>
-              <div className="text-3xl font-bold mb-2">50</div>
-              <div className="text-sm opacity-95">Leitos Disponíveis</div>
-            </div>
-
-            <div className="bg-white/15 backdrop-blur-md rounded-2xl p-6 text-center text-white hover:bg-white/20 transition-all duration-300 mt-8 border border-white/10">
-              <div className="w-16 h-16 bg-white/25 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8" />
-              </div>
-              <div className="text-3xl font-bold mb-2">24h</div>
-              <div className="text-sm opacity-95">Pronto Atendimento</div>
-            </div>
-
-            <div className="bg-white/15 backdrop-blur-md rounded-2xl p-6 text-center text-white hover:bg-white/20 transition-all duration-300 border border-white/10">
-              <div className="w-16 h-16 bg-white/25 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-8 h-8" />
-              </div>
-              <div className="text-3xl font-bold mb-2">SUS</div>
-              <div className="text-sm opacity-95">Credenciado</div>
-            </div>
-
-            <div className="bg-white/15 backdrop-blur-md rounded-2xl p-6 text-center text-white hover:bg-white/20 transition-all duration-300 mt-8 border border-white/10">
-              <div className="w-16 h-16 bg-white/25 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <div className="text-2xl font-bold">+</div>
-              </div>
-              <div className="text-3xl font-bold mb-2">8</div>
-              <div className="text-sm opacity-95">Leitos Emergência</div>
             </div>
           </div>
         </div>

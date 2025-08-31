@@ -1,16 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Award, Users, Heart, Target, Star, CheckCircle, Shield } from "lucide-react";
+import { Heart, Target, Shield } from "lucide-react";
 import medicalTeam from "@/assets/medical-team.jpg";
 import hospitalInterior from "@/assets/hospital-interior.jpg";
 
 const AboutSection = () => {
-  const stats = [
-    { number: "50", label: "Leitos de Internação", icon: Users },
-    { number: "24h", label: "Atendimento Contínuo", icon: Heart },
-    { number: "100%", label: "Satisfação dos Pacientes", icon: Star },
-    { number: "15+", label: "Anos de Experiência", icon: Award }
-  ];
 
   const values = [
     {
@@ -55,21 +49,6 @@ const AboutSection = () => {
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Sobre Nós
           </h2>
-        </div>
-
-        {/* Stats Section */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-10">{/* Reduced gaps and margin */}
-          {stats.map((stat, index) => (
-            <Card key={index} className="text-center border-0 shadow-lg bg-card hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl font-bold text-foreground mb-2">{stat.number}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </CardContent>
-            </Card>
-          ))}
         </div>
 
         {/* About Content with Images */}
