@@ -52,7 +52,7 @@ const InstallationsSection = () => {
         <div className="grid lg:grid-cols-3 gap-8 mb-10">
           {/* Video Section */}
           <div className="lg:col-span-1 flex">
-            <div className="relative w-full h-[520px] rounded-lg overflow-hidden shadow-lg bg-black">
+            <div className="relative w-full h-[580px] rounded-lg overflow-hidden shadow-lg bg-black">
               <iframe 
                 src="https://www.youtube.com/embed/bX5x1sPxsII?autoplay=1&mute=1&loop=1&playlist=bX5x1sPxsII&controls=0&showinfo=0&rel=0&modestbranding=1&disablekb=1&fs=0&iv_load_policy=3"
                 className="absolute inset-0 w-full h-full rounded-lg"
@@ -67,16 +67,16 @@ const InstallationsSection = () => {
           {/* Installations Grid */}
           <div className="lg:col-span-2 grid grid-cols-1 gap-6">
             {installations.map((installation, index) => (
-              <Card key={index} className="border-0 shadow-lg bg-card hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="grid md:grid-cols-2 gap-6 items-center">
+              <Card key={index} className="border-0 shadow-lg bg-card hover:shadow-xl transition-all duration-300 h-[180px]">
+                <CardContent className="p-6 h-full">
+                  <div className="grid md:grid-cols-2 gap-6 items-center h-full">
                     {/* Image Carousel */}
                     <div className="relative">
                       <Carousel className="w-full">
                         <CarouselContent>
                           {installation.images.map((image, imgIndex) => (
                             <CarouselItem key={imgIndex}>
-                              <div className="relative h-48 rounded-lg overflow-hidden">
+                              <div className="relative h-32 rounded-lg overflow-hidden">
                                 <img 
                                   src={image} 
                                   alt={`${installation.title} - Imagem ${imgIndex + 1}`}
@@ -99,7 +99,7 @@ const InstallationsSection = () => {
                         <h3 className="text-xl font-bold text-foreground mb-2">
                           {installation.title}
                         </h3>
-                        <p className="text-muted-foreground leading-relaxed">
+                        <p className="text-muted-foreground leading-relaxed text-sm">
                           {installation.description}
                         </p>
                       </div>
