@@ -1,36 +1,34 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Play, Building, Stethoscope, Heart, Shield } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Building, Bed, Heart, Stethoscope, ChevronLeft, ChevronRight } from "lucide-react";
 import hospitalInterior from "@/assets/hospital-interior.jpg";
 import hospitalRoom from "@/assets/hospital-room.jpg";
 import emergencyRoom from "@/assets/emergency-room.jpg";
 import surgeryRoom from "@/assets/surgery-room.jpg";
+import { useState } from "react";
 
 const InstallationsSection = () => {
+  const [selectedInstallation, setSelectedInstallation] = useState<number | null>(null);
+  
   const installations = [
     {
-      title: "Quartos de Internação",
-      description: "Ambientes confortáveis e seguros para a recuperação dos pacientes",
-      image: hospitalRoom,
-      icon: Building
+      title: "Apartamento",
+      description: "Nossos apartamentos proporcionam conforto e privacidade, com uma infraestrutura completa pensada para atender, com qualidade e comodidade, às necessidades de pacientes e acompanhantes.",
+      images: [hospitalRoom, hospitalInterior, emergencyRoom], // múltiplas imagens
+      icon: Bed
     },
     {
-      title: "Centro Cirúrgico",
-      description: "Salas cirúrgicas equipadas com tecnologia de ponta",
-      image: surgeryRoom,
-      icon: Stethoscope
-    },
-    {
-      title: "Pronto Atendimento",
-      description: "Atendimento de urgência e emergência 24 horas",
-      image: emergencyRoom,
+      title: "Enfermaria",
+      description: "Nossas enfermarias oferecem um ambiente acolhedor e funcional, cuidadosamente projetado para garantir conforto e segurança aos pacientes durante a recuperação.",
+      images: [emergencyRoom, hospitalRoom, hospitalInterior], // múltiplas imagens
       icon: Heart
     },
     {
-      title: "Ambiente Seguro e Confortável",
-      description: "Protocolos rigorosos de segurança e qualidade para garantir proteção total",
-      image: hospitalInterior,
-      icon: Shield
+      title: "Bloco Cirúrgico",
+      description: "Equipado com tecnologia de ponta e respaldado por uma equipe altamente especializada, asseguramos excelência e segurança em cada procedimento.",
+      images: [surgeryRoom, hospitalInterior, hospitalRoom], // múltiplas imagens
+      icon: Stethoscope
     }
   ];
 
@@ -67,27 +65,44 @@ const InstallationsSection = () => {
           </div>
 
           {/* Installations Grid */}
-          <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4 h-[520px]">
+          <div className="lg:col-span-2 grid grid-cols-1 gap-6">
             {installations.map((installation, index) => (
-              <Card key={index} className="border-0 shadow-lg bg-card hover:shadow-xl transition-all duration-300 h-full">
-                <CardContent className="p-0 h-full">
-                  <div className="flex flex-col h-full">
-                    <div className="relative h-28 flex-shrink-0">
-                      <img 
-                        src={installation.image} 
-                        alt={installation.title}
-                        className="w-full h-full object-cover rounded-t-lg"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent rounded-t-lg" />
-                      <installation.icon className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 text-white" />
+              <Card key={index} className="border-0 shadow-lg bg-card hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-6">
+                  <div className="grid md:grid-cols-2 gap-6 items-center">
+                    {/* Image Carousel */}
+                    <div className="relative">
+                      <Carousel className="w-full">
+                        <CarouselContent>
+                          {installation.images.map((image, imgIndex) => (
+                            <CarouselItem key={imgIndex}>
+                              <div className="relative h-48 rounded-lg overflow-hidden">
+                                <img 
+                                  src={image} 
+                                  alt={`${installation.title} - Imagem ${imgIndex + 1}`}
+                                  className="w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
+                                <installation.icon className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 text-white" />
+                              </div>
+                            </CarouselItem>
+                          ))}
+                        </CarouselContent>
+                        <CarouselPrevious className="absolute left-2 top-1/2 transform -translate-y-1/2" />
+                        <CarouselNext className="absolute right-2 top-1/2 transform -translate-y-1/2" />
+                      </Carousel>
                     </div>
-                    <div className="p-4 flex-1 flex flex-col justify-center">
-                      <h4 className="text-base font-semibold text-foreground mb-2">
-                        {installation.title}
-                      </h4>
-                      <p className="text-xs text-muted-foreground leading-relaxed">
-                        {installation.description}
-                      </p>
+                    
+                    {/* Content */}
+                    <div className="space-y-4">
+                      <div>
+                        <h3 className="text-xl font-bold text-foreground mb-2">
+                          {installation.title}
+                        </h3>
+                        <p className="text-muted-foreground leading-relaxed">
+                          {installation.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
