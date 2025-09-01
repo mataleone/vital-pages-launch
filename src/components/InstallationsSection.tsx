@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Building, Bed, Heart, Stethoscope, ChevronLeft, ChevronRight } from "lucide-react";
+import { Building, Bed, Heart, Activity, ChevronLeft, ChevronRight } from "lucide-react";
 import hospitalInterior from "@/assets/hospital-interior.jpg";
 import hospitalRoom from "@/assets/hospital-room.jpg";
 import emergencyRoom from "@/assets/emergency-room.jpg";
@@ -28,7 +28,7 @@ const InstallationsSection = () => {
       title: "Bloco Cirúrgico",
       description: "Equipado com tecnologia de ponta e respaldado por uma equipe altamente especializada, asseguramos excelência e segurança em cada procedimento.",
       images: [surgeryRoom, hospitalInterior, hospitalRoom], // múltiplas imagens
-      icon: Stethoscope
+      icon: Activity
     }
   ];
 
