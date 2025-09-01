@@ -151,7 +151,7 @@ const ElectiveSurgeriesSection = () => {
   ];
 
   return (
-    <section itemScope itemType="https://schema.org/MedicalClinic" className="py-12 bg-background">{/* Reduced from py-20 */}
+    <section itemScope itemType="https://schema.org/MedicalClinic" className="py-10 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-10">

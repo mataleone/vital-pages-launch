@@ -33,7 +33,7 @@ const ValuesSection = () => {
   ];
 
   return (
-    <section id="values" className="py-12 bg-muted/30">
+    <section id="values" className="py-10 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Main Header */}
         <div className="text-center mb-16">

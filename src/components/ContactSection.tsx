@@ -21,14 +21,14 @@ const ContactSection = () => {
       title: "Telefone",
       description: "(31) 2942-0524",
       details: "(31) 0000-0000",
-      action: ""
+      action: "Entrar em Contato"
     },
     {
       icon: Mail,
-      title: "E-mail",
+      title: "E-mail", 
       description: "recepcao.bo@redehsvp.com.br",
       details: "",
-      action: ""
+      action: "Enviar E-mail"
     },
     {
       icon: Calendar,
@@ -47,10 +47,14 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-16 bg-background">
+    <section id="contact" className="py-10 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
+          <div className="inline-flex items-center space-x-2 bg-primary/10 rounded-full px-4 py-2 mb-4">
+            <Phone className="h-5 w-5 text-primary" />
+            <span className="text-sm font-medium text-primary">Contato e Localização</span>
+          </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Entre em Contato
           </h2>
@@ -71,15 +75,46 @@ const ContactSection = () => {
                 <h3 className="text-lg font-bold text-foreground mb-2">
                   {contact.title}
                 </h3>
-                <p className="text-muted-foreground text-sm mb-4">
+                <p className="text-muted-foreground text-sm mb-2">
                   {contact.description}
                 </p>
-                {contact.details && (
-                  <p className="text-xs text-muted-foreground mb-4">
-                    {contact.details}
-                  </p>
+                {contact.title === "Telefone" && (
+                  <div className="space-y-2 w-full">
+                    <p className="text-xs text-muted-foreground mb-3">
+                      {contact.details}
+                    </p>
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="w-full hover:bg-primary hover:text-white transition-colors mb-2"
+                      onClick={() => window.location.href = 'tel:31294205024'}
+                    >
+                      <Phone className="w-4 h-4 mr-2" />
+                      Entrar em Contato
+                    </Button>
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="w-full hover:bg-primary hover:text-white transition-colors"
+                      onClick={() => window.open('https://api.whatsapp.com/send/?phone=553100000000', '_blank')}
+                    >
+                      <MessageCircle className="w-4 h-4 mr-2" />
+                      WhatsApp
+                    </Button>
+                  </div>
                 )}
-                {contact.title === "Agendamento Online" ? (
+                {contact.title === "E-mail" && (
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="w-full hover:bg-primary hover:text-white transition-colors"
+                    onClick={() => window.location.href = 'mailto:recepcao.bo@redehsvp.com.br'}
+                  >
+                    <Mail className="w-4 h-4 mr-2" />
+                    Enviar E-mail
+                  </Button>
+                )}
+                {contact.title === "Agendamento Online" && (
                   <div className="space-y-2 w-full">
                     <Button 
                       variant="outline" 
@@ -100,14 +135,6 @@ const ContactSection = () => {
                       Julia
                     </Button>
                   </div>
-                ) : contact.action && (
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="w-full hover:bg-primary hover:text-white transition-colors"
-                  >
-                    {contact.action}
-                  </Button>
                 )}
               </CardContent>
             </Card>

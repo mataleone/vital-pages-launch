@@ -33,7 +33,7 @@ const InstallationsSection = () => {
   ];
 
   return (
-    <section id="installations" className="py-12 bg-background">
+    <section id="installations" className="py-10 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-10">
