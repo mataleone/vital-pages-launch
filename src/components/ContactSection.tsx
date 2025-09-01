@@ -220,35 +220,49 @@ const ContactSection = () => {
 
           {/* Right Column - Emergency & Quick Actions */}
           <div className="space-y-6">
-            {/* Emergency */}
-            <Card className="border-0 shadow-lg bg-gradient-to-br from-red-500 to-red-600 text-white h-fit">
+            {/* Trabalhe Conosco */}
+            <Card className="border-0 shadow-lg bg-gradient-to-br from-primary to-secondary text-white h-fit">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-3 mb-6">
                   <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                    <AlertCircle className="w-6 h-6" />
+                    <Calendar className="w-6 h-6" />
                   </div>
                   <h3 className="text-xl font-bold">
-                    Emergência 24h
+                    Trabalhe Conosco
                   </h3>
                 </div>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center py-2 border-b border-white/20 last:border-0">
-                    <span className="font-medium text-white">Pronto Atendimento</span>
-                    <span className="text-sm text-white/90">24 horas - Todos os dias</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/20 last:border-0">
-                    <span className="font-medium text-white">Leitos de Observação</span>
-                    <span className="text-sm text-white/90">8 leitos disponíveis</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/20 last:border-0">
-                    <span className="font-medium text-white">Especialidades</span>
-                    <span className="text-sm text-white/90">Urgência e Emergência</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/20 last:border-0">
-                    <span className="font-medium text-white">Observação</span>
-                    <span className="text-sm text-white/90">Masc/Fem/Pediátrico</span>
+                <div className="space-y-4 mb-6">
+                  <p className="text-white/90 text-sm leading-relaxed">
+                    Faça parte da nossa equipe! Estamos sempre em busca de profissionais qualificados e comprometidos com a excelência no atendimento.
+                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-start space-x-2">
+                      <div className="w-2 h-2 bg-white/70 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm text-white/90">Oportunidades em diversas áreas da saúde</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <div className="w-2 h-2 bg-white/70 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm text-white/90">Ambiente de trabalho colaborativo</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <div className="w-2 h-2 bg-white/70 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm text-white/90">Plano de carreira e desenvolvimento</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <div className="w-2 h-2 bg-white/70 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm text-white/90">Benefícios competitivos</span>
+                    </div>
                   </div>
                 </div>
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="w-full bg-white/10 text-white border-white/30 hover:bg-white hover:text-primary transition-colors"
+                  onClick={() => window.open('https://forms.google.com/xxyyzz', '_blank')}
+                >
+                  <Calendar className="w-5 h-5 mr-3" />
+                  Cadastrar Currículo
+                </Button>
               </CardContent>
             </Card>
 
