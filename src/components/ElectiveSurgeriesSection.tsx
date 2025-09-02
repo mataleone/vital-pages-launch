@@ -25,11 +25,11 @@ const ElectiveSurgeriesSection = () => {
       name: "Cabeça e Pescoço",
       icon: Brain,
       surgeries: [
-        "Tireoidectomia Parcial",
-        "Tireoidectomia Total", 
-        "Exérese de Cisto Tireoglosso",
-        "Exérese de Cisto Branquial",
-        "Parotidectomia Parcial ou Subtotal"
+        { name: "Tireoidectomia Parcial", description: "Remoção cirúrgica de parte da glândula tireoide" },
+        { name: "Tireoidectomia Total", description: "Remoção completa da glândula tireoide" },
+        { name: "Exérese de Cisto Tireoglosso", description: "Retirada de cisto congênito no pescoço" },
+        { name: "Exérese de Cisto Branquial", description: "Remoção de cisto lateral do pescoço" },
+        { name: "Parotidectomia Parcial ou Subtotal", description: "Remoção de parte da glândula parótida" }
       ]
     },
     {
@@ -37,16 +37,16 @@ const ElectiveSurgeriesSection = () => {
       name: "Cirurgia Geral",
       icon: Heart,
       surgeries: [
-        "Colecistectomia Videolaparoscópica",
-        "Fistulectomia / Fistulotomia Anal",
-        "Hemorroidectomia",
-        "Hernioplastia Epigástrica",
-        "Hernioplastia Incisional",
-        "Hernioplastia Inguinal Bilateral",
-        "Hernioplastia Inguinal Unilateral",
-        "Hernioplastia Umbilical",
-        "Laparotomia Exploradora",
-        "Ressecção Simples de Tumor de Partes Moles"
+        { name: "Colecistectomia Videolaparoscópica", description: "Retirada da vesícula biliar por via minimamente invasiva" },
+        { name: "Fistulectomia / Fistulotomia Anal", description: "Correção cirúrgica de fístulas anais" },
+        { name: "Hemorroidectomia", description: "Remoção cirúrgica de hemorroidas" },
+        { name: "Hernioplastia Epigástrica", description: "Correção de hérnia na região superior do abdome" },
+        { name: "Hernioplastia Incisional", description: "Reparo de hérnia em cicatriz cirúrgica anterior" },
+        { name: "Hernioplastia Inguinal Bilateral", description: "Correção de hérnias inguinais em ambos os lados" },
+        { name: "Hernioplastia Inguinal Unilateral", description: "Correção de hérnia inguinal em um lado" },
+        { name: "Hernioplastia Umbilical", description: "Reparo de hérnia umbilical" },
+        { name: "Laparotomia Exploradora", description: "Abertura cirúrgica do abdome para diagnóstico" },
+        { name: "Ressecção Simples de Tumor de Partes Moles", description: "Remoção de tumores benignos em tecidos moles" }
       ]
     },
     {
@@ -54,8 +54,8 @@ const ElectiveSurgeriesSection = () => {
       name: "Oftalmológica",
       icon: Eye,
       surgeries: [
-        "Catarata – Facectomia",
-        "Tratamento Cirúrgico de Pterígio"
+        { name: "Catarata – Facectomia", description: "Cirurgia para remoção de catarata e melhora da visão" },
+        { name: "Tratamento Cirúrgico de Pterígio", description: "Remoção de crescimento anormal na córnea" }
       ]
     },
     {
@@ -63,19 +63,19 @@ const ElectiveSurgeriesSection = () => {
       name: "Ginecológica",
       icon: Heart,
       surgeries: [
-        "Colpoperineoplastia Anterior e Posterior",
-        "Exérese de Cisto Vaginal",
-        "Exérese de Glândula de Bartholin / Skene",
-        "Histerectomia Subtotal",
-        "Histerectomia Total",
-        "Histerectomia Total com Anexectomia (Uni/Bilateral)",
-        "Histeroscopia Cirúrgica c/ Ressectoscópio c/ OPME",
-        "Laqueadura Tubária",
-        "Marsupialização de Glândula de Bartholin",
-        "Miomectomia",
-        "Ooforectomia/Ooforoplastia",
-        "Salpingectomia Uni/Bilateral",
-        "Tratamento Cirúrgico de Hipertrofia dos Pequenos Lábios"
+        { name: "Colpoperineoplastia Anterior e Posterior", description: "Correção do prolapso vaginal" },
+        { name: "Exérese de Cisto Vaginal", description: "Remoção de cisto na região vaginal" },
+        { name: "Exérese de Glândula de Bartholin / Skene", description: "Retirada de glândulas inflamadas ou com cistos" },
+        { name: "Histerectomia Subtotal", description: "Remoção parcial do útero" },
+        { name: "Histerectomia Total", description: "Remoção completa do útero" },
+        { name: "Histerectomia Total com Anexectomia (Uni/Bilateral)", description: "Remoção do útero e ovários/trompas" },
+        { name: "Histeroscopia Cirúrgica c/ Ressectoscópio c/ OPME", description: "Cirurgia por dentro do útero via histeroscopia" },
+        { name: "Laqueadura Tubária", description: "Esterilização feminina definitiva" },
+        { name: "Marsupialização de Glândula de Bartholin", description: "Tratamento de cisto da glândula de Bartholin" },
+        { name: "Miomectomia", description: "Remoção de miomas uterinos" },
+        { name: "Ooforectomia/Ooforoplastia", description: "Cirurgia nos ovários" },
+        { name: "Salpingectomia Uni/Bilateral", description: "Remoção das trompas de Falópio" },
+        { name: "Tratamento Cirúrgico de Hipertrofia dos Pequenos Lábios", description: "Correção estética dos pequenos lábios" }
       ]
     },
     {
@@ -83,15 +83,15 @@ const ElectiveSurgeriesSection = () => {
       name: "Ortopédica",
       icon: Bone,
       surgeries: [
-        "Reconstrução Ligamentar Intra-articular do Joelho c/ OPME",
-        "Ressecção de Cisto Sinovial",
-        "Ressecção Simples de Tumor Ósseo/de Partes Moles",
-        "Tenoplastia ou Enxerto de Tendão Único",
-        "Tenosinovectomia em Membro Superior",
-        "Tratamento Cirúrgico de Dedo em Gatilho",
-        "Tratamento das Lesões Osteocondrais por Fixação ou Mosaicoplastia Joelho/Tornozelo",
-        "Tratamento Cirúrgico de Rotura do Menisco com Meniscectomia c/ OPME",
-        "Tratamento Cirúrgico de Síndrome Compressiva em Túnel Osteofibroso ao Nível do Carpo"
+        { name: "Reconstrução Ligamentar Intra-articular do Joelho c/ OPME", description: "Reconstrução de ligamentos rompidos no joelho" },
+        { name: "Ressecção de Cisto Sinovial", description: "Remoção de cisto nas articulações" },
+        { name: "Ressecção Simples de Tumor Ósseo/de Partes Moles", description: "Retirada de tumores em ossos ou músculos" },
+        { name: "Tenoplastia ou Enxerto de Tendão Único", description: "Reparo ou substituição de tendão lesionado" },
+        { name: "Tenosinovectomia em Membro Superior", description: "Remoção de tecido inflamado ao redor de tendões" },
+        { name: "Tratamento Cirúrgico de Dedo em Gatilho", description: "Correção do travamento do dedo" },
+        { name: "Tratamento das Lesões Osteocondrais por Fixação ou Mosaicoplastia Joelho/Tornozelo", description: "Reparo de cartilagem articular" },
+        { name: "Tratamento Cirúrgico de Rotura do Menisco com Meniscectomia c/ OPME", description: "Reparo ou remoção de menisco lesionado" },
+        { name: "Tratamento Cirúrgico de Síndrome Compressiva em Túnel Osteofibroso ao Nível do Carpo", description: "Descompressão do túnel do carpo" }
       ]
     },
     {
@@ -99,10 +99,10 @@ const ElectiveSurgeriesSection = () => {
       name: "Otorrinolaringológica",
       icon: Ear,
       surgeries: [
-        "Adenoidectomia",
-        "Amigdalectomia",
-        "Septoplastia",
-        "Turbinectomia"
+        { name: "Adenoidectomia", description: "Remoção das adenoides (carne esponjosa)" },
+        { name: "Amigdalectomia", description: "Retirada cirúrgica das amígdalas" },
+        { name: "Septoplastia", description: "Correção do desvio do septo nasal" },
+        { name: "Turbinectomia", description: "Redução das conchas nasais para melhorar respiração" }
       ]
     },
     {
@@ -110,19 +110,19 @@ const ElectiveSurgeriesSection = () => {
       name: "Pediátrica",
       icon: Baby,
       surgeries: [
-        "Frenectomia",
-        "Hernioplastia Epigástrica",
-        "Hernioplastia Incisional",
-        "Hernioplastia Inguinal Bilateral",
-        "Hernioplastia Inguinal Unilateral",
-        "Hernioplastia Umbilical",
-        "Orquidopexia Bilateral",
-        "Orquidopexia Unilateral",
-        "Postectomia Hospitalar",
-        "Ressecção de Sinéquias",
-        "Ressecção Simples de Tumor de Partes Moles",
-        "Tratamento Cirúrgico de Polidactilia Articulada",
-        "Tratamento Cirúrgico de Sindactilia Simples (Dois Dedos)"
+        { name: "Frenectomia", description: "Correção do freio lingual ou labial em crianças" },
+        { name: "Hernioplastia Epigástrica", description: "Correção de hérnia abdominal superior em crianças" },
+        { name: "Hernioplastia Incisional", description: "Reparo de hérnia em cicatriz anterior pediátrica" },
+        { name: "Hernioplastia Inguinal Bilateral", description: "Correção de hérnias inguinais nos dois lados" },
+        { name: "Hernioplastia Inguinal Unilateral", description: "Reparo de hérnia inguinal em um lado" },
+        { name: "Hernioplastia Umbilical", description: "Correção da hérnia umbilical infantil" },
+        { name: "Orquidopexia Bilateral", description: "Descida cirúrgica de testículos não descidos (bilateral)" },
+        { name: "Orquidopexia Unilateral", description: "Descida cirúrgica de testículo não descido (unilateral)" },
+        { name: "Postectomia Hospitalar", description: "Circuncisão em ambiente hospitalar" },
+        { name: "Ressecção de Sinéquias", description: "Correção de aderências na genitália feminina" },
+        { name: "Ressecção Simples de Tumor de Partes Moles", description: "Remoção de tumores benignos em crianças" },
+        { name: "Tratamento Cirúrgico de Polidactilia Articulada", description: "Correção de dedos extras nas mãos ou pés" },
+        { name: "Tratamento Cirúrgico de Sindactilia Simples (Dois Dedos)", description: "Separação de dedos unidos" }
       ]
     },
     {
@@ -130,8 +130,8 @@ const ElectiveSurgeriesSection = () => {
       name: "Plástica",
       icon: Palette,
       surgeries: [
-        "Abdominoplastia",
-        "Mamoplastia"
+        { name: "Abdominoplastia", description: "Cirurgia plástica do abdome para remoção de excesso de pele" },
+        { name: "Mamoplastia", description: "Cirurgia plástica das mamas (aumento, redução ou reconstrução)" }
       ]
     },
     {
@@ -139,13 +139,13 @@ const ElectiveSurgeriesSection = () => {
       name: "Urológica",
       icon: Droplets,
       surgeries: [
-        "Postectomia Hospitalar",
-        "Tratamento Cirúrgico de Hidrocele",
-        "Tratamento Cirúrgico de Varicocele",
-        "Tratamento Cirúrgico de Incontinência Urinária Via Abdominal c/ OPME (Sling)",
-        "Ureterolitotripsia Transureteroscópica c/ OPME (Retirada de Cálculo Renal) com Retirada Endoscópica de Duplo J",
-        "Ressecção Endoscópica da Próstata",
-        "Vasectomia"
+        { name: "Postectomia Hospitalar", description: "Circuncisão masculina em ambiente hospitalar" },
+        { name: "Tratamento Cirúrgico de Hidrocele", description: "Correção do acúmulo de líquido no escroto" },
+        { name: "Tratamento Cirúrgico de Varicocele", description: "Correção das varizes nos testículos" },
+        { name: "Tratamento Cirúrgico de Incontinência Urinária Via Abdominal c/ OPME (Sling)", description: "Colocação de suporte para incontinência urinária" },
+        { name: "Ureterolitotripsia Transureteroscópica c/ OPME (Retirada de Cálculo Renal) com Retirada Endoscópica de Duplo J", description: "Remoção de pedras nos rins via endoscopia" },
+        { name: "Ressecção Endoscópica da Próstata", description: "Cirurgia da próstata via endoscópica" },
+        { name: "Vasectomia", description: "Esterilização masculina definitiva" }
       ]
     }
   ];
@@ -211,13 +211,21 @@ const ElectiveSurgeriesSection = () => {
                         itemProp="medicalSpecialty"
                         className="group"
                       >
-                        <Badge 
-                          variant="outline" 
-                          className="w-full justify-start p-3 sm:p-4 text-xs sm:text-sm border-muted hover:border-primary/50 hover:bg-primary/5 transition-smooth cursor-pointer min-h-[48px] items-start"
-                        >
-                          <Scissors className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-left leading-tight break-words">{surgery}</span>
-                        </Badge>
+                        <Card className="border-muted hover:border-primary/50 hover:bg-primary/5 transition-smooth cursor-pointer">
+                          <CardContent className="p-3 sm:p-4">
+                            <div className="flex items-start space-x-2">
+                              <Scissors className="w-3 h-3 sm:w-4 sm:h-4 text-primary flex-shrink-0 mt-1" />
+                              <div className="flex-1 min-w-0">
+                                <h4 className="text-xs sm:text-sm font-semibold text-foreground leading-tight break-words mb-1">
+                                  {surgery.name}
+                                </h4>
+                                <p className="text-xs text-muted-foreground leading-tight">
+                                  {surgery.description}
+                                </p>
+                              </div>
+                            </div>
+                          </CardContent>
+                        </Card>
                       </div>
                     ))}
                   </div>
@@ -290,14 +298,15 @@ const ElectiveSurgeriesSection = () => {
               "@context": "https://schema.org",
               "@type": "MedicalClinic",
               "name": "Hospital São Vicente de Paulo",
-              "medicalSpecialty": surgeryCategories.map(cat => ({
-                "@type": "MedicalSpecialty",
-                "name": `Cirurgia ${cat.name}`,
-                "availableService": cat.surgeries.map(surgery => ({
-                  "@type": "MedicalProcedure",
-                  "name": surgery
-                }))
-              }))
+               "medicalSpecialty": surgeryCategories.map(cat => ({
+                 "@type": "MedicalSpecialty",
+                 "name": `Cirurgia ${cat.name}`,
+                 "availableService": cat.surgeries.map(surgery => ({
+                   "@type": "MedicalProcedure",
+                   "name": surgery.name,
+                   "description": surgery.description
+                 }))
+               }))
             })
           }}
         />
