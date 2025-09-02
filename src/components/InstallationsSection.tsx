@@ -33,26 +33,26 @@ const InstallationsSection = () => {
   ];
 
   return (
-    <section id="installations" className="py-10 bg-background">
+    <section id="installations" className="py-6 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center space-x-2 bg-primary/10 rounded-full px-4 py-2 mb-4">
-            <Building className="h-5 w-5 text-primary" />
-            <span className="text-sm font-medium text-primary">Instalações</span>
+        <div className="text-center mb-6 sm:mb-8">
+          <div className="inline-flex items-center space-x-2 bg-primary/10 rounded-full px-3 sm:px-4 py-2 mb-4">
+            <Building className="h-4 sm:h-5 w-4 sm:w-5 text-primary" />
+            <span className="text-xs sm:text-sm font-medium text-primary">Instalações</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Nossas Instalações
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
             Conheça nossas modernas instalações equipadas com tecnologia de ponta para oferecer o melhor atendimento médico hospitalar.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-10">
+        <div className="grid lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-6 sm:mb-8">
           {/* Video Section */}
           <div className="lg:col-span-1 flex">
-            <div className="relative w-full h-[580px] rounded-lg overflow-hidden shadow-lg bg-black">
+            <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[580px] rounded-lg overflow-hidden shadow-lg bg-black">
               <iframe 
                 src="https://www.youtube.com/embed/bX5x1sPxsII?autoplay=1&mute=1&loop=1&playlist=bX5x1sPxsII&controls=0&showinfo=0&rel=0&modestbranding=1&disablekb=1&fs=0&iv_load_policy=3"
                 className="absolute inset-0 w-full h-full rounded-lg"
@@ -65,41 +65,41 @@ const InstallationsSection = () => {
           </div>
 
           {/* Installations Grid */}
-          <div className="lg:col-span-2 grid grid-cols-1 gap-6">
+          <div className="lg:col-span-2 grid grid-cols-1 gap-4 sm:gap-6">
             {installations.map((installation, index) => (
-              <Card key={index} className="border-0 shadow-lg bg-card hover:shadow-xl transition-all duration-300 h-[180px]">
-                <CardContent className="p-6 h-full">
-                  <div className="grid md:grid-cols-2 gap-6 items-center h-full">
+              <Card key={index} className="border-0 shadow-lg bg-card hover:shadow-xl transition-all duration-300 h-[160px] sm:h-[180px]">
+                <CardContent className="p-4 sm:p-6 h-full">
+                  <div className="grid md:grid-cols-2 gap-4 sm:gap-6 items-center h-full">
                     {/* Image Carousel */}
                     <div className="relative">
                       <Carousel className="w-full">
                         <CarouselContent>
                           {installation.images.map((image, imgIndex) => (
                             <CarouselItem key={imgIndex}>
-                              <div className="relative h-32 rounded-lg overflow-hidden">
+                              <div className="relative h-24 sm:h-32 rounded-lg overflow-hidden">
                                 <img 
                                   src={image} 
                                   alt={`${installation.title} - Imagem ${imgIndex + 1}`}
                                   className="w-full h-full object-cover"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
-                                <installation.icon className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 text-white" />
+                                <installation.icon className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 sm:w-8 h-6 sm:h-8 text-white" />
                               </div>
                             </CarouselItem>
                           ))}
                         </CarouselContent>
-                        <CarouselPrevious className="absolute left-2 top-1/2 transform -translate-y-1/2" />
-                        <CarouselNext className="absolute right-2 top-1/2 transform -translate-y-1/2" />
+                        <CarouselPrevious className="absolute left-1 sm:left-2 top-1/2 transform -translate-y-1/2" />
+                        <CarouselNext className="absolute right-1 sm:right-2 top-1/2 transform -translate-y-1/2" />
                       </Carousel>
                     </div>
                     
                     {/* Content */}
-                    <div className="space-y-4">
+                    <div className="space-y-2 sm:space-y-4">
                       <div>
-                        <h3 className="text-xl font-bold text-foreground mb-2">
+                        <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1 sm:mb-2">
                           {installation.title}
                         </h3>
-                        <p className="text-muted-foreground leading-relaxed text-sm">
+                        <p className="text-muted-foreground leading-relaxed text-xs sm:text-sm">
                           {installation.description}
                         </p>
                       </div>

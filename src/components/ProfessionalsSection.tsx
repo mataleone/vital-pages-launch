@@ -98,18 +98,18 @@ const ProfessionalsSection = () => {
   };
 
   return (
-    <section className="py-10 bg-muted/30">
+    <section className="py-6 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-8 md:mb-10">
-          <div className="inline-flex items-center space-x-2 bg-primary/10 rounded-full px-4 py-2 mb-4">
-            <Users className="h-5 w-5 text-primary" />
-            <span className="text-sm font-medium text-primary">Equipe Especializada</span>
+        <div className="text-center mb-6 sm:mb-8">
+          <div className="inline-flex items-center space-x-2 bg-primary/10 rounded-full px-3 sm:px-4 py-2 mb-4">
+            <Users className="h-4 sm:h-5 w-4 sm:w-5 text-primary" />
+            <span className="text-xs sm:text-sm font-medium text-primary">Equipe Especializada</span>
           </div>
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 md:mb-6 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 px-4">
             Nossos Profissionais
           </h2>
-          <p className="text-base md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
+          <p className="text-sm sm:text-base lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
             Conheça nossa equipe de especialistas altamente qualificados e experientes, 
             comprometidos em oferecer o melhor cuidado à sua saúde.
           </p>
@@ -133,22 +133,22 @@ const ProfessionalsSection = () => {
           </button>
 
           {/* Slideshow Container */}
-          <div className="overflow-hidden mx-4 md:mx-12">
+          <div className="overflow-hidden mx-2 sm:mx-4 md:mx-8 lg:mx-12">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {Array.from({ length: Math.ceil(professionals.length / 3) }).map((_, slideIndex) => (
                 <div key={slideIndex} className="w-full flex-shrink-0">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
                     {professionals.slice(slideIndex * 3, slideIndex * 3 + 3).map((professional) => (
                       <Card 
                         key={professional.id} 
                         className="bg-card shadow-card hover:shadow-glow transition-smooth hover:-translate-y-2 border-0"
                       >
-                        <CardContent className="p-6 text-center">
+                        <CardContent className="p-4 sm:p-6 text-center">
                           {/* Professional Photo */}
-                          <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden bg-muted">
+                          <div className="w-20 sm:w-24 h-20 sm:h-24 mx-auto mb-3 sm:mb-4 rounded-full overflow-hidden bg-muted">
                             <img
                               src={professional.image}
                               alt={`Foto do ${professional.name}`}
@@ -157,23 +157,23 @@ const ProfessionalsSection = () => {
                           </div>
                           
                           {/* Professional Name */}
-                          <h3 className="text-lg font-semibold text-foreground mb-2">
+                          <h3 className="text-base sm:text-lg font-semibold text-foreground mb-1 sm:mb-2">
                             {professional.name}
                           </h3>
                           
                           {/* Specialty */}
-                          <p className="text-sm text-muted-foreground mb-2">
+                          <p className="text-xs sm:text-sm text-muted-foreground mb-1 sm:mb-2">
                             {professional.specialty}
                           </p>
                           
                           {/* CRM */}
-                          <p className="text-xs text-primary font-medium mb-4">
+                          <p className="text-xs text-primary font-medium mb-3 sm:mb-4">
                             {professional.crm}
                           </p>
                           
                           {/* Social Media Link */}
-                          <button className="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-r from-primary to-secondary text-white rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105">
-                            <Instagram className="w-4 h-4" />
+                          <button className="inline-flex items-center justify-center w-8 sm:w-10 h-8 sm:h-10 bg-gradient-to-r from-primary to-secondary text-white rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105">
+                            <Instagram className="w-3 sm:w-4 h-3 sm:h-4" />
                           </button>
                         </CardContent>
                       </Card>
@@ -185,12 +185,12 @@ const ProfessionalsSection = () => {
           </div>
 
           {/* Slide Indicators */}
-          <div className="flex justify-center mt-6 space-x-2">
+          <div className="flex justify-center mt-4 sm:mt-6 space-x-2">
             {Array.from({ length: Math.ceil(professionals.length / 3) }).map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-smooth ${
+                className={`w-2 sm:w-3 h-2 sm:h-3 rounded-full transition-smooth ${
                   currentSlide === index 
                     ? 'bg-primary shadow-glow' 
                     : 'bg-muted hover:bg-muted-foreground/30'

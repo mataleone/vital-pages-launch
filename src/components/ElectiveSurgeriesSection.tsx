@@ -151,18 +151,18 @@ const ElectiveSurgeriesSection = () => {
   ];
 
   return (
-    <section itemScope itemType="https://schema.org/MedicalClinic" className="py-10 bg-background">
+    <section itemScope itemType="https://schema.org/MedicalClinic" className="py-6 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center space-x-2 bg-primary/10 rounded-full px-4 py-2 mb-4">
-            <Scissors className="h-5 w-5 text-primary" />
-            <span className="text-sm font-medium text-primary">Procedimentos Especializados</span>
+        <div className="text-center mb-6 sm:mb-8 lg:mb-10">
+          <div className="inline-flex items-center space-x-2 bg-primary/10 rounded-full px-3 sm:px-4 py-2 mb-4">
+            <Scissors className="h-4 sm:h-5 w-4 sm:w-5 text-primary" />
+            <span className="text-xs sm:text-sm font-medium text-primary">Procedimentos Especializados</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Cirurgias Eletivas
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
             Oferecemos uma ampla gama de cirurgias eletivas, realizadas com excelência e cuidado, 
             atendendo pacientes pelo SUS e particulares.
           </p>
@@ -170,7 +170,7 @@ const ElectiveSurgeriesSection = () => {
 
         {/* Surgery Categories Tabs */}
         <Tabs defaultValue="cabeca-pescoco" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-9 mb-6 h-auto p-1">{/* Improved mobile grid */}
+          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-9 mb-4 sm:mb-6 h-auto p-1">{/* Improved mobile grid */}
             {surgeryCategories.map((category) => {
               const IconComponent = category.icon;
               return (
@@ -244,30 +244,30 @@ const ElectiveSurgeriesSection = () => {
         </Tabs>
 
         {/* Call to Action with Image */}
-        <div className="mt-8 sm:mt-10">
+        <div className="mt-6 sm:mt-8">
           <Card className="border-0 shadow-lg bg-card overflow-hidden">
             <div className="grid lg:grid-cols-2 gap-0">
-              <div className="p-6 sm:p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
-                <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
+              <div className="p-4 sm:p-6 lg:p-8 xl:p-12 flex flex-col justify-center order-2 lg:order-1">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground mb-3 sm:mb-4">
                   Precisa de uma Cirurgia Eletiva?
                 </h3>
-                <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
+                <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-3 sm:mb-4 lg:mb-6 leading-relaxed">
                   Nossa equipe está pronta para atendê-lo com segurança e qualidade. 
                   Atendemos pelo SUS, com credenciamentos municipais, e também oferecemos 
                   atendimentos particulares.
                 </p>
-                <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
+                <p className="text-xs sm:text-sm lg:text-base text-muted-foreground mb-4 sm:mb-6 lg:mb-8 leading-relaxed">
                   Entre em contato para mais informações sobre procedimentos e agendamentos. 
                   Todas as cirurgias são realizadas por equipe médica especializada com equipamentos modernos.
                 </p>
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg transition-all duration-300 font-semibold px-6 sm:px-12 py-3 sm:py-4 h-12 sm:h-14 text-base sm:text-lg w-full sm:w-fit"
+                  className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg transition-all duration-300 font-semibold px-4 sm:px-6 lg:px-12 py-3 sm:py-4 h-10 sm:h-12 lg:h-14 text-sm sm:text-base lg:text-lg w-full sm:w-fit"
                 >
                   Agendamento
                 </Button>
               </div>
-              <div className="relative h-64 sm:h-80 lg:h-auto order-1 lg:order-2">
+              <div className="relative h-48 sm:h-64 lg:h-auto order-1 lg:order-2">
                 <img 
                   src={surgeryRoom} 
                   alt="Centro cirúrgico preparado para cirurgia eletiva" 
@@ -275,9 +275,9 @@ const ElectiveSurgeriesSection = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-l from-primary/80 via-primary/50 to-primary/30" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center text-white px-4 sm:px-6">
-                    <Scissors className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-white" />
-                    <h4 className="text-lg sm:text-xl font-bold mb-2">
+                  <div className="text-center text-white px-3 sm:px-4 lg:px-6">
+                    <Scissors className="w-10 sm:w-12 lg:w-16 h-10 sm:h-12 lg:h-16 mx-auto mb-2 sm:mb-3 lg:mb-4 text-white" />
+                    <h4 className="text-base sm:text-lg lg:text-xl font-bold mb-1 sm:mb-2">
                       Cirurgias com Excelência
                     </h4>
                     <p className="text-white/90 text-xs sm:text-sm max-w-xs mx-auto">
