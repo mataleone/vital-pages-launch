@@ -244,14 +244,6 @@ const ContactSection = () => {
                       <div className="w-2 h-2 bg-white/70 rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-sm text-white/90">Ambiente de trabalho colaborativo</span>
                     </div>
-                    <div className="flex items-start space-x-2">
-                      <div className="w-2 h-2 bg-white/70 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-sm text-white/90">Plano de carreira e desenvolvimento</span>
-                    </div>
-                    <div className="flex items-start space-x-2">
-                      <div className="w-2 h-2 bg-white/70 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-sm text-white/90">Benefícios competitivos</span>
-                    </div>
                   </div>
                 </div>
                 <Button 

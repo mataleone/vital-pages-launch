@@ -29,8 +29,8 @@ const ServicesSection = () => {
     },
     {
       icon: TestTube,
-      title: "Exames Diagnósticos",
-      description: "Endoscopia, colonoscopia e exames laboratoriais",
+      title: "Exames Diagnósticos", 
+      description: "Endoscopia, colonoscopia, ultrassonografia, raio X e exames laboratoriais",
       color: "from-accent to-secondary"
     },
     {
