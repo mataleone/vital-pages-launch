@@ -1,64 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone } from "lucide-react";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import { useEffect, useState } from "react";
 
 const ModernHero = () => {
-  const [api, setApi] = useState<any>(null);
-
-  const heroImages = [
-    {
-      src: "/lovable-uploads/a9e4cc63-eef5-4308-9bce-542fdb14620d.png",
-      alt: "Hospital Jaques Gonçalves Pereira - Fachada Real"
-    },
-    {
-      src: "/src/assets/hospital-exterior.jpg",
-      alt: "Hospital - Vista Externa"
-    },
-    {
-      src: "/src/assets/hospital-interior.jpg", 
-      alt: "Hospital - Interior Moderno"
-    },
-    {
-      src: "/src/assets/medical-team.jpg",
-      alt: "Equipe Médica Especializada"
-    }
-  ];
-
-  useEffect(() => {
-    if (!api) return;
-
-    const interval = setInterval(() => {
-      api.scrollNext();
-    }, 5000); // Troca de slide a cada 5 segundos
-
-    return () => clearInterval(interval);
-  }, [api]);
-
   return (
     <section className="relative h-screen overflow-hidden">
-      {/* Background Slideshow */}
+      {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <Carousel 
-          setApi={setApi}
-          opts={{ loop: true }}
-          className="w-full h-full"
-        >
-          <CarouselContent className="ml-0">
-            {heroImages.map((image, index) => (
-              <CarouselItem key={index} className="pl-0">
-                <div className="relative w-full h-screen">
-                  <img 
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/60 via-secondary/50 to-accent/40" />
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
+        <img 
+          src="/lovable-uploads/a9e4cc63-eef5-4308-9bce-542fdb14620d.png" 
+          alt="Hospital Jaques Gonçalves Pereira - Fachada Real" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/60 via-secondary/50 to-accent/40" />
       </div>
 
       {/* Background Pattern */}

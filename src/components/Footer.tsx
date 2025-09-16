@@ -100,11 +100,11 @@ const Footer = () => {
               <div className="text-gray-300 text-sm">
                 <strong>Telefone:</strong><br />
                 Recepção: (31) 2942-0524<br />
-                (31) 0000-0000
+                (31) 99867-8593
               </div>
               <div className="text-gray-300 text-sm">
                 <strong>Agendamento:</strong><br />
-                (31) 9999-8888<br />
+                (31) 99867-8593<br />
                 (31) 8888-9999<br />
                 (31) 8555-5555
               </div>

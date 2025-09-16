@@ -43,12 +43,12 @@ const ModernFooter = () => {
               <div>
                 <div className="text-sm font-medium text-white mb-1">Telefone</div>
                 <div className="text-xs text-gray-300">Recepção: (31) 2942-0524</div>
-                <div className="text-xs text-gray-300">(31) 0000-0000</div>
+                <div className="text-xs text-gray-300">(31) 99867-8593</div>
               </div>
               
               <div>
                 <div className="text-sm font-medium text-white mb-1">Agendamento</div>
-                <div className="text-xs text-gray-300">(31) 9999-8888</div>
+                <div className="text-xs text-gray-300">(31) 99867-8593</div>
                 <div className="text-xs text-gray-300">(31) 8888-9999</div>
                 <div className="text-xs text-gray-300">(31) 8555-5555</div>
               </div>

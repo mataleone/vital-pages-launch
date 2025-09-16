@@ -20,7 +20,7 @@ const ContactSection = () => {
       icon: Phone,
       title: "Telefone",
       description: "(31) 2942-0524",
-      details: "(31) 0000-0000",
+      details: "(31) 99867-8593",
       action: "Entrar em Contato"
     },
     {

@@ -78,7 +78,7 @@ const Header = () => {
                 isScrolled ? 'text-primary' : 'text-white'
               }`}>
                 <Phone className="w-3 h-3" />
-                <span>(31) 9999-8888</span>
+                <span>(31) 99867-8593</span>
               </div>
             </div>
             <Button 
@@ -202,7 +202,7 @@ const Header = () => {
                     isScrolled ? 'text-primary' : 'text-white'
                   }`}>
                     <Phone className="w-4 h-4" />
-                    <span>(31) 9999-8888 (WhatsApp)</span>
+                    <span>(31) 99867-8593 (WhatsApp)</span>
                   </div>
                 </div>
                 <div className="flex flex-col space-y-2">
