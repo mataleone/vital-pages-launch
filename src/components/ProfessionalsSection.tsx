@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Instagram, ChevronLeft, ChevronRight, Users } from "lucide-react";
+import { ChevronLeft, ChevronRight, Users } from "lucide-react";
+import drHigorCarlech from "@/assets/dr-higor-carlech.png";
 
 const ProfessionalsSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -8,75 +9,73 @@ const ProfessionalsSection = () => {
   const professionals = [
     {
       id: 1,
-      name: "Dr. Carlos Silva",
-      specialty: "Cardiologista",
-      crm: "CRM MG 12345-6",
-      image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&h=300&fit=crop&crop=face",
-      social: "instagram"
+      name: "Dr. Higor Souza Carlech",
+      specialty: "Cirurgia Geral",
+      crm: "CRM MG 43345",
+      image: drHigorCarlech
     },
     {
       id: 2,
-      name: "Dra. Ana Santos",
-      specialty: "Pediatra",
-      crm: "CRM MG 23456-7",
-      image: "https://images.unsplash.com/photo-1594824720330-67b799c6dc1e?w=300&h=300&fit=crop&crop=face",
-      social: "instagram"
+      name: "Dr. Carlos Silva",
+      specialty: "Cardiologista",
+      crm: "CRM MG 12345-6",
+      image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&h=300&fit=crop&crop=face"
     },
     {
       id: 3,
-      name: "Dr. Roberto Lima",
-      specialty: "Ortopedista",
-      crm: "CRM MG 34567-8",
-      image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=300&h=300&fit=crop&crop=face",
-      social: "instagram"
+      name: "Dra. Ana Santos",
+      specialty: "Pediatra",
+      crm: "CRM MG 23456-7",
+      image: "https://images.unsplash.com/photo-1594824720330-67b799c6dc1e?w=300&h=300&fit=crop&crop=face"
     },
     {
       id: 4,
-      name: "Dra. Mariana Costa",
-      specialty: "Neurologista",
-      crm: "CRM MG 45678-9",
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop&crop=face",
-      social: "instagram"
+      name: "Dr. Roberto Lima",
+      specialty: "Ortopedista",
+      crm: "CRM MG 34567-8",
+      image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=300&h=300&fit=crop&crop=face"
     },
     {
       id: 5,
-      name: "Dr. José Oliveira",
-      specialty: "Gastroenterologista",
-      crm: "CRM MG 56789-0",
-      image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=300&h=300&fit=crop&crop=face",
-      social: "instagram"
+      name: "Dra. Mariana Costa",
+      specialty: "Neurologista",
+      crm: "CRM MG 45678-9",
+      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop&crop=face"
     },
     {
       id: 6,
-      name: "Dra. Patricia Mendes",
-      specialty: "Ginecologista",
-      crm: "CRM MG 67890-1",
-      image: "https://images.unsplash.com/photo-1584467735871-8b5d0542c84f?w=300&h=300&fit=crop&crop=face",
-      social: "instagram"
+      name: "Dr. José Oliveira",
+      specialty: "Gastroenterologista",
+      crm: "CRM MG 56789-0",
+      image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=300&h=300&fit=crop&crop=face"
     },
     {
       id: 7,
-      name: "Dr. Eduardo Rocha",
-      specialty: "Dermatologista",
-      crm: "CRM MG 78901-2",
-      image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&h=300&fit=crop&crop=face",
-      social: "instagram"
+      name: "Dra. Patricia Mendes",
+      specialty: "Ginecologista",
+      crm: "CRM MG 67890-1",
+      image: "https://images.unsplash.com/photo-1584467735871-8b5d0542c84f?w=300&h=300&fit=crop&crop=face"
     },
     {
       id: 8,
-      name: "Dra. Fernanda Alves",
-      specialty: "Psiquiatra",
-      crm: "CRM MG 89012-3",
-      image: "https://images.unsplash.com/photo-1627499736738-7bb0ba2a4eea?w=300&h=300&fit=crop&crop=face",
-      social: "instagram"
+      name: "Dr. Eduardo Rocha",
+      specialty: "Dermatologista",
+      crm: "CRM MG 78901-2",
+      image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&h=300&fit=crop&crop=face"
     },
     {
       id: 9,
+      name: "Dra. Fernanda Alves",
+      specialty: "Psiquiatra",
+      crm: "CRM MG 89012-3",
+      image: "https://images.unsplash.com/photo-1627499736738-7bb0ba2a4eea?w=300&h=300&fit=crop&crop=face"
+    },
+    {
+      id: 10,
       name: "Dr. Marcos Ferreira",
       specialty: "Urologista",
       crm: "CRM MG 90123-4",
-      image: "https://images.unsplash.com/photo-1638202993928-7267aad84c31?w=300&h=300&fit=crop&crop=face",
-      social: "instagram"
+      image: "https://images.unsplash.com/photo-1638202993928-7267aad84c31?w=300&h=300&fit=crop&crop=face"
     }
   ];
 
@@ -167,14 +166,9 @@ const ProfessionalsSection = () => {
                           </p>
                           
                           {/* CRM */}
-                          <p className="text-xs text-primary font-medium mb-3 sm:mb-4">
+                          <p className="text-xs text-primary font-medium">
                             {professional.crm}
                           </p>
-                          
-                          {/* Social Media Link */}
-                          <button className="inline-flex items-center justify-center w-8 sm:w-10 h-8 sm:h-10 bg-gradient-to-r from-primary to-secondary text-white rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105">
-                            <Instagram className="w-3 sm:w-4 h-3 sm:h-4" />
-                          </button>
                         </CardContent>
                       </Card>
                     ))}
