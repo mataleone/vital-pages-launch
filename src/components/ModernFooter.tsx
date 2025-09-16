@@ -14,7 +14,6 @@ const ModernFooter = () => {
                 className="h-10 w-auto"
               />
               <div>
-                <div className="text-sm text-gray-400">Rede HSVP</div>
                 <div className="text-lg font-bold">Hospital Jaques Gonçalves Pereira</div>
               </div>
             </div>
@@ -48,9 +47,8 @@ const ModernFooter = () => {
               
               <div>
                 <div className="text-sm font-medium text-white mb-1">Agendamento</div>
-                <div className="text-xs text-gray-300">(31) 99867-8593</div>
-                <div className="text-xs text-gray-300">(31) 8888-9999</div>
-                <div className="text-xs text-gray-300">(31) 8555-5555</div>
+                <div className="text-xs text-gray-300">Francielly: (31) 97205-2830</div>
+                <div className="text-xs text-gray-300">Julia: (31) 99740-4237</div>
               </div>
               
               <div>
