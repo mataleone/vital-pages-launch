@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, Phone, ChevronDown, Scissors } from "lucide-react";
+import { useState } from "react";
 
 const ModernHero = () => {
+  const [isSurgeryDropdownOpen, setIsSurgeryDropdownOpen] = useState(false);
   return (
     <section className="relative h-screen overflow-hidden">
       {/* Background Image with Overlay */}
@@ -50,13 +52,44 @@ const ModernHero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4"
-              >
-                Agendar Cirurgia
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
+              <div className="relative">
+                <Button 
+                  size="lg" 
+                  className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4 flex items-center"
+                  onClick={() => setIsSurgeryDropdownOpen(!isSurgeryDropdownOpen)}
+                >
+                  <Scissors className="mr-2 w-5 h-5" />
+                  Agendar Cirurgia
+                  <ChevronDown className="ml-2 w-5 h-5" />
+                </Button>
+                
+                {isSurgeryDropdownOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-card border border-border rounded-lg shadow-xl z-50">
+                    <div className="p-2">
+                      <a
+                        href="https://api.whatsapp.com/send/?phone=5531972052830"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center w-full px-4 py-3 text-sm text-foreground hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                        onClick={() => setIsSurgeryDropdownOpen(false)}
+                      >
+                        <Phone className="w-4 h-4 mr-3" />
+                        Agendamento - Francielly
+                      </a>
+                      <a
+                        href="https://api.whatsapp.com/send/?phone=55319974042370"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center w-full px-4 py-3 text-sm text-foreground hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                        onClick={() => setIsSurgeryDropdownOpen(false)}
+                      >
+                        <Phone className="w-4 h-4 mr-3" />
+                        Agendamento - Julia
+                      </a>
+                    </div>
+                  </div>
+                )}
+              </div>
               
               <Button 
                 size="lg" 
