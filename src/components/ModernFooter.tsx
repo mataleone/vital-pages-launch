@@ -74,23 +74,10 @@ const ModernFooter = () => {
         <div className="border-t border-gray-700 mt-12 pt-8">
           <div className="flex flex-col lg:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 lg:mb-0">
-              © {new Date().getFullYear()} Rede HSVP - Hospital Jaques Gonçalves Pereira. Todos os direitos reservados.
+              © {new Date().getFullYear()} Hospital Jaques Gonçalves Pereira. Todos os direitos reservados.
             </div>
-            <div className="flex flex-col lg:flex-row items-center space-y-2 lg:space-y-0 lg:space-x-6 text-sm">
-              <div className="text-gray-400">
-                Feito com ♥ por <a href="https://www.dataeast.com.br" target="_blank" rel="noopener noreferrer" className="text-white font-semibold hover:text-primary transition-colors">Dataeast® Tecnologia</a>
-              </div>
-              <div className="flex space-x-6">
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Política de Privacidade
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Termos de Uso
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Código de Ética
-                </a>
-              </div>
+            <div className="text-gray-400 text-sm">
+              Feito com ♥ por <a href="https://www.dataeast.com.br" target="_blank" rel="noopener noreferrer" className="text-white font-semibold hover:text-primary transition-colors">Dataeast® Tecnologia</a>
             </div>
           </div>
         </div>
