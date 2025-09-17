@@ -263,8 +263,11 @@ const ElectiveSurgeriesSection = () => {
                 <Button 
                   size="lg" 
                   className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg transition-all duration-300 font-semibold px-4 sm:px-6 lg:px-12 py-3 sm:py-4 h-10 sm:h-12 lg:h-14 text-sm sm:text-base lg:text-lg w-full sm:w-fit"
+                  asChild
                 >
-                  Agendamento
+                  <a href="https://api.whatsapp.com/send/?phone=5531998678593&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                    Agendamento
+                  </a>
                 </Button>
               </div>
               <div className="relative h-48 sm:h-64 lg:h-auto order-1 lg:order-2">

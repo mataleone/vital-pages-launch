@@ -121,9 +121,9 @@ const AboutTeam = () => {
                   Cada paciente é uma vida que merece respeito e agilidade no cuidado. 
                   Fazemos a diferença todos os dias através da excelência médica.
                 </p>
-                <button className="bg-gradient-primary text-white px-6 py-2 rounded-lg font-semibold text-sm hover:shadow-glow transition-smooth">
+                <a href="https://api.whatsapp.com/send/?phone=5531998678593&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="bg-gradient-primary text-white px-6 py-2 rounded-lg font-semibold text-sm hover:shadow-glow transition-smooth inline-block">
                   Agendar Consulta
-                </button>
+                </a>
               </CardContent>
             </Card>
           </div>

@@ -133,9 +133,9 @@ const Team = () => {
             Com a parceria da Secretaria Municipal de Saúde, facilitamos o acesso aos nossos 
             serviços, reforçando nosso propósito de fazer a diferença, todos os dias.
           </p>
-          <button className="bg-gradient-primary text-white px-8 py-3 rounded-lg font-semibold hover:shadow-glow transition-smooth">
+          <a href="https://api.whatsapp.com/send/?phone=5531998678593&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="bg-gradient-primary text-white px-8 py-3 rounded-lg font-semibold hover:shadow-glow transition-smooth inline-block">
             Marcar Consulta
-          </button>
+          </a>
         </div>
       </div>
     </section>

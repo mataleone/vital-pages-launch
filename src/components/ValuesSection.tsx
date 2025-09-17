@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart, Target, Shield, CheckCircle } from "lucide-react";
 import teamValues from "@/assets/team-values.jpg";
-import hospitalInterior from "@/assets/hospital-interior.jpg";
+import hospitalCommitment from "@/assets/hospital-commitment.jpg";
 
 const ValuesSection = () => {
   const values = [
@@ -123,13 +123,16 @@ const ValuesSection = () => {
                   <Button 
                     size="lg" 
                     className="bg-gradient-to-r from-secondary to-primary hover:shadow-lg transition-all duration-300 font-semibold px-8 w-fit"
+                    asChild
                   >
-                    Agendar Consulta
+                    <a href="https://api.whatsapp.com/send/?phone=5531998678593&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                      Agendar Consulta
+                    </a>
                   </Button>
                 </div>
                 <div className="relative h-80 lg:h-auto order-1 lg:order-2">
                   <img 
-                    src={hospitalInterior} 
+                    src={hospitalCommitment} 
                     alt="Nosso compromisso com o cuidado" 
                     className="w-full h-full object-cover"
                   />

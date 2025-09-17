@@ -86,12 +86,15 @@ const Header = () => {
               variant="outline" 
               className={`transition-all duration-500 ${
                 isScrolled 
-                  ? 'border-primary text-primary hover:bg-primary hover:text-white' 
+                  ? 'border-primary text-primary hover:bg-primary hover:text-white'
                   : 'border-white/30 text-white hover:bg-white/10 backdrop-blur-sm'
               }`}
+              asChild
             >
-              <Calendar className="w-4 h-4 mr-1" />
-              Consulta
+              <a href="https://api.whatsapp.com/send/?phone=5531998678593&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                <Calendar className="w-4 h-4 mr-1" />
+                Consulta
+              </a>
             </Button>
             <div className="relative">
               <Button 
@@ -213,9 +216,12 @@ const Header = () => {
                         ? 'border-primary text-primary hover:bg-primary hover:text-white'
                         : 'border-white/30 text-white hover:bg-white/10'
                     }`}
+                    asChild
                   >
-                    <Calendar className="w-4 h-4 mr-2" />
-                    Agendar Consulta
+                    <a href="https://api.whatsapp.com/send/?phone=5531998678593&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      Agendar Consulta
+                    </a>
                   </Button>
                   <Button className={`w-full transition-all duration-300 ${
                     isScrolled

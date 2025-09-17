@@ -95,9 +95,12 @@ const ModernHero = () => {
                 size="lg" 
                 variant="outline" 
                 className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm font-semibold px-8 py-4"
+                asChild
               >
-                <Phone className="mr-2 w-5 h-5" />
-                Agendar Consulta
+                <a href="https://api.whatsapp.com/send/?phone=5531998678593&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                  <Phone className="mr-2 w-5 h-5" />
+                  Agendar Consulta
+                </a>
               </Button>
             </div>
           </div>
