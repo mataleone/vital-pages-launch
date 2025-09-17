@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight, Users } from "lucide-react";
 import drHigorCarlech from "@/assets/dr-higor-carlech.png";
 import drLucasFerreira from "@/assets/dr-lucas-ferreira.png";
+import drWaldeckDuarte from "@/assets/dr-waldeck-duarte.png";
 
 const ProfessionalsSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -21,6 +22,13 @@ const ProfessionalsSection = () => {
       specialty: "Ginecologista",
       crm: "CRM MG 45434",
       image: drLucasFerreira
+    },
+    {
+      id: 3,
+      name: "Dr. Waldeck Caroso Duarte Junior",
+      specialty: "Ortopedista",
+      crm: "CRM MG 65923",
+      image: drWaldeckDuarte
     }
   ];
 
@@ -44,7 +52,7 @@ const ProfessionalsSection = () => {
         </div>
 
         {/* Professionals Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
           {professionals.map((professional) => (
             <Card 
               key={professional.id} 
