@@ -1,7 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Building, Bed, Heart, Activity, ChevronLeft, ChevronRight } from "lucide-react";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Building, Bed, Heart, Activity, ChevronLeft, ChevronRight, X } from "lucide-react";
 import hospitalInterior from "@/assets/hospital-interior.jpg";
 import hospitalRoom from "@/assets/hospital-room.jpg";
 import emergencyRoom from "@/assets/emergency-room.jpg";
@@ -74,19 +75,36 @@ const InstallationsSection = () => {
                     <div className="relative">
                       <Carousel className="w-full">
                         <CarouselContent>
-                          {installation.images.map((image, imgIndex) => (
-                            <CarouselItem key={imgIndex}>
-                              <div className="relative h-24 sm:h-32 rounded-lg overflow-hidden">
-                                <img 
-                                  src={image} 
-                                  alt={`${installation.title} - Imagem ${imgIndex + 1}`}
-                                  className="w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
-                                <installation.icon className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 sm:w-8 h-6 sm:h-8 text-white" />
-                              </div>
-                            </CarouselItem>
-                          ))}
+                           {installation.images.map((image, imgIndex) => (
+                             <CarouselItem key={imgIndex}>
+                               <Dialog>
+                                 <DialogTrigger asChild>
+                                   <div className="relative h-24 sm:h-32 rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-200">
+                                     <img 
+                                       src={image} 
+                                       alt={`${installation.title} - Imagem ${imgIndex + 1}`}
+                                       className="w-full h-full object-cover"
+                                     />
+                                     <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
+                                     <installation.icon className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 sm:w-8 h-6 sm:h-8 text-white" />
+                                   </div>
+                                 </DialogTrigger>
+                                 <DialogContent className="max-w-4xl w-full p-0">
+                                   <div className="relative">
+                                     <img 
+                                       src={image} 
+                                       alt={`${installation.title} - Imagem ${imgIndex + 1}`}
+                                       className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+                                     />
+                                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 rounded-b-lg">
+                                       <h4 className="text-white font-semibold text-lg">{installation.title}</h4>
+                                       <p className="text-white/80 text-sm">{installation.description}</p>
+                                     </div>
+                                   </div>
+                                 </DialogContent>
+                               </Dialog>
+                             </CarouselItem>
+                           ))}
                         </CarouselContent>
                         <CarouselPrevious className="absolute left-1 sm:left-2 top-1/2 transform -translate-y-1/2" />
                         <CarouselNext className="absolute right-1 sm:right-2 top-1/2 transform -translate-y-1/2" />
