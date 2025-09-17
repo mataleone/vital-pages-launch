@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart, Target, Shield, CheckCircle } from "lucide-react";
-import medicalTeam from "@/assets/medical-team.jpg";
+import teamValues from "@/assets/team-values.jpg";
 import hospitalInterior from "@/assets/hospital-interior.jpg";
 
 const ValuesSection = () => {
@@ -57,7 +57,7 @@ const ValuesSection = () => {
               <div className="grid lg:grid-cols-2 gap-0">
                 <div className="relative h-60 sm:h-72 lg:h-auto">
                   <img 
-                    src={medicalTeam} 
+                    src={teamValues} 
                     alt="Nossos valores em ação" 
                     className="w-full h-full object-cover"
                   />
