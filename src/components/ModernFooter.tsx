@@ -14,7 +14,7 @@ const ModernFooter = () => {
                 className="h-10 w-auto"
               />
                <div>
-                <div className="text-lg font-bold">Hospital Jaques Gonçalves Pereira</div>
+                <div className="text-base font-bold">Hospital Jaques Gonçalves Pereira</div>
                </div>
             </div>
             
