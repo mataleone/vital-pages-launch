@@ -270,11 +270,11 @@ const ElectiveSurgeriesSection = () => {
                   </a>
                 </Button>
               </div>
-              <div className="relative h-48 sm:h-64 lg:h-auto order-1 lg:order-2">
+              <div className="relative h-64 sm:h-80 lg:h-full order-1 lg:order-2">
                 <img 
                   src={surgeryRoom} 
                   alt="Centro cirúrgico preparado para cirurgia eletiva" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-l from-primary/80 via-primary/50 to-primary/30" />
                 <div className="absolute inset-0 flex items-center justify-center">
