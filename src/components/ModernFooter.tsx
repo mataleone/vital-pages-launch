@@ -17,8 +17,8 @@ const ModernFooter = () => {
             </div>
             
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Sua saúde em boas mãos. Parte da Rede Hospitais São Vicente de Paulo, 
-              oferecemos excelência em saúde com atendimento humanizado, tecnologia de ponta e equipe especializada.
+              Como parte da Rede Hospitais São Vicente de Paulo, garantimos excelência em saúde, 
+              combinando atendimento humanizado, tecnologia de ponta e equipe altamente especializada.
             </p>
             
             <div className="flex space-x-4">
