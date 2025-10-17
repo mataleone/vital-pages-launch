@@ -23,6 +23,9 @@ const ModernHero = () => {
         }}></div>
       </div>
 
+      {/* Top Gradient Overlay for Header Readability */}
+      <div className="absolute inset-x-0 top-0 h-40 md:h-56 lg:h-64 bg-gradient-to-b from-foreground/80 via-foreground/40 to-transparent z-10 pointer-events-none" />
+
       <div className="relative z-20 container mx-auto px-4 py-12">
         <div className="flex items-center h-screen">
           {/* Left Content */}
