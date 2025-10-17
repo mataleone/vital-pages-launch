@@ -96,7 +96,7 @@ const ContactSection = () => {
                       variant="outline" 
                       size="sm" 
                       className="w-full hover:bg-primary hover:text-white transition-colors"
-                      onClick={() => window.open('https://api.whatsapp.com/send/?phone=553100000000', '_blank')}
+                      onClick={() => window.open('https://api.whatsapp.com/send/?phone=5531998678593', '_blank')}
                     >
                       <MessageCircle className="w-4 h-4 mr-2" />
                       WhatsApp
