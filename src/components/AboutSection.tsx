@@ -57,7 +57,7 @@ const AboutSection = () => {
             <Card className="border-0 shadow-lg bg-card">
               <CardContent className="p-4 sm:p-6 lg:p-8">
                 <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed mb-4 sm:mb-6">
-                  O <strong className="text-foreground">RedeHSVP - Hospital Jaques Gonçalves Pereira</strong> é uma 
+                  A <strong className="text-foreground">RedeHSVP</strong> é uma 
                   instituação de referência na região, comprometida em oferecer atendimento médico de
                   excelência com humanização e tecnologia de ponta. Fazemos parte da prestigiosa 
                   <strong className="text-foreground"> Rede Hospitais São Vicente de Paulo</strong>, 
