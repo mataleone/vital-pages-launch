@@ -7,11 +7,11 @@ const ModernFooter = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Hospital Info */}
           <div>
-            <div className="flex flex-col space-y-3 mb-6">
+            <div className="mb-6">
               <img 
                 src="/lovable-uploads/00897a29-1dbc-47fd-ad4c-da44171b9c7e.png" 
                 alt="RedeHSVP - Hospital Jaques Gonçalves Pereira" 
-                className="h-10 w-auto"
+                className="h-12 w-auto mb-3"
               />
               <div className="text-base font-bold">RedeHSVP - Hospital Jaques Gonçalves Pereira</div>
             </div>
