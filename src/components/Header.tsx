@@ -78,11 +78,10 @@ const Header = () => {
             </div>
             <Button 
               size="sm" 
-              variant="outline" 
               className={`transition-all duration-500 ${
-                isScrolled 
-                  ? 'border-primary text-primary hover:bg-primary hover:text-white'
-                  : 'border-white/30 text-white hover:bg-white/10 backdrop-blur-sm'
+                isScrolled
+                  ? 'bg-gradient-to-r from-primary to-secondary hover:shadow-lg'
+                  : 'bg-gradient-to-r from-primary to-secondary text-white hover:shadow-lg'
               }`}
               asChild
             >
@@ -120,7 +119,7 @@ const Header = () => {
                       Agendamento - Francielly
                     </a>
                     <a
-                      href="https://api.whatsapp.com/send/?phone=55319974042370"
+                      href="https://api.whatsapp.com/send/?phone=5531997404237"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center w-full px-4 py-3 text-sm text-foreground hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
@@ -205,11 +204,10 @@ const Header = () => {
                 </div>
                 <div className="flex flex-col space-y-2">
                   <Button 
-                    variant="outline" 
                     className={`w-full transition-all duration-300 ${
-                      isScrolled 
-                        ? 'border-primary text-primary hover:bg-primary hover:text-white'
-                        : 'border-white/30 text-white hover:bg-white/10'
+                      isScrolled
+                        ? 'bg-gradient-to-r from-primary to-secondary'
+                        : 'bg-gradient-to-r from-primary to-secondary text-white hover:shadow-lg'
                     }`}
                     asChild
                   >
@@ -221,7 +219,7 @@ const Header = () => {
                   <Button className={`w-full transition-all duration-300 ${
                     isScrolled
                       ? 'bg-gradient-to-r from-primary to-secondary'
-                      : 'bg-white/20 text-white hover:bg-white/30'
+                      : 'bg-gradient-to-r from-primary to-secondary text-white hover:shadow-lg'
                   }`}>
                     <Scissors className="w-4 h-4 mr-2" />
                     Agendar Cirurgia

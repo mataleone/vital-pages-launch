@@ -80,7 +80,7 @@ const ModernHero = () => {
                         Agendamento - Francielly
                       </a>
                       <a
-                        href="https://api.whatsapp.com/send/?phone=55319974042370"
+                        href="https://api.whatsapp.com/send/?phone=5531997404237"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center w-full px-4 py-3 text-sm text-foreground hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
@@ -96,8 +96,7 @@ const ModernHero = () => {
               
               <Button 
                 size="lg" 
-                variant="outline" 
-                className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm font-semibold px-8 py-4"
+                className="bg-gradient-to-r from-primary to-secondary text-white hover:shadow-lg font-semibold px-8 py-4"
                 asChild
               >
                 <a href="https://api.whatsapp.com/send/?phone=5531998678593&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
