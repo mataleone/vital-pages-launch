@@ -13,7 +13,7 @@ const ModernHero = () => {
           alt="Hospital Jaques Gonçalves Pereira - Fachada Real" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/60 via-secondary/50 to-accent/40" />
+        <div className="absolute inset-0 bg-gradient-to-tl from-primary/60 via-secondary/50 to-accent/40" />
       </div>
 
       {/* Background Pattern */}
