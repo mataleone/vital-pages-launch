@@ -58,7 +58,7 @@ const AboutSection = () => {
               <CardContent className="p-4 sm:p-6 lg:p-8">
                 <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed mb-4 sm:mb-6">
                   A <strong className="text-foreground">RedeHSVP</strong> é uma 
-                  instituação de referência na região, comprometida em oferecer atendimento médico de
+                  instituição de referência na região, comprometida em oferecer atendimento médico de
                   excelência com humanização e tecnologia de ponta. Fazemos parte da prestigiosa 
                   <strong className="text-foreground"> Rede Hospitais São Vicente de Paulo</strong>, 
                   unindo tradição e inovação no cuidado à saúde.
