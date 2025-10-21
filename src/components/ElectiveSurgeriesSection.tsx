@@ -138,7 +138,6 @@ const ElectiveSurgeriesSection = () => {
       icon: Droplets,
       surgeries: [
         { name: "Postectomia Hospitalar", description: "Circuncisão masculina em ambiente hospitalar" },
-        { name: "Sling", description: "Procedimento para tratamento de incontinência urinária" },
         { name: "Tratamento Cirúrgico de Hidrocele", description: "Correção do acúmulo de líquido no escroto" },
         { name: "Tratamento Cirúrgico de Varicocele", description: "Correção das varizes nos testículos" },
         { name: "Tratamento Cirúrgico de Incontinência Urinária Via Abdominal c/ OPME (Sling)", description: "Colocação de suporte para incontinência urinária" },
