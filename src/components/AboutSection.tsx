@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Heart, Target, Shield } from "lucide-react";
 import medicalTeam from "@/assets/medical-team.jpg";
 import hospitalInterior from "@/assets/hospital-interior.jpg";
+import hospitalExterior from "@/assets/hospital-exterior-new.jpg";
 
 const AboutSection = () => {
 
@@ -76,7 +77,7 @@ const AboutSection = () => {
             <Card className="border-0 shadow-lg overflow-hidden h-full">
               <div className="relative h-60 sm:h-72 lg:h-80">
                 <img 
-                  src="/lovable-uploads/e9093921-7fd2-4005-bab8-90e2789a9fb2.png" 
+                  src={hospitalExterior} 
                   alt="Fachada do Hospital Jaques Gonçalves Pereira" 
                   className="w-full h-full object-cover object-center"
                 />
