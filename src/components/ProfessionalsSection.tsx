@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight, Users } from "lucide-react";
 import drHigorCarlech from "@/assets/dr-higor-carlech-new.jpg";
 import drLucasFerreira from "@/assets/dr-lucas-ferreira.png";
 import drWaldeckDuarte from "@/assets/dr-waldeck-duarte.png";
+import drMarcosVillela from "@/assets/dr-marcos-villela.jpg";
 
 const ProfessionalsSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -18,13 +19,20 @@ const ProfessionalsSection = () => {
     },
     {
       id: 2,
+      name: "Dr. Marcos Roberto de Paiva Villela",
+      specialty: "Cirurgia Geral",
+      crm: "CRM MG 28765",
+      image: drMarcosVillela
+    },
+    {
+      id: 3,
       name: "Dr. Lucas de Souza Ferreira",
       specialty: "Ginecologista",
       crm: "CRM MG 45434",
       image: drLucasFerreira
     },
     {
-      id: 3,
+      id: 4,
       name: "Dr. Waldeck Caroso Duarte Junior",
       specialty: "Ortopedista",
       crm: "CRM MG 65923",
