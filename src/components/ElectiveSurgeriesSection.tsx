@@ -28,6 +28,17 @@ import surgeryRoom from "@/assets/surgery-room.jpg";
 const ElectiveSurgeriesSection = () => {
   const surgeryCategories = [
     {
+      id: "cabeca-pescoco",
+      name: "Cabeça e Pescoço",
+      icon: Brain,
+      surgeries: [
+        { name: "Tireoidectomia Parcial", description: "Remoção cirúrgica de parte da glândula tireoide" },
+        { name: "Tireoidectomia Total", description: "Remoção completa da glândula tireoide" },
+        { name: "Exérese de Cisto Tireoglosso", description: "Retirada de cisto congênito no pescoço" },
+        { name: "Parotidectomia Parcial ou Subtotal", description: "Remoção de parte da glândula parótida" }
+      ]
+    },
+    {
       id: "cirurgia-geral",
       name: "Cirurgia Geral",
       icon: Heart,
@@ -163,8 +174,8 @@ const ElectiveSurgeriesSection = () => {
         </div>
 
         {/* Surgery Categories Tabs */}
-        <Tabs defaultValue="cirurgia-geral" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-8 mb-4 sm:mb-6 h-auto p-1">{/* Improved mobile grid */}
+        <Tabs defaultValue="cabeca-pescoco" className="w-full">
+          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-9 mb-4 sm:mb-6 h-auto p-1">{/* Improved mobile grid */}
             {surgeryCategories.map((category) => {
               const IconComponent = category.icon;
               return (
