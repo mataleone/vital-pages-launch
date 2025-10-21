@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight, Users } from "lucide-react";
-import drHigorCarlech from "@/assets/dr-higor-carlech.png";
+import drHigorCarlech from "@/assets/dr-higor-carlech-new.jpg";
 import drLucasFerreira from "@/assets/dr-lucas-ferreira.png";
 import drWaldeckDuarte from "@/assets/dr-waldeck-duarte.png";
 
