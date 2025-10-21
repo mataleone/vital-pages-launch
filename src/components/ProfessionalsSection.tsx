@@ -3,7 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Users, Stethoscope } from "lucide-react";
 import drHigorCarlech from "@/assets/dr-higor-carlech-new.jpg";
-import drLucasFerreira from "@/assets/dr-lucas-ferreira.png";
+import drLucasFerreira from "@/assets/dr-lucas-ferreira-new.jpg";
 import drWaldeckDuarte from "@/assets/dr-waldeck-duarte.png";
 import drMarcosVillela from "@/assets/dr-marcos-villela.jpg";
 
