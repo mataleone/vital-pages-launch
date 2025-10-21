@@ -28,14 +28,14 @@ import surgeryRoom from "@/assets/surgery-room.jpg";
 const ElectiveSurgeriesSection = () => {
   const surgeryCategories = [
     {
-      id: "cabeca-pescoco",
-      name: "Cabeça e Pescoço",
-      icon: Brain,
+      id: "angiologia",
+      name: "Angiologia",
+      icon: Heart,
       surgeries: [
-        { name: "Tireoidectomia Parcial", description: "Remoção cirúrgica de parte da glândula tireoide" },
-        { name: "Tireoidectomia Total", description: "Remoção completa da glândula tireoide" },
-        { name: "Exérese de Cisto Tireoglosso", description: "Retirada de cisto congênito no pescoço" },
-        { name: "Parotidectomia Parcial ou Subtotal", description: "Remoção de parte da glândula parótida" }
+        { name: "Tratamento Cirúrgico Esclerosante Não Estético de Varizes M/I Bilateral", description: "Tratamento bilateral de varizes em membros inferiores com técnica esclerosante" },
+        { name: "Tratamento Cirúrgico Esclerosante Não Estético de Varizes M/I Unilateral", description: "Tratamento unilateral de varizes em membro inferior com técnica esclerosante" },
+        { name: "Tratamento Cirúrgico de Varizes (Bilateral)", description: "Cirurgia bilateral para remoção de varizes em membros inferiores" },
+        { name: "Tratamento Cirúrgico de Varizes (Unilateral)", description: "Cirurgia unilateral para remoção de varizes em membro inferior" }
       ]
     },
     {
@@ -174,7 +174,7 @@ const ElectiveSurgeriesSection = () => {
         </div>
 
         {/* Surgery Categories Tabs */}
-        <Tabs defaultValue="cabeca-pescoco" className="w-full">
+        <Tabs defaultValue="angiologia" className="w-full">
           <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-9 mb-4 sm:mb-6 h-auto p-1">{/* Improved mobile grid */}
             {surgeryCategories.map((category) => {
               const IconComponent = category.icon;
