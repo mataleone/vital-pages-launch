@@ -28,7 +28,6 @@ const ElectiveSurgeriesSection = () => {
         { name: "Tireoidectomia Parcial", description: "Remoção cirúrgica de parte da glândula tireoide" },
         { name: "Tireoidectomia Total", description: "Remoção completa da glândula tireoide" },
         { name: "Exérese de Cisto Tireoglosso", description: "Retirada de cisto congênito no pescoço" },
-        { name: "Exérese de Cisto Branquial", description: "Remoção de cisto lateral do pescoço" },
         { name: "Parotidectomia Parcial ou Subtotal", description: "Remoção de parte da glândula parótida" }
       ]
     },
@@ -38,7 +37,6 @@ const ElectiveSurgeriesSection = () => {
       icon: Heart,
       surgeries: [
         { name: "Colecistectomia Videolaparoscópica", description: "Retirada da vesícula biliar por via minimamente invasiva" },
-        { name: "Fistulectomia / Fistulotomia Anal", description: "Correção cirúrgica de fístulas anais" },
         { name: "Hemorroidectomia", description: "Remoção cirúrgica de hemorroidas" },
         { name: "Hernioplastia Epigástrica", description: "Correção de hérnia na região superior do abdome" },
         { name: "Hernioplastia Incisional", description: "Reparo de hérnia em cicatriz cirúrgica anterior" },
@@ -140,6 +138,7 @@ const ElectiveSurgeriesSection = () => {
       icon: Droplets,
       surgeries: [
         { name: "Postectomia Hospitalar", description: "Circuncisão masculina em ambiente hospitalar" },
+        { name: "Sling", description: "Procedimento para tratamento de incontinência urinária" },
         { name: "Tratamento Cirúrgico de Hidrocele", description: "Correção do acúmulo de líquido no escroto" },
         { name: "Tratamento Cirúrgico de Varicocele", description: "Correção das varizes nos testículos" },
         { name: "Tratamento Cirúrgico de Incontinência Urinária Via Abdominal c/ OPME (Sling)", description: "Colocação de suporte para incontinência urinária" },
@@ -196,7 +195,7 @@ const ElectiveSurgeriesSection = () => {
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-foreground">
-                        Cirurgia {category.name}
+                        {category.name}
                       </h3>
                       <p className="text-muted-foreground">
                         {category.surgeries.length} procedimentos disponíveis
