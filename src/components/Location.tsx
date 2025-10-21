@@ -33,9 +33,9 @@ const Location = () => {
                   <div>
                     <h4 className="text-lg font-semibold text-foreground mb-1">Endereço</h4>
                     <p className="text-muted-foreground">
-                      Consulte nosso atendimento<br />
-                      para informações de localização<br />
-                      e como chegar ao hospital
+                      Alameda Cruz Souza, N°500, Alex Müller<br />
+                      Distrito de Cachoeira Escura<br />
+                      Belo Oriente - MG, 35195-000
                     </p>
                   </div>
                 </div>
@@ -102,16 +102,20 @@ const Location = () => {
               Como Chegar
             </h3>
 
-            {/* Map Placeholder */}
-            <Card className="shadow-card border-0 mb-6">
+            {/* Interactive Map */}
+            <Card className="shadow-card border-0 mb-6 overflow-hidden">
               <CardContent className="p-0">
-                <div className="w-full h-64 bg-gradient-to-br from-muted to-muted/50 rounded-lg flex items-center justify-center">
-                  <div className="text-center text-muted-foreground">
-                    <MapPin className="w-12 h-12 mx-auto mb-2" />
-                    <p className="text-sm">Mapa Interativo</p>
-                    <p className="text-xs">Hospital Jaques Gonçalves Pereira</p>
-                  </div>
-                </div>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.5!2d-42.36342732982128!3d-19.308670810631384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDE4JzMxLjIiUyA0MsKwMjEnNDguMyJX!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                  width="100%"
+                  height="320"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Localização do Hospital"
+                  className="rounded-lg"
+                ></iframe>
               </CardContent>
             </Card>
 
@@ -142,7 +146,7 @@ const Location = () => {
                     <div>
                       <h5 className="font-semibold text-foreground">Transporte Público</h5>
                       <p className="text-sm text-muted-foreground">
-                        Estação Metro Centro a 200m
+                        Fácil acesso pela rodovia
                       </p>
                     </div>
                   </div>
