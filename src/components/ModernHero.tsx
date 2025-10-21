@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, ChevronDown, Scissors } from "lucide-react";
 import { useState } from "react";
+import hospitalHeroImage from "@/assets/hospital-hero-new.jpg";
 
 const ModernHero = () => {
   const [isSurgeryDropdownOpen, setIsSurgeryDropdownOpen] = useState(false);
@@ -9,8 +10,8 @@ const ModernHero = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img 
-          src="/lovable-uploads/a9e4cc63-eef5-4308-9bce-542fdb14620d.png" 
-          alt="Hospital Jaques Gonçalves Pereira - Fachada Real" 
+          src={hospitalHeroImage}
+          alt="Hospital Jaques Gonçalves Pereira - Fachada Externa" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-tl from-primary/60 via-secondary/50 to-accent/40" />
