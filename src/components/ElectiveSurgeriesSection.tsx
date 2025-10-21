@@ -258,15 +258,27 @@ const ElectiveSurgeriesSection = () => {
                   Entre em contato para mais informações sobre procedimentos e agendamentos. 
                   Todas as cirurgias são realizadas por equipe médica especializada com equipamentos modernos.
                 </p>
-                <Button 
-                  size="lg" 
-                  className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg transition-all duration-300 font-semibold px-4 sm:px-6 lg:px-12 py-3 sm:py-4 h-10 sm:h-12 lg:h-14 text-sm sm:text-base lg:text-lg w-full sm:w-fit"
-                  asChild
-                >
-                  <a href="https://api.whatsapp.com/send/?phone=5531998678593&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
-                    Agendamento
-                  </a>
-                </Button>
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                  <Button 
+                    size="lg" 
+                    className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg transition-all duration-300 font-semibold px-4 sm:px-6 py-3 sm:py-4 h-10 sm:h-12 text-sm sm:text-base flex-1 sm:flex-initial"
+                    asChild
+                  >
+                    <a href="https://api.whatsapp.com/send/?phone=553172052830&text=Olá!%20Gostaria%20de%20agendar%20uma%20cirurgia%20eletiva&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                      Agendar com Franciele
+                    </a>
+                  </Button>
+                  <Button 
+                    size="lg" 
+                    variant="outline"
+                    className="border-2 border-primary hover:bg-primary/10 hover:shadow-lg transition-all duration-300 font-semibold px-4 sm:px-6 py-3 sm:py-4 h-10 sm:h-12 text-sm sm:text-base flex-1 sm:flex-initial"
+                    asChild
+                  >
+                    <a href="https://api.whatsapp.com/send/?phone=553199740423&text=Olá!%20Gostaria%20de%20agendar%20uma%20cirurgia%20eletiva&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                      Agendar com Júlia
+                    </a>
+                  </Button>
+                </div>
               </div>
               <div className="relative h-64 sm:h-80 lg:h-full order-1 lg:order-2">
                 <img 

@@ -61,7 +61,7 @@ const ModernFooter = () => {
             <h4 className="text-lg font-bold mb-6">Localização</h4>
             <div className="space-y-2">
               <div className="text-sm font-medium text-white mb-1">Endereço</div>
-              <div className="text-xs text-gray-300">Alameda Cruz F Souza, N°500, Alex Müller</div>
+              <div className="text-xs text-gray-300">Alameda Cruz Souza, N°500, Alex Müller</div>
               <div className="text-xs text-gray-300">Distrito de Cachoeira Escura</div>
               <div className="text-xs text-gray-300">Belo Oriente - MG, 35195-000</div>
             </div>
