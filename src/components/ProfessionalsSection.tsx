@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Users, Stethoscope } from "lucide-react";
 import drHigorCarlech from "@/assets/dr-higor-carlech-new.jpg";
 import drLucasFerreira from "@/assets/dr-lucas-ferreira-new.jpg";
-import drWaldeckDuarte from "@/assets/dr-waldeck-duarte.png";
+import drWaldeckDuarte from "@/assets/dr-waldeck-duarte-new.jpg";
 import drMarcosVillela from "@/assets/dr-marcos-villela.jpg";
 
 const ProfessionalsSection = () => {
