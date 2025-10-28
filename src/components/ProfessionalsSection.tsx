@@ -6,6 +6,7 @@ import drHigorCarlech from "@/assets/dr-higor-carlech-new.jpg";
 import drLucasFerreira from "@/assets/dr-lucas-ferreira-new.jpg";
 import drWaldeckDuarte from "@/assets/dr-waldeck-duarte-new.jpg";
 import drMarcosVillela from "@/assets/dr-marcos-villela-new.jpg";
+import drLipeAlvim from "@/assets/dr-lipe-alvim.jpg";
 
 const ProfessionalsSection = () => {
   const professionals = [
@@ -36,6 +37,13 @@ const ProfessionalsSection = () => {
       specialty: "Ortopedista",
       crm: "CRM MG 65923",
       image: drWaldeckDuarte
+    },
+    {
+      id: 5,
+      name: "Dr. Lipe de Mello Alvim",
+      specialty: "Urologista",
+      crm: "CRM MG 52545",
+      image: drLipeAlvim
     }
   ];
 
