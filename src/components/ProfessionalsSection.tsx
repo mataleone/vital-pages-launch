@@ -78,14 +78,14 @@ const ProfessionalsSection = () => {
         </Badge>
         
         {/* Professional Name with gradient text */}
-        <h3 className="text-xl sm:text-2xl font-bold bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text text-transparent mb-3 leading-tight">
+        <h3 className="text-base sm:text-lg font-bold bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text text-transparent mb-3 leading-tight">
           {professional.name}
         </h3>
         
         {/* CRM with enhanced styling */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20">
           <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-          <p className="text-sm sm:text-base text-primary font-semibold tracking-wide">
+          <p className="text-xs sm:text-sm text-primary font-semibold tracking-wide">
             {professional.crm}
           </p>
         </div>
