@@ -5,7 +5,7 @@ import { Users, Stethoscope } from "lucide-react";
 import drHigorCarlech from "@/assets/dr-higor-carlech-new.jpg";
 import drLucasFerreira from "@/assets/dr-lucas-ferreira-new.jpg";
 import drWaldeckDuarte from "@/assets/dr-waldeck-duarte-new.jpg";
-import drMarcosVillela from "@/assets/dr-marcos-villela.jpg";
+import drMarcosVillela from "@/assets/dr-marcos-villela-new.jpg";
 
 const ProfessionalsSection = () => {
   const professionals = [
